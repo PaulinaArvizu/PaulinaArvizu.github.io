@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Carrito de compras</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .tarjeta>label {
+            display: flex;
+
+        }
+
+        .metodos-pago {
+            display: grid;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Carrito de compras</h4>
+    <div class="card-group">
+        <div class="card">
+            <table>
+                <tr>
+                    <td>#</td>
+                    <td><img src="" alt="producto"></td>
+                    <td>Nombre producto</td>
+                    <td>$$</td>
+                </tr>
+                <tr>
+                    <td>#</td>
+                    <td><img src="" alt="producto"></td>
+                    <td>Nombre producto</td>
+                    <td>$$</td>
+                </tr>
+            </table>
+            <p>Subtotal = $$$</p>
+            <p>Total = $$$</p>
+            <div class="" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">Finalizar</button>
+                <button type="button" class="btn btn-secondary">Cancelar</button>
+            </div>
+        </div>
+        <div class="card pago">
+            <h4 class="card-title">Metodo de pago</h4>
+            <div class="card">
+                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                <div class="card-body">
+                    <div class="form-check metodos-pago">
+                        <label class="form-check-label" for="">
+                            <input type="radio" class="form-check-input" name="Metodos" id="" value="checkedValue"
+                                checked>
+                            Metodo 1
+                        </label>
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="Metodos" id="" value="checkedValue"
+                                checked>
+                            Metodo 2
+                        </label>
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="Metodos" id="" value="checkedValue"
+                                checked>
+                            Agregar tarjeta
+                            <div class="tarjeta">
+                                <label>
+                                    Tarjeta:
+                                    <input type="text" name="Tarjeta" id="Tnum">
+                                </label>
+                                <label>
+                                    Nombre:
+                                    <input type="text" name="Tarjeta" id="Tnom">
+                                </label>
+                                <label>
+                                    Codigo de seguridad:
+                                    <input type="text" name="Tarjeta" id="Tc">
+                                </label>
+                                <label>
+                                    Fecha de vencimiento:
+                                    <input type="month" name="Tarjeta" id="Tven">
+                                </label>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
