@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Usuario ver cuenta</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Style -->
+    <link rel="stylesheet" href="style - usuario ver cuenta.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/54a2b41b40.js"></script>
+  </head>
+  <body>
+        <p>Aqui va la barra superior de usuario general</p>
+    <div class="barr-sup">
+          <h1>Nombre de Usuario<button type="button" class="btn btn-link">Editar</button></h1>
+          <ul class="nav nav-tabs">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">
+                      <label for="posts">Tus publicaciones</label>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <label for="pets">Tus mascotas</label>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <label for="pending">Pedidos en curso</label>
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <label for="history">Historial de pedidos</label>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <input type="radio" name="navbar" id="posts" checked>
+    <div class="publicaciones">
+        <h3>Tus publicaciones</h3>
+        <div class="card">
+            <div class="card-header">
+                Nombre de usuario
+            </div>
+            <img src="Imagenes/Bannana.jpg"" class=" card-img-top" alt="foto publicacion 1"">
+            <div class=" card-body">
+                <p class="mascota">#Bannana</p>
+                <p class="card-text">Acabo de rescatar a este tierno gatito.    </p>
+                <table width="100%">
+                    <tr>
+                        <td><a href="#" style="color: brown;""><i class=" fas fa-paw"></i> Me gusta</a></td>
+                        <td align="right"><a class="delete" href="#" style="color: red;"><i class="fas fa-times-circle"></i> Eliminar</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Nombre de usuario
+            </div>
+            <img src="Imagenes/Ejemplo foto publicacion 2.jpg"" class=" card-img-top" alt="foto publicacion 1"">
+            <div class=" card-body">
+                <p class="mascota">#Milaneso</p>
+                <p class="card-text">Hoy pesaron a Milaneso. 500kgs!!</p>
+                <table width="100%">
+                    <tr>
+                        <td><a href="#" style="color: brown;""><i class=" fas fa-paw"></i> Me gusta</a></td>
+                        <td align="right"><a class="delete" href="#" style="color: red;"><i class="fas fa-times-circle"></i> Eliminar</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Nombre de usuario
+            </div>
+            <img src="Imagenes/Ejemplo foto publicacion 3.jpg"" class=" card-img-top" alt="foto publicacion 1"">
+            <div class=" card-body">
+                <p class="mascota">#Milaneso #Milanesa</p>
+                <p class="card-text">Milaneso con Milanesa. Que pareja tan linda</p>
+                <table width="100%">
+                    <tr>
+                        <td><a href="#" style="color: brown;""><i class=" fas fa-paw"></i> Me gusta</a></td>
+                        <td align="right"><a class="delete" href="#" style="color: red;"><i class="fas fa-times-circle"></i> Eliminar</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div> <!--div de publicaciones-->
+
+    <input type="radio" name="navbar" id="pets">
+    <div class="tus-mascotas">
+        <h3>Tus Mascotas<button type="button" class="btn btn-link">Editar</button></h3>
+            <table class="table" width="100%">
+                <tbody>
+                    <tr>
+                        <td scope="row"><img src="Imagenes/milaneso.jpg" alt=""></td>
+                        <td class="mascota">Milaneso</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><img src="Imagenes/Bannana.jpg" alt=""></td>
+                        <td class="mascota">Bannana</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><img src="Imagenes/Takin.jpg" alt=""></td>
+                        <td class="mascota">Takin</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!-- div de mascotas -->
+    </div>
+    <input type="radio" name="navbar" id="pending">
+    <div class="pedidos-pendientes">
+        <h3>Pedidos en curso</h3>
+        <div class="card border-warning mb-3">
+            <div class="card-header">Pedido: #126551796</div>
+            <div class="card-body">
+                <table class="table-striped table-condensed" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Cantidad</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Cuerda</td>
+                            <td>$60</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Rascadera para gato</td>
+                            <td>$500</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">5</td>
+                            <td>Hierba para gato</td>
+                            <td>$250</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div><!-- div pedidos pedientes -->
+
+    <input type="radio" name="navbar" id="history">
+    <div class="historial-pedidos">
+        <h3>Historial de pedidos</h3>
+        <div class="card border-success mb-3">
+            <div class="card-header">Pedido: #1616584</div>
+            <div class="card-body">
+                <table class="table-striped table-condensed" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Cantidad</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Pintura de uñas</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Correa</td>
+                            <td>$200</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Vestido</td>
+                            <td>$100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card border-success mb-3">
+                <div class="card-header">Pedido: #1928941</div>
+                <div class="card-body">
+                    <table class="table-striped table-condensed" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Cantidad</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Cuerda</td>
+                                <td>$60</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Rascadera para gato</td>
+                                <td>$500</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">5</td>
+                                <td>Hierba para gato</td>
+                                <td>$250</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div><!-- div historial -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

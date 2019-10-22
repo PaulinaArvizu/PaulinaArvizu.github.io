@@ -1,0 +1,72 @@
+[class="sticky-box"] {
+    position: sticky;
+    top: 50px;
+    left: 1000px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+[class~="tus-mascotas"] {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+
+.publicaciones .mascota {
+    font-size: 10px;
+    color: blue;
+}
+
+.publicaciones .card {
+    background-color: #d0e9ee;
+    margin-bottom: 20px;
+    width: 25%;
+}
+td:first-of-type {
+    width: 20%;
+}
+.publicaciones td:first-of-type {
+    width: 50%;
+}
+td img {
+    height: 100px;
+}
+
+td.mascota {
+    vertical-align: middle;
+}
+div input.posts:not(:checked) ~ div.publicaciones {
+    display: none;
+}
+input[type="radio"] {
+    display: none;
+}
+input:checked + div {
+    display: block;
+}
+div.publicaciones, div.tus-mascotas, div.pedidos-pendientes, div.historial-pedidos {
+    padding-left: 1%;
+    padding-top: 1%;
+    display: none;
+}
+.historial-pedidos .card, .pedidos-pendientes .card {
+    width: 50%;
+    margin-bottom: 20px;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+.historial-pedidos td:first-of-type {
+    text-align: center;
+}
+.historial-pedidos .card-header {
+    color: white;
+    background-color: rgb(39, 162, 67);
+}
+.pedidos-pendientes .card-header {
+    color: white;
+    background-color: rgb(247, 187, 7);
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}

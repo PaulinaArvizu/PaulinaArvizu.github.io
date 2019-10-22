@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/54a2b41b40.js"></script>
+  </head>
+  <body>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPay">
+          Agregar método de pago
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade bd-example-modal-lg" id="addPay" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-credit-card"></i> Agregar Método de Pago</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="card-num">Número de tarjeta</label>
+                                <input type="text" class="form-control" id="card-num" placeholder="xxxx-xxxx-xxxx-xxxx">
+                            </div>
+                            <div class="form-group">
+                                <label for="valid-thru-date">Fecha de vencimiento</label>
+                                <input type="date" class="form-control" id="valid-thru-date">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-name">Nombre del titular</label>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="text" id="card-first-name" class="form-control" placeholder="Nombre(s)">
+                                        </div>
+                                        <div class="col">
+                                          <input type="text" id="card-last-name" class="form-control" placeholder="Apellidos">
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="security-code">Código de seguridad</label>
+                                <input type="text" class="form-control col-2" id="security-code" placeholder="xxx">
+                            </div>
+                            <div class="form-group">
+                                <p>Dirección</p>
+                                <p>
+                                    <div class="form-row">
+                                        <div class="col-5">
+                                            <input type="text" class="form-control" placeholder="Calle">
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Num.ext.">
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Num.int.">
+                                        </div>
+                                        <div class="col-4">
+                                                <input type="text" class="form-control" placeholder="Colonia">
+                                            </div>
+                                    </div>
+                                </p>
+                                <p>
+                                    <div class="form-row">
+                                        <div class="col-7">
+                                            <input type="text" class="form-control" placeholder="Ciudad">
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Estado">
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="C. P.">
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

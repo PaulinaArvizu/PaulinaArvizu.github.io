@@ -1,0 +1,18 @@
+div.foto-perfil {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    display: flex;
+    align-items: flex-start;
+}
+img {
+    height: 250px;
+}
+.ediciones {
+    width: 50%;
+}
+button {
+    /* text-align: left; */
+    width: 50%;
+    margin: 1%;
+}

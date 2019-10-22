@@ -1,0 +1,47 @@
+[class="fixed-box"] {
+    position: fixed;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    left: 60%;
+}
+
+.fixed-box .card {
+    width: 50%;
+    color: black;
+}
+
+.fixed-box .card-header {
+    background-color: rgb(22, 157, 178);
+    color: white;
+}
+
+[class~="tus-mascotas"] {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.publicaciones .mascota {
+    font-size: 10px;
+    color: blue;
+}
+
+.publicaciones .card {
+    background-color: #d0e9ee;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.publicaciones {
+    padding-left: 5%;
+    padding-top: 1%;
+}
+td img {
+    height: 30px;
+}
+
+td.mascota {
+    vertical-align: middle;
+}
