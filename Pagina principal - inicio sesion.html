@@ -15,15 +15,24 @@
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/54a2b41b40.js"></script>
     <style>
-        h1 {
+        .Rakunians {
+            font-family: 'Cedarville Cursive', cursive;
+            color: black;
             text-align: center;
             font-size: 100px;
             vertical-align: bottom;
         }
-        [class~="Rakunians"] {
-            font-family: 'Cedarville Cursive', cursive;
-            color: black;
+        body {
+            background-image: url("Imagenes/fondo - pagina principal.jpg");
         }
+        /* .Rakunians tr {
+            box-shadow: 0px 0px 20px 20px white;
+            border-radius: 113px 113px 113px 113px;
+        }
+        .Rakunians td {
+            background-color: white;
+            border-radius: 113px 113px 113px 113px;
+        } */
     </style>
 </head>
 
@@ -33,16 +42,22 @@
             <table width="100%">
                 <tr>
                     <td align="right">
-                        <i class="far fa-question-circle" style="padding: 5px;"></i>About
+                        <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#about">
+                            <i class="far fa-question-circle" style="padding: 5px;"></i> About
+                        </button>
                     </td>
                 </tr>
             </table>
         </div>
     </nav>
 
-    <h1 class="Rakunians">
-        <img src="Imagenes/Rakunians.png" alt="Rakunians" width="100px">Rakunians
-    </h1>
+    <table class="Rakunians" align="center">
+        <tr>
+            <td>
+                <img src="Imagenes/Rakunians.png" alt="Rakunians" width="100px">Rakunians<img>
+            </td>
+        </tr>
+    </table>
 
     <table align="center">
         <tr style="vertical-align: top;">
@@ -54,15 +69,13 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Usuario/Email" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="Usuario/Email" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-unlock"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Contraseña" aria-label="Contraseña"
-                                aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
                         </div>
                         <p style="text-align: center;"><a href="#" class="btn btn-primary">Iniciar sesión</a></p>
                         <p><a href="#">Olvidé mi contraseña</a></p>
@@ -77,38 +90,36 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-at"></i></span>
                             </div>
-                            <input type="email" class="form-control" placeholder="email" aria-label="email"
-                                aria-describedby="basic-addon1">
+                            <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Nombre de Usuario"
-                                aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="Nombre de Usuario" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
+                        <small>Fecha de nacimiento</small>
                         <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i
-                                        class="far fa-calendar-alt"></i></span>
-                            </div>
-                            <input type="date" class="form-control" placeholder="Fecha de nacimiento"
-                                aria-label="Fecha de nacimiento" aria-describedby="basic-addon1">
+                            
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="far fa-calendar-alt"></i>
+                                    </span>
+                                </div>
+                            <input type="date" class="form-control" placeholder="Fecha de nacimiento" aria-label="Fecha de nacimiento" aria-describedby="basic-addon1">
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-unlock"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña"
-                                aria-describedby="basic-addon1">
+                            <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
                         </div>
 
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-unlock"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Confirmar contraseña"
-                                aria-label="Confirmar contraseña" aria-describedby="basic-addon1">
+                            <input type="password" class="form-control" placeholder="Confirmar contraseña" aria-label="Confirmar contraseña" aria-describedby="basic-addon1">
                         </div>
                         <p style="text-align: center;"><a href="#" class="btn btn-primary">Registrarse</a></p>
                     </div>
@@ -117,7 +128,36 @@
         </tr>
     </table>
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"><i class="far fa-question-circle" style="padding: 5px;"></i> Acerca de Rakunians</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fuga vitae exercitationem totam ea hic dolor ipsa nemo vel, aliquid eveniet repudiandae, dicta officiis distinctio minus recusandae officia, possimus architecto?</p>
+                    <p>Dolore id vero rem culpa consequuntur, ab ipsam fugit nisi molestias qui blanditiis! Ex harum assumenda delectus quis beatae iusto facilis, optio dolorem omnis odio, nobis ratione perspiciatis voluptatibus vero?</p>
+                    <p>Tenetur magni error possimus soluta quae quos quo repellat, provident facere asperiores sunt ratione harum nemo architecto alias? Tenetur perspiciatis adipisci mollitia quis cum sit hic cumque eius vitae? Omnis.</p>
+                    <p>Dignissimos laudantium porro assumenda. Blanditiis vel dicta voluptatem! Sit vero quod vel suscipit architecto nam sequi ex nihil cumque minus, voluptatibus sapiente rerum, maxime quaerat, natus debitis rem voluptates enim?</p>
+                    <p>Provident incidunt laboriosam consectetur illo at dolore explicabo? Magnam aspernatur quam exercitationem neque repellendus nostrum ad, in fugit quidem facilis sunt possimus aliquam, eos tenetur quia fugiat maiores suscipit deserunt!</p>
+                    <p>Culpa necessitatibus saepe rerum ipsa, quo, similique dolore debitis aspernatur dolorem molestias illo accusantium assumenda deleniti reiciendis minus nesciunt obcaecati nobis eius perspiciatis quidem quia temporibus! Officiis earum rerum odio!</p>
+                    <p>Consequatur, molestiae repellendus veritatis qui facere quibusdam omnis illo nobis culpa assumenda eum fugit pariatur autem quam neque nemo vero minima amet reiciendis ab ratione. Dolores assumenda aliquam aspernatur at?</p>
+                    <p>Consequuntur, accusantium. Possimus quia, magnam consectetur maxime quas accusantium nesciunt, sapiente earum iusto eveniet porro mollitia aliquam non harum odit! Expedita suscipit reiciendis placeat accusantium. Molestias, omnis aliquam? Ipsum, tenetur.</p>
+                    <p>Deleniti laudantium dicta suscipit iure! Distinctio impedit veniam molestiae magnam illo blanditiis ipsam cum consectetur perspiciatis? Animi accusamus rem neque iure, obcaecati facere? Dicta, deleniti sequi? Laboriosam sapiente laudantium enim.</p>
+                    <p>A consequatur delectus corporis similique, vitae distinctio beatae fuga voluptatem inventore praesentium voluptatibus impedit iusto culpa at quaerat sunt facilis voluptatum magni illo quisquam dolorem? Sapiente quo unde ipsam hic!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
