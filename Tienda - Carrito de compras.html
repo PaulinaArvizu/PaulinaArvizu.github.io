@@ -20,10 +20,14 @@
         .metodos-pago {
             display: grid;
         }
+        input:not(:checked) ~ .tarjeta{
+            display: none;
+        }
     </style>
 </head>
 
 <body>
+    b4
     <h4>Carrito de compras</h4>
     <div class="card-group">
         <div class="card">
@@ -54,37 +58,40 @@
                 <img class="card-img-top" src="holder.js/100x180/" alt="">
                 <div class="card-body">
                     <div class="form-check metodos-pago">
-                        <label class="form-check-label" for="">
-                            <input type="radio" class="form-check-input" name="Metodos" id="" value="checkedValue"
+                        <label class="form-check-label" for="Met1">
+                            <input type="radio" class="form-check-input" name="Metodos" id="Met1" value="checkedValue"
                                 checked>
                             Metodo 1
                         </label>
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="Metodos" id="" value="checkedValue"
+                        <label class="form-check-label" for="Met2">
+                            <input type="radio" class="form-check-input" name="Metodos" id="Met2" value="checkedValue"
                                 checked>
                             Metodo 2
                         </label>
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="Metodos" id="" value="checkedValue"
+                        <label class="form-check-label" for="Met3">
+
+                            <input type="radio" class="form-check-input" name="Metodos" id="Met3" value="checkedValue"
                                 checked>
                             Agregar tarjeta
                             <div class="tarjeta">
-                                <label>
-                                    Tarjeta:
-                                    <input type="text" name="Tarjeta" id="Tnum">
-                                </label>
-                                <label>
-                                    Nombre:
-                                    <input type="text" name="Tarjeta" id="Tnom">
-                                </label>
-                                <label>
-                                    Codigo de seguridad:
-                                    <input type="text" name="Tarjeta" id="Tc">
-                                </label>
-                                <label>
-                                    Fecha de vencimiento:
-                                    <input type="month" name="Tarjeta" id="Tven">
-                                </label>
+                                <table>
+                                    <tr>
+                                        <td> <label for="Tnum">Tarjeta:</label></td>
+                                        <td><input type="text" name="Tarjeta" id="Tnum"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="Tnom">Nombre:</label></td>
+                                        <td> <input type="text" name="Tarjeta" id="Tnom"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="Tc">Codigo de seguridad:</label></td>
+                                        <td><input type="text" name="Tarjeta" id="Tc"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="Tven">Fecha de vencimiento:</label></td>
+                                        <td><input type="month" name="Tarjeta" id="Tven"></td>
+                                    </tr>
+                                </table>
                             </div>
                         </label>
                     </div>
