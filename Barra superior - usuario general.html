@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <title>Barra superior - inicio de sesion</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,20 +12,15 @@
     <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/54a2b41b40.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="style - barras.css">
+</head>
 
-    <style>
-    [class~="Rakunians"] {
-        font-family: 'Cedarville Cursive', cursive;
-        font-size: 40px;
-        color: black;
-    }
-    </style>
-
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+<body>
+    <!-- <nav class="navbar navbar-expand-sm navbar-light bg-light"> -->
+    <nav class="navbar navbar-expand-sm navbar-light">
         <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <table width = "100%">
+            <table width="100%">
                 <tr>
                     <td width="20%">
                         <a class="nav-link Rakunians" href="">
@@ -34,7 +29,8 @@
                     </td>
                     <td width="15%">
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Nombre de usuario
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -48,13 +44,13 @@
                         <div id="buscar">
                             <form class="form-inline my-2 my-lg-0">
                                 <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                                <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
                             </form>
                         </div>
                     </td>
                     <td align="right">
                         <div id="tienda">
-                                <button class="btn btn-primary" type="submit"><i class="fas fa-store"></i>   Tienda</button>
+                            <button class="btn btn-primary" type="submit"><i class="fas fa-store"></i> Tienda</button>
                         </div>
                     </td>
                 </tr>
@@ -66,5 +62,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
