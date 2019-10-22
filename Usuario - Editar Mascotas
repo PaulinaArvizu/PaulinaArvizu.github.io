@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Editar Mascotas</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://kit.fontawesome.com/54a2b41b40.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+
+    <style>
+        h2 {
+            text-decoration: underline;
+        }
+
+        .card {
+            width: 10%;
+            height: 10%;
+        }
+
+        .MascotaPP {
+            width: 150px;
+            height: 150px;
+        }
+
+        .card-footer {
+            background-color: rgb(240, 240, 240);
+        }
+
+        .card-body {
+            height: 10rem;
+        }
+
+        .text-muted {
+            font-weight: bolder;
+        }
+
+        .card {
+            background-color: powderblue;
+        }
+
+        .titulo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 2em;
+        }
+
+        ul {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+
+</head>
+
+<p class="titulo">Editar Mascotas</p>
+<hr>
+
+<body>
+    <div class="card-columns">
+        <div class="card">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <img class="MascotaPP card-img-top border border-dark rounded"
+                            src="/ventanas imagenes prueba/milaneso.jpg" alt="Card image cap">
+                    </td>
+                    <td align="right">
+                        <p><button type="button" class="btn btn-primary"> <i class="fas fa-pen"></i> Editar</button></p>
+                        <p><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button></p>
+                    </td>
+                </tr>
+            </table>
+            <div class="card-body">
+                <h5 class="card-title">Milaneso</h5>
+                <p class="card-text">Milaneo es un perrito travieso que le gusta ser gordito.</p>
+            </div>
+            <div class="card-footer">
+                <small>
+                    <ul type="none">
+                        <li><b>Tipo:</b> Perro</li>
+                        <li><b>Raza:</b> Pug</li>
+                        <li><b>Edad:</b> 5 años</li>
+                    </ul>
+                </small>
+            </div>
+        </div>
+        <div class="card">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <img class="MascotaPP card-img-top border border-dark rounded"
+                            src="/ventanas imagenes prueba/Bannana.jpg" alt="Card image cap">
+                    </td>
+                    <td align="right">
+                        <p><button type="button" class="btn btn-primary"> <i class="fas fa-pen"></i> Editar</button></p>
+                        <p><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button></p>
+                    </td>
+                </tr>
+            </table>
+            <div class="card-body">
+                <h5 class="card-title">Bannana</h5>
+                <p class="card-text">Bannana es un gatito que le gusta el dia del platano. Es muy tranquilo y hace caras
+                    cuando lo regañan.</p>
+            </div>
+            <div class="card-footer">
+                <small>
+                    <ul type="none">
+                        <li><b>Tipo:</b> Gato</li>
+                        <li><b>Raza:</b> Fruta</li>
+                        <li><b>Edad:</b> 5 años</li>
+                    </ul>
+                </small>
+            </div>
+        </div>
+        <div class="card">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <img class="MascotaPP card-img-top border border-dark rounded"
+                            src="/ventanas imagenes prueba/Takin.jpg" alt="Card image cap">
+                    </td>
+                    <td align="right">
+                        <p><button type="button" class="btn btn-primary"> <i class="fas fa-pen"></i> Editar</button></p>
+                        <p><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button></p>
+                    </td>
+                </tr>
+            </table>
+            <div class="card-body">
+                <h5 class="card-title">Takin</h5>
+                <p class="card-text">Takin es un Border Collie muy feliz pero es algo torpe para su raza, aunque es muy
+                    guapo.</p>
+            </div>
+            <div class="card-footer">
+                <small>
+                    <ul type="none">
+                        <li><b>Tipo:</b> Perro</li>
+                        <li><b>Raza:</b> Border Collie</li>
+                        <li><b>Edad:</b> 2 años</li>
+                    </ul>
+                </small>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <button type="button" class="btn btn-success"><h7><i class="fas fa-plus-circle"></i> Agregar Mascota
+            </h7>
+    </button>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
