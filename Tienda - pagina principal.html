@@ -6,6 +6,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         .productos>li {
             align-items: flex;
@@ -15,30 +19,40 @@
             text-decoration: none;
             color: black;
         }
+
+        .productos>li:nth-of-type(odd) {
+            background-color: lightgray;
+        }
+        span{
+            right: 10%;
+        }
+        li span{
+            position: absolute;
+            right: 50%;
+        }
     </style>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
     <p>Aqui va barra superior tienda</p>
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Agregadas recientemente</h4>
+            <h2 class="card-title">Agregadas recientemente</h2>
         </div>
         <ul class="list-group list-group-flush productos">
-            <li class="list-group-item"><a href=""><img src="" alt="P1"> Nuevo producto 1</a></li>
-            <li class="list-group-item"><a href=""><img src="" alt="P1"> Nuevo producto 2</a></li>
+            <li class="list-group-item"><a href=""><img src="" alt="P1"> Nuevo producto 1</a>
+                <p>$$</p>
+            </li>
+            <li class="list-group-item"><a href=""><img src="" alt="P1"> Nuevo producto 2</a><p>$$</li>
         </ul>
     </div>
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Nuestros productos</h4>
+            <h2 class="card-title">Nuestros productos</h2>
         </div>
         <ul class="list-group list-group-flush productos">
-            <li class="list-group-item"><a href=""><img src="" alt="P1"> Producto 1</a></li>
-            <li class="list-group-item"><a href=""><img src="" alt="P1"> Producto 2</a></li>
+            <li class="list-group-item"><a href=""><img src="" alt="P1"> Producto 1</a><p>$$</li>
+            <li class="list-group-item"><a href=""><img src="" alt="P1"> Producto 2</a> <p>$$</li>
         </ul>
     </div>
     <!-- Optional JavaScript -->

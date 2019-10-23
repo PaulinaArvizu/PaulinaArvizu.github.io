@@ -12,44 +12,106 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
-        .tarjeta>label {
-            display: flex;
-
-        }
-
-        .metodos-pago {
-            display: grid;
-        }
-        input:not(:checked) ~ .tarjeta{
+        input:not(:checked)~.card .tarjeta {
             display: none;
         }
+
+        input:not(:checked)~.card .nDirec {
+            display: none;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+
+        .container>tr>td {
+            width: 100%;
+        }
+
+        .metodos-pago .card {
+            width: 100%;
+        }
+
+        .finalizar {
+            background-color: rgb(7, 209, 0);
+        }
+
+        .cancelar {
+            background-color: red;
+        }
+
+        .envio {
+            border-left: none;
+        }
+
+        .card-header {
+            background-color: lightcoral;
+        }
+
+        input:checked+.card {
+            background-color: rgb(179, 224, 255);
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        
     </style>
 </head>
 
 <body>
-    <p>Aqui va barra superior tienda</p>
+    <p class="navbar">Aqui va barra superior tienda</p>
     <h4>Carrito de compras</h4>
     <div class="card-group">
         <div class="card">
-            <table>
-                <tr>
-                    <td>#</td>
-                    <td><img src="" alt="producto"></td>
-                    <td>Nombre producto</td>
-                    <td>$$</td>
-                </tr>
-                <tr>
-                    <td>#</td>
-                    <td><img src="" alt="producto"></td>
-                    <td>Nombre producto</td>
-                    <td>$$</td>
-                </tr>
-            </table>
-            <p>Subtotal = $$$</p>
-            <p>Total = $$$</p>
-            <div class="" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary">Finalizar</button>
-                <button type="button" class="btn btn-secondary">Cancelar</button>
+            <div class="carrito-compras">
+                <div class="card border-warning mb-3">
+                    <div class="card-header">Pedido: #231241123</div>
+                    <div class="card-body">
+                        <table class="table-striped table-condensed" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th colspan="2">Producto</th>
+                                    <th>Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#</td>
+                                    <td><img src="" alt="producto"></td>
+                                    <td>Nombre producto</td>
+                                    <td>$$</td>
+                                </tr>
+                                <tr>
+                                    <td>#</td>
+                                    <td><img src="" alt="producto"></td>
+                                    <td>Nombre producto</td>
+                                    <td>$$</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="totales">
+                            <table>
+                                <tr class="subtotal">
+                                    <td>Subtotal:</td>
+                                    <td>$$</td>
+                                </tr>
+                                <tr class="total">
+                                    <td>Total:</td>
+                                    <td>$$</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary finalizar">Finalizar</button>
+                    <button type="button" class="btn btn-secondary cancelar">Cancelar</button>
+                </div>
             </div>
         </div>
         <div class="card pago">
@@ -58,57 +120,115 @@
                 <img class="card-img-top" src="holder.js/100x180/" alt="">
                 <div class="card-body">
                     <div class="form-check metodos-pago">
+
                         <label class="form-check-label" for="Met1">
                             <input type="radio" class="form-check-input" name="Metodos" id="Met1" value="checkedValue"
                                 checked>
-                            Metodo 1
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Metodo 1</h6>
+                                    <p class="card-text">credito</p>
+                                </div>
+                            </div>
                         </label>
+                        <br>
                         <label class="form-check-label" for="Met2">
                             <input type="radio" class="form-check-input" name="Metodos" id="Met2" value="checkedValue"
                                 checked>
-                            Metodo 2
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Metodo 2</h6>
+                                    <p class="card-text">debito</p>
+                                </div>
+                            </div>
                         </label>
+                        <br>
                         <label class="form-check-label" for="Met3">
-
                             <input type="radio" class="form-check-input" name="Metodos" id="Met3" value="checkedValue"
                                 checked>
-                            Agregar tarjeta
-                            <div class="tarjeta">
-                                <table>
-                                    <tr>
-                                        <td> <label for="Tnum">Tarjeta:</label></td>
-                                        <td><input type="text" name="Tarjeta" id="Tnum"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><label for="Tnom">Nombre:</label></td>
-                                        <td> <input type="text" name="Tarjeta" id="Tnom"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><label for="Tc">Codigo de seguridad:</label></td>
-                                        <td><input type="text" name="Tarjeta" id="Tc"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><label for="Tven">Fecha de vencimiento:</label></td>
-                                        <td><input type="month" name="Tarjeta" id="Tven"></td>
-                                    </tr>
-                                </table>
+                            <div class="card">
+                                <h6 class="card-title">Agregar tarjeta</h6>
+                                <div class="tarjeta">
+                                    <table>
+                                        <tr>
+                                            <td> <label for="Tnum">Tarjeta:</label></td>
+                                            <td><input type="text" name="Tarjeta" id="Tnum"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Tnom">Nombre:</label></td>
+                                            <td> <input type="text" name="Tarjeta" id="Tnom"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Tc">Codigo de seguridad:</label></td>
+                                            <td><input type="text" name="Tarjeta" id="Tc"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Tven">Fecha de vencimiento:</label></td>
+                                            <td><input type="month" name="Tarjeta" id="Tven"></td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                         </label>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
+    </div>
+    <div class="card-group">
+        <div class="card">
+
+        </div>
+        <div class="card envio">
+            <div class="form-check">
+                <label>
+                    <input type="radio" name="envio" id="">
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">Direccion 1</h6>
+                            <p class="card-text">Calle x de D #123</p>
+                        </div>
+                    </div>
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="envio" id="">
+                    <div class="card">
+                        <h6 class="card-title">Agregar direccion</h6>
+                        <div class="nDirec">
+                            <table>
+                                <tr>
+                                    <td> <label for="calle">Calle:</label></td>
+                                    <td><input type="text" name="nDirec" id="calle"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="numero">Numero de casa:</label></td>
+                                    <td> <input type="text" name="nDirec" id="numero"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="c">Codigo postal:</label></td>
+                                    <td><input type="text" name="´nDirec" id="cp"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

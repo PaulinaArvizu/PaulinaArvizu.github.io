@@ -6,6 +6,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <style>
         .product {
             width: 20%;
@@ -14,13 +19,21 @@
         .card-product {
             width: 10%;
         }
-        .carrito{
+
+        .carrito {
             align-items: center;
         }
+
+        .Especificaciones {
+            width: 62%;
+        }
+        .card{
+            border: none;
+        }
+        .descripcion{
+            background-color: rgb(242, 242, 242);
+        }
     </style>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -30,11 +43,17 @@
         <img class="product"
             src="https://cdn.shopify.com/s/files/1/0185/9786/products/40304-FlatOutLeash-BrookTrout-WEB_1024x1024_b7dd091b-9495-4726-8b00-601c021f3942.jpg?v=1527392068"
             alt="Card image cap">
-        <div class="card">
+        <div class="card descripcion">
             <div class="card-body">
                 <table>
-                    <tr><td class="card-text descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit accusantium sequi, quaerat aliquid fuga similique in sint maxime tempora enim quas iure voluptatem ex ipsam tempore itaque consequuntur recusandae officiis!</td></tr>
-                    <tr><td>Precio</td></tr>
+                    <tr>
+                        <td class="card-text descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                            accusantium sequi, quaerat aliquid fuga similique in sint maxime tempora enim quas iure
+                            voluptatem ex ipsam tempore itaque consequuntur recusandae officiis!</td>
+                    </tr>
+                    <tr>
+                        <td>Precio</td>
+                    </tr>
                 </table>
             </div>
         </div>
@@ -47,7 +66,9 @@
             <a href="#">agregar al carrito</a>
         </div>
     </div>
-    <p class="Especificaciones">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit unde, velit temporibus molestias labore quos culpa reprehenderit. Eligendi dolorem, dicta commodi illo corporis, tempore assumenda quibusdam numquam, itaque perspiciatis soluta.</p>
+    <p class="Especificaciones">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit unde, velit temporibus
+        molestias labore quos culpa reprehenderit. Eligendi dolorem, dicta commodi illo corporis, tempore assumenda
+        quibusdam numquam, itaque perspiciatis soluta.</p>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
