@@ -1,0 +1,28 @@
+th {
+    width: 5%;
+}
+td:first-of-type {
+    width: 15%;
+}
+td:last-of-type {
+    width: 25%;
+}
+img {
+    width: 200px;
+}
+.table:nth-of-type(odd) {
+    background-color: rgb(242, 242, 242);
+}
+th p {
+    text-align: center;
+    padding: 0;
+}
+.usuario {
+    margin: 0px;
+}
+table-condensed tr {
+    height: 10px;
+}
+table td p{
+    vertical-align: middle; 
+}
