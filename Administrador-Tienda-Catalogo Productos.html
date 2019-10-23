@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Administrador - Tienda - Catalogo de productos</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://kit.fontawesome.com/54a2b41b40.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+
+    <style>
+        h2 {
+            text-decoration: underline;
+        }
+
+        .card {
+            width: 100%;
+            height: 10%;
+        }
+
+        .card-header {
+            background-color: rgb(22, 157, 178);
+            color: white;
+        }
+
+
+        .card-footer {
+            background-color: rgb(240, 240, 240);
+        }
+
+        .card-body {
+            height: 40%;
+        }
+
+        .text-muted {
+            font-weight: bolder;
+        }
+
+
+        .titulo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 2em;
+        }
+
+        .ProductP {
+            width: 110px;
+            height: 150px;
+        }
+    </style>
+
+</head>
+<p> Aqui va la barra de navegacion.</p>
+<p class="titulo">Catalogo de Productos
+    <small>(Vista Administrador)</small>
+</p>
+<hr>
+
+<body>
+    <table>
+        <tr>
+            <td width="20%">
+                <nav class="nav">
+                    <form action="">
+                        <div align="center">
+                            <button class="btn btn-success" type="button"><i
+                                class="fas fa-plus"></i> Añadir</button>
+                        </div>
+                        
+                        <hr>
+                        <ul type="none">
+
+                            <h4>Categoria: </h4>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat1">
+                                <label for="cat1">Alimento </label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat2">
+                                <label for="cat2">Premios </label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat3">
+                                <label for="cat3">Juguetes </label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat4">
+                                <label for="cat4">Herramientas de entrenamiento</label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat5">
+                                <label for="cat5">Accesorios </label>
+                            </li>
+                        </ul>
+                        <hr>
+                        <ul type="none">
+
+                            <h4>Tipo: </h4>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Tipo1">
+                                <label for="Tipo1">Perros </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Tipo2">
+                                <label for="Tipo2">Gatos </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Tipo3">
+                                <label for="Tipo3">Otros Domesticos </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Tipo4">
+                                <label for="Tipo4">Exoticos</label>
+                            </li>
+                        </ul>
+
+                        <hr>
+                        <ul type="none">
+
+                            <h4> Tamaño: </h4>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Size1">
+                                <label for="Size1">Extra Chico </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Size2">
+                                <label for="Size2">Chico </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Size3">
+                                <label for="Size3">Mediano </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Size4">
+                                <label for="Size4">Grande</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Size5">
+                                <label for="Size5">Extra Grande </label>
+                            </li>
+                        </ul>
+                        <hr>
+                        <ul type="none">
+
+                            <h4>Precio: </h4>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Precio1">
+                                <label for="Precio1">
+                                    <500 </label> </li> <li>
+
+                                        <input type="checkbox" name="checkbox1" id="Precio2">
+                                        <label for="Precio2">500 - 1000 </label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="Precio3">
+                                <label for="Precio3">1000 - 1500 </label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="Precio4">
+                                <label for="Precio4"> 1500- 2000</label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat1">
+                                <label for="cat1"> > 2000 </label>
+                            </li>
+                        </ul>
+                </nav>
+                </form>
+            </td>
+            <td width="65%">
+                <div class="card-columns">
+                    <div class="card border-info mb-3">
+                        <div class="card-header">
+                            <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                        </div>
+                        <div class="card-body">
+                            <p align="center">
+                                <img src="/ventanas imagenes prueba/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                            </p>
+                            <hr>
+                            <p class="card-text">
+                                <ul type="none">
+                                    <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                    <li><b>Costo: </b>$599.99</li>
+                                    <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                        Con prebióticos exclusivos: CitriStim
+                                        Único en su segmento con pulpa de remolacha
+                                        Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+
+                                    </li>
+                                </ul>
+                            </p>
+                            <table align="center">
+                                <tr>
+                                <td>
+                                    <form>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <button class="btn btn-danger col" type="button"><i
+                                                        class="fas fa-trash-alt"></i> Eliminar</button>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-success" type="button"><i
+                                                        class="fas fa-pen"></i> Editar</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card border-info mb-3">
+                            <div class="card-header">
+                                <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                            </div>
+                            <div class="card-body">
+                                <p align="center">
+                                    <img src="/ventanas imagenes prueba/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                                </p>
+                                <hr>
+                                <p class="card-text">
+                                    <ul type="none">
+                                        <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                        <li><b>Costo: </b>$599.99</li>
+                                        <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                            Con prebióticos exclusivos: CitriStim
+                                            Único en su segmento con pulpa de remolacha
+                                            Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+    
+                                        </li>
+                                    </ul>
+                                </p>
+                                <table align="center">
+                                    <tr>
+                                    <td>
+                                        <form>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-danger col" type="button"><i
+                                                            class="fas fa-trash-alt"></i> Eliminar</button>
+                                                </div>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-success" type="button"><i
+                                                            class="fas fa-pen"></i> Editar</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card border-info mb-3">
+                                <div class="card-header">
+                                    <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p align="center">
+                                        <img src="/ventanas imagenes prueba/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                                    </p>
+                                    <hr>
+                                    <p class="card-text">
+                                        <ul type="none">
+                                            <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                            <li><b>Costo: </b>$599.99</li>
+                                            <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                                Con prebióticos exclusivos: CitriStim
+                                                Único en su segmento con pulpa de remolacha
+                                                Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+        
+                                            </li>
+                                        </ul>
+                                    </p>
+                                    <table align="center">
+                                        <tr>
+                                        <td>
+                                            <form>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <button class="btn btn-danger col" type="button"><i
+                                                                class="fas fa-trash-alt"></i> Eliminar</button>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-success" type="button"><i
+                                                                class="fas fa-pen"></i> Editar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card border-info mb-3">
+                                    <div class="card-header">
+                                        <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p align="center">
+                                            <img src="/ventanas imagenes prueba/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                                        </p>
+                                        <hr>
+                                        <p class="card-text">
+                                            <ul type="none">
+                                                <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                                <li><b>Costo: </b>$599.99</li>
+                                                <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                                    Con prebióticos exclusivos: CitriStim
+                                                    Único en su segmento con pulpa de remolacha
+                                                    Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+            
+                                                </li>
+                                            </ul>
+                                        </p>
+                                        <table align="center">
+                                            <tr>
+                                            <td>
+                                                <form>
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-danger col" type="button"><i
+                                                                    class="fas fa-trash-alt"></i> Eliminar</button>
+                                                        </div>
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-success" type="button"><i
+                                                                    class="fas fa-pen"></i> Editar</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
