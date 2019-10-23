@@ -25,10 +25,11 @@
             height: 10%;
         }
 
-        .MascotaPP {
-            width: 150px;
-            height: 150px;
+        .card-header {
+            background-color: rgb(22, 157, 178);
+            color: white;
         }
+
 
         .card-footer {
             background-color: rgb(240, 240, 240);
@@ -42,9 +43,6 @@
             font-weight: bolder;
         }
 
-        .card {
-            background-color: powderblue;
-        }
 
         .titulo {
             font-family: 'Montserrat', sans-serif;
@@ -52,9 +50,9 @@
             font-size: 2em;
         }
 
-        .Logo {
-            width: 35px;
-            height: 20px;
+        .ProductP {
+            width: 110px;
+            height: 150px;
         }
     </style>
 
@@ -62,290 +60,303 @@
 <p> Aqui va la barra de navegacion.</p>
 <p class="titulo">Resultados de Busqueda</p>
 <hr>
-<body>
-        <table>
-            <tr>
-                <td width="20%">
-                        <nav class="nav">
-                                <form action="">
-                        
-                                    <hr>
-                                    <ul type="none">
-                        
-                                        <h4>Categoria: </h4>
-                                        <li>
-                        
-                                            <input type="checkbox" name="checkbox1" id="cat1">
-                                            <label for="cat1">Alimento </label>
-                                        </li>
-                                        <li>
-                        
-                                            <input type="checkbox" name="checkbox1" id="cat2">
-                                            <label for="cat2">Premios </label>
-                                        </li>
-                                        <li>
-                        
-                                            <input type="checkbox" name="checkbox1" id="cat3">
-                                            <label for="cat3">Juguetes </label>
-                                        </li>
-                                        <li>
-                        
-                                            <input type="checkbox" name="checkbox1" id="cat4">
-                                            <label for="cat4">Herramientas de entrenamiento</label>
-                                        </li>
-                                        <li>
-                        
-                                            <input type="checkbox" name="checkbox1" id="cat5">
-                                            <label for="cat5">Accesorios </label>
-                                        </li>
-                                    </ul>
-                                    <hr>
-                                    <ul type="none">
-                        
-                                        <h4>Tipo: </h4>
-                                        <li>
-                                            <input type="checkbox" name="checkbox1" id="Tipo1">
-                                            <label for="Tipo1">Perros </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="checkbox1" id="Tipo2">
-                                            <label for="Tipo2">Gatos </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="checkbox1" id="Tipo3">
-                                            <label for="Tipo3">Otros Domesticos </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="checkbox1" id="Tipo4">
-                                            <label for="Tipo4">Exoticos</label>
-                                        </li>
-                                    </ul>
-                        
-                                    <hr>
-                                    <ul type="none">
-                        
-                                        <h4> Tamaño: </h4>
-                                        <li>
-                                            <input type="checkbox" name="checkbox1" id="Size1">
-                                            <label for="Size1">Extra Chico </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="checkbox1" id="Size2">
-                                            <label for="Size2">Chico </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="checkbox1" id="Size3">
-                                            <label for="Size3">Mediano </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="checkbox1" id="Size4">
-                                            <label for="Size4">Grande</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="checkbox1" id="Size5">
-                                            <label for="Size5">Extra Grande </label>
-                                        </li>
-                                    </ul>
-                                    <hr>
-                                    <ul type="none">
-                        
-                                        <h4>Precio: </h4>
-                                        <li>
-                                            <input type="checkbox" name="checkbox1" id="Precio1">
-                                            <label for="Precio1"> <500 </label>
-                                        </li>
-                                        <li>
-                        
-                                            <input type="checkbox" name="checkbox1" id="Precio2">
-                                            <label for="Precio2">500 - 1000 </label>
-                                        </li>
-                                        <li>
-                        
-                                            <input type="checkbox" name="checkbox1" id="Precio3">
-                                            <label for="Precio3">1000 - 1500 </label>
-                                        </li>
-                                        <li>
-                        
-                                            <input type="checkbox" name="checkbox1" id="Precio4">
-                                            <label for="Precio4"> 1500- 2000</label>
-                                        </li>
-                                        <li>
-                        
-                                            <input type="checkbox" name="checkbox1" id="cat1">
-                                            <label for="cat1"> > 2000 </label>
-                                        </li>
-                                    </ul>
-                            </nav>
-                    </form>
-                </td>
-                <td width="65%">
-                    <div class="card-columns">
-            <div class="card text-white bg-info">
-                <div class="card-body">
-                    <h5 class="card-title"> MasterCard <b>x-6789</b>
-                        <img src="/ventanas imagenes prueba/MasterCard_Logo.png" class="Logo" alt="LogoCC"></h5>
-                    <hr>
-                    <p class="card-text">
-                        <ul type="none">
-                            <li><b>Tarjeta: </b>x-6789</li>
-                            <li><b>Tipo: </b>Debito</li>
-                            <li><b>Fecha de Vencimiento: </b>21/10/2022</li>
-                            <li><b>Direccion: </b>
-                                <table>
-                                    <tr>
-                                        <td>Calzada Principal 420</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Colonia Fresona</td>
-                                    </tr>
-                                    <tr>
-                                        <td>42022, Guadalajara JAL</td>
-                                    </tr>
-                                </table>
-                            </li>
-                        </ul>
-                    </p>
-                    <table align="center">
-                        <tr>
-                            <td>
-                            </td>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
-                                            Eliminar</button></td>
-                                        <td>barra con #</td>
-                                        <td><button type="button" class="btn btn-success"><i class="fas fa-trash-alt"></i>
-                                            Eliminar</button></td>
-                                    </tr>
-                                </table>
-                            <td>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-    
-            <div class="card text-white bg-info">
-                <div class="card-body">
-                    <h5 class="card-title"> Visa <b>x-1234</b>
-                        <img src="/ventanas imagenes prueba/Visa_Logo.png" class="Logo" alt="LogoCC"></h5>
-                    <hr>
-                    <p class="card-text">
-                        <ul type="none">
-                            <li><b>Tarjeta: </b>x-1234</li>
-                            <li><b>Tipo: </b>Credito</li>
-                            <li><b>Fecha de Vencimiento: </b>25/11/2024</li>
-                            <li><b>Direccion: </b>
-                                <table>
-                                    <tr>
-                                        <td>Calzada Secundaria 420</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Colonia Masomenos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>42202, Tlajomulco JAL</td>
-                                    </tr>
-                                </table>
-                            </li>
-                        </ul>
-                    </p>
-                    <table align="center">
-                        <tr>
-                            <td>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
-                                    Eliminar</button>
-                            <td>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-    
-            <div class="card text-white bg-info">
-                <div class="card-body">
-                    <h5 class="card-title"> American Express <b>x-3456</b>
-                        <img src="/ventanas imagenes prueba/AmericanExpress_Loco.png" class="Logo" alt="LogoCC"></h5>
-                    <hr>
-                    <p class="card-text">
-                        <ul type="none">
-                            <li><b>Tarjeta: </b>x-3456</li>
-                            <li><b>Tipo: </b>Debito</li>
-                            <li><b>Fecha de Vencimiento: </b>27/05/2020</li>
-                            <li><b>Direccion: </b>
-                                <table>
-                                    <tr>
-                                        <td>Calle Evasion 404</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Colonia de Impuestos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>33050, Gotham City NJ</td>
-                                    </tr>
-                                </table>
-                            </li>
-                        </ul>
-                    </p>
-                    <table align="center">
-                        <tr>
-                            <td>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
-                                    Eliminar</button>
-                            <td>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
 
-            <div class="card text-white bg-info">
-                    <div class="card-body">
-                        <h5 class="card-title"> MasterCard <b>x-6789</b>
-                            <img src="/ventanas imagenes prueba/MasterCard_Logo.png" class="Logo" alt="LogoCC"></h5>
+<body>
+    <table>
+        <tr>
+            <td width="20%">
+                <nav class="nav">
+                    <form action="">
+
                         <hr>
-                        <p class="card-text">
-                            <ul type="none">
-                                <li><b>Tarjeta: </b>x-6789</li>
-                                <li><b>Tipo: </b>Debito</li>
-                                <li><b>Fecha de Vencimiento: </b>21/10/2022</li>
-                                <li><b>Direccion: </b>
-                                    <table>
+                        <ul type="none">
+
+                            <h4>Categoria: </h4>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat1">
+                                <label for="cat1">Alimento </label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat2">
+                                <label for="cat2">Premios </label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat3">
+                                <label for="cat3">Juguetes </label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat4">
+                                <label for="cat4">Herramientas de entrenamiento</label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat5">
+                                <label for="cat5">Accesorios </label>
+                            </li>
+                        </ul>
+                        <hr>
+                        <ul type="none">
+
+                            <h4>Tipo: </h4>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Tipo1">
+                                <label for="Tipo1">Perros </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Tipo2">
+                                <label for="Tipo2">Gatos </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Tipo3">
+                                <label for="Tipo3">Otros Domesticos </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Tipo4">
+                                <label for="Tipo4">Exoticos</label>
+                            </li>
+                        </ul>
+
+                        <hr>
+                        <ul type="none">
+
+                            <h4> Tamaño: </h4>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Size1">
+                                <label for="Size1">Extra Chico </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Size2">
+                                <label for="Size2">Chico </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Size3">
+                                <label for="Size3">Mediano </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Size4">
+                                <label for="Size4">Grande</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Size5">
+                                <label for="Size5">Extra Grande </label>
+                            </li>
+                        </ul>
+                        <hr>
+                        <ul type="none">
+
+                            <h4>Precio: </h4>
+                            <li>
+                                <input type="checkbox" name="checkbox1" id="Precio1">
+                                <label for="Precio1">
+                                    <500 </label> </li> <li>
+
+                                        <input type="checkbox" name="checkbox1" id="Precio2">
+                                        <label for="Precio2">500 - 1000 </label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="Precio3">
+                                <label for="Precio3">1000 - 1500 </label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="Precio4">
+                                <label for="Precio4"> 1500- 2000</label>
+                            </li>
+                            <li>
+
+                                <input type="checkbox" name="checkbox1" id="cat1">
+                                <label for="cat1"> > 2000 </label>
+                            </li>
+                        </ul>
+                </nav>
+                </form>
+            </td>
+            <td width="65%">
+                <div class="card-columns">
+                    <div class="card border-info mb-3">
+                        <div class="card-header">
+                            <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                        </div>
+                        <div class="card-body">
+                            <p align="center">
+                                <img src="/ventanas imagenes prueba/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                            </p>
+                            <hr>
+                            <p class="card-text">
+                                <ul type="none">
+                                    <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                    <li><b>Costo: </b>$599.99</li>
+                                    <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                        Con prebióticos exclusivos: CitriStim
+                                        Único en su segmento con pulpa de remolacha
+                                        Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+
+                                    </li>
+                                </ul>
+                            </p>
+                            <table align="center">
+                                <tr>
+                                <td>
+                                    <form>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <button class="btn btn-danger col" type="button"><i
+                                                        class="fas fa-minus"></i></button>
+                                            </div>
+                                            <div>
+                                                <input type="text" style="width: 50px; height: 50px;">
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-success" type="button"><i
+                                                        class="fas fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card border-info mb-3">
+                            <div class="card-header">
+                                <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                            </div>
+                            <div class="card-body">
+                                <p align="center">
+                                    <img src="/ventanas imagenes prueba/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                                </p>
+                                <hr>
+                                <p class="card-text">
+                                    <ul type="none">
+                                        <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                        <li><b>Costo: </b>$599.99</li>
+                                        <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                            Con prebióticos exclusivos: CitriStim
+                                            Único en su segmento con pulpa de remolacha
+                                            Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+    
+                                        </li>
+                                    </ul>
+                                </p>
+                                <table align="center">
+                                    <tr>
+                                    <td>
+                                        <form>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-danger col" type="button"><i
+                                                            class="fas fa-minus"></i></button>
+                                                </div>
+                                                <div>
+                                                    <input type="text" style="width: 50px; height: 50px;">
+                                                </div>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-success" type="button"><i
+                                                            class="fas fa-plus"></i></button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card border-info mb-3">
+                                <div class="card-header">
+                                    <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p align="center">
+                                        <img src="/ventanas imagenes prueba/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                                    </p>
+                                    <hr>
+                                    <p class="card-text">
+                                        <ul type="none">
+                                            <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                            <li><b>Costo: </b>$599.99</li>
+                                            <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                                Con prebióticos exclusivos: CitriStim
+                                                Único en su segmento con pulpa de remolacha
+                                                Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+        
+                                            </li>
+                                        </ul>
+                                    </p>
+                                    <table align="center">
                                         <tr>
-                                            <td>Calzada Principal 420</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Colonia Fresona</td>
-                                        </tr>
-                                        <tr>
-                                            <td>42022, Guadalajara JAL</td>
+                                        <td>
+                                            <form>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <button class="btn btn-danger col" type="button"><i
+                                                                class="fas fa-minus"></i></button>
+                                                    </div>
+                                                    <div>
+                                                        <input type="text" style="width: 50px; height: 50px;">
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-success" type="button"><i
+                                                                class="fas fa-plus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </td>
                                         </tr>
                                     </table>
-                                </li>
-                            </ul>
-                        </p>
-                        <table align="center">
-                            <tr>
-                                <td>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
-                                        Eliminar</button>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-        </div>
-                </td>
-            </tr>
-        </table>
+                                </div>
+                            </div>
+                            <div class="card border-info mb-3">
+                                    <div class="card-header">
+                                        <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p align="center">
+                                            <img src="/ventanas imagenes prueba/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                                        </p>
+                                        <hr>
+                                        <p class="card-text">
+                                            <ul type="none">
+                                                <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                                <li><b>Costo: </b>$599.99</li>
+                                                <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                                    Con prebióticos exclusivos: CitriStim
+                                                    Único en su segmento con pulpa de remolacha
+                                                    Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+            
+                                                </li>
+                                            </ul>
+                                        </p>
+                                        <table align="center">
+                                            <tr>
+                                            <td>
+                                                <form>
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-danger col" type="button"><i
+                                                                    class="fas fa-minus"></i></button>
+                                                        </div>
+                                                        <div>
+                                                            <input type="text" style="width: 50px; height: 50px;">
+                                                        </div>
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-success" type="button"><i
+                                                                    class="fas fa-plus"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+            </td>
+        </tr>
+    </table>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

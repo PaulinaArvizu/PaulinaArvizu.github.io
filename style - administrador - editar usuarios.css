@@ -1,0 +1,21 @@
+th {
+    width: 15%;
+}
+td:first-of-type {
+    width: 20%;
+}
+td:last-of-type {
+    width: 25%;
+}
+img {
+    width: 200px;
+}
+.table:nth-of-type(odd) {
+    background-color: rgb(242, 242, 242);
+}
+img + p {
+    text-align: center;
+}
+.usuario {
+    margin: 0px;
+}
