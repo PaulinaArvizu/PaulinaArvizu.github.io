@@ -1,0 +1,64 @@
+{
+    "mascotas": [
+        {"id": "1",
+        "idU":"1",
+        "nombre": "figaro",
+        "fecha": "2000-05-01",
+        "tipo": "perro",
+        "raza": "ninguna",
+        "size": "chico",
+        "descripcion": "holis",
+        "img": ""}
+    ],
+    "metodosPago": [
+        {
+            "id":"1",
+            "idU":"1",
+            "tarjeta":"123456789",
+            "fecha":"2000-05-01",
+            "nombre":"abc",
+            "apellido": "def",
+            "codigo": "123",
+            "direccion": ["calle", "num ext", "num int", "colonia", "ciudad", "estado", "c.p."]
+        }
+    ],
+    "usuarios": [
+        {
+            "id": "1",
+            "correo": "abc@abc.abc",
+            "nombre": "abc",
+            "fecha": "2000-05-01",
+            "password": "12345",
+            "reportado": "false"
+        }
+    ],
+    "publicaciones": [
+        {
+            "id": "1",
+            "idU": "1",
+            "descripcion": "aqui esta una foto",
+            "img": "",
+            "mascotas": ["1"],
+            "reportado": "true"
+        }
+    ],
+    "productos": [
+        {
+            "id": "1",
+            "nombre": "prod",
+            "precio": "123",
+            "detalles": "producto",
+            "fecha": "2000-05-01",
+            "img": ""
+        }
+    ],
+    "pedidos": [
+        {
+            "id":"1",
+            "idU":"1",
+            "productos":["1"],
+            "subtotal":"10",
+            "total": "11"
+        }
+    ]
+}
