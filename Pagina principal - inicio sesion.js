@@ -12,7 +12,9 @@ let Usuario = {
     password: "",
     reportado: false,
     seguidores: [],
-    siguiendo: []
+    siguiendo: [],
+    admin: false,
+    moderador: false
 }
 
 iniciar.onclick = () => {
@@ -27,10 +29,6 @@ iniciar.onclick = () => {
                 if(user.password == pw) {window.location.href = 'Usuario - feed.html';}
             }
             else {
-                // user = JSON.parse(xhr.response)[0];
-                // console.log(user);
-                // console.log(user.password);
-                // console.log(typeof(user));
                 alert('error');
             }
         })
@@ -84,6 +82,8 @@ function addUser(xhr) {
     Usuario.fecha = registerForm.querySelector('[type="date"]').value;
     Usuario.password = pw[0].value;
     Usuario.reportado = false;
+    Usuario.admin = false;
+    Usuario.moderador = false;
     // console.log(Usuario);
         
     makeHTTPRequest(`/usuarios`,'POST', {'Content-Type': 'application/json'}, Usuario,
