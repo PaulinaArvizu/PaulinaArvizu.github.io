@@ -41,7 +41,9 @@
       "password": "12345",
       "reportado": false,
       "seguidores": [],
-      "siguiendo": []
+      "siguiendo": [2,3],
+      "admin": false,
+      "moderador": false
     },
     {
       "id": 2,
@@ -50,8 +52,10 @@
       "fecha": "2000-05-01",
       "password": "12345",
       "reportado": false,
-      "seguidores": [],
-      "siguiendo": []
+      "seguidores": [1],
+      "siguiendo": [],
+      "admin": false,
+      "moderador": false
     },
     {
       "id": 3,
@@ -60,20 +64,39 @@
       "fecha": "2019-11-02",
       "password": "a",
       "reportado": false,
-      "seguidores": [],
-      "siguiendo": []
+      "seguidores": [1],
+      "siguiendo": [],
+      "admin": false,
+      "moderador": false
     }
   ],
   "publicaciones": [
     {
       "id": 1,
       "idU": 1,
-      "descripcion": "aqui esta una foto",
+      "descripcion": "aqui esta una foto1",
       "img": "",
-      "mascotas": [
-        "1"
-      ],
-      "reportado": true
+      "mascotas": [1],
+      "reportado": true,
+      "fecha":"2000-05-01"
+    },
+    {
+      "id": 1,
+      "idU": 2,
+      "descripcion": "aqui esta una foto2",
+      "img": "",
+      "mascotas": [],
+      "reportado": true,
+      "fecha":"2000-05-01"
+    },
+    {
+      "id": 1,
+      "idU": 3,
+      "descripcion": "aqui esta una foto3",
+      "img": "",
+      "mascotas": [],
+      "reportado": true,
+      "fecha":"2019-11-02"
     }
   ],
   "productos": [
@@ -95,8 +118,10 @@
       "productos": [
         "1"
       ],
+      "cantidad":[1],
       "subtotal": 10.1,
-      "total": 11.15
+      "total": 11.15,
+      "status":1
     }
   ]
 }
