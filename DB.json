@@ -1,119 +1,122 @@
 {
-    "mascotas": [{
-        "id": 1,
-        "idU": 1,
-        "nombre": "figaro",
-        "fecha": "2000-05-01",
-        "tipo": "perro",
-        "raza": "ninguna",
-        "size": "chico",
-        "descripcion": "holis",
-        "img": ""
-    }],
-    "metodosPago": [{
-        "id": 1,
-        "idU": 1,
-        "tarjeta": 123456789,
-        "fecha": "2000-05-01",
-        "nombre": "abc",
-        "apellido": "def",
-        "codigo": 123,
-        "direccion": [
-            "calle",
-            "num ext",
-            "num int",
-            "colonia",
-            "ciudad",
-            "estado",
-            "c.p."
-        ]
-    }],
-    "usuarios": [{
-            "id": 1,
-            "correo": "abc@abc.abc",
-            "nombre": "abc",
-            "fecha": "2000-05-01",
-            "password": "12345",
-            "reportado": false,
-            "seguidores": [],
-            "siguiendo": [2, 3],
-            "admin": false,
-            "moderador": false
-        },
-        {
-            "id": 2,
-            "correo": "def@abc.abc",
-            "nombre": "123",
-            "fecha": "2000-05-01",
-            "password": "12345",
-            "reportado": false,
-            "seguidores": [1],
-            "siguiendo": [],
-            "admin": false,
-            "moderador": false
-        },
-        {
-            "id": 3,
-            "correo": "a@a.a",
-            "nombre": "a",
-            "fecha": "2019-11-02",
-            "password": "a",
-            "reportado": false,
-            "seguidores": [1],
-            "siguiendo": [],
-            "admin": false,
-            "moderador": false
-        }
-    ],
-    "publicaciones": [{
-            "id": 1,
-            "idU": 1,
-            "descripcion": "aqui esta una foto1",
-            "img": "",
-            "mascotas": [1],
-            "reportado": true,
-            "fecha": "2000-05-01"
-        },
-        {
-            "id": 1,
-            "idU": 2,
-            "descripcion": "aqui esta una foto2",
-            "img": "",
-            "mascotas": [],
-            "reportado": true,
-            "fecha": "2000-05-01"
-        },
-        {
-            "id": 1,
-            "idU": 3,
-            "descripcion": "aqui esta una foto3",
-            "img": "",
-            "mascotas": [],
-            "reportado": true,
-            "fecha": "2019-11-02"
-        }
-    ],
-    "productos": [{
-        "id": 1,
-        "nombre": "prod",
-        "precio": 123.5,
-        "marca": "peludo",
-        "size": "dimensiones",
-        "detalles": "producto",
-        "fecha": "2000-05-01",
-        "img": ""
-    }],
-    "pedidos": [{
-        "id": 1,
-        "idU": 1,
-        "productos": [{
-                "idP":"1",
-                "cantidad":"2"
-            }
+  "mascotas": [{
+      "id": 1,
+      "idU": 1,
+      "nombre": "figaro",
+      "fecha": "2000-05-01",
+      "tipo": "perro",
+      "raza": "ninguna",
+      "size": "chico",
+      "descripcion": "holis",
+      "img": ""
+  }],
+  "metodosPago": [{
+      "id": 1,
+      "idU": 1,
+      "tarjeta": 123456789,
+      "fecha": "2000-05-01",
+      "nombre": "abc",
+      "apellido": "def",
+      "codigo": 123,
+      "direccion": [
+          "calle",
+          "num ext",
+          "num int",
+          "colonia",
+          "ciudad",
+          "estado",
+          "c.p."
+      ]
+  }],
+  "usuarios": [{
+          "id": 1,
+          "correo": "abc@abc.abc",
+          "nombre": "abc",
+          "fecha": "2000-05-01",
+          "password": "12345",
+          "reportado": false,
+          "seguidores": [],
+          "siguiendo": [2, 3],
+          "admin": false,
+          "moderador": false
+      },
+      {
+          "id": 2,
+          "correo": "def@abc.abc",
+          "nombre": "123",
+          "fecha": "2000-05-01",
+          "password": "12345",
+          "reportado": false,
+          "seguidores": [1],
+          "siguiendo": [],
+          "admin": false,
+          "moderador": false
+      },
+      {
+          "id": 3,
+          "correo": "a@a.a",
+          "nombre": "a",
+          "fecha": "2019-11-02",
+          "password": "a",
+          "reportado": false,
+          "seguidores": [1],
+          "siguiendo": [],
+          "admin": false,
+          "moderador": false
+      }
+  ],
+  "publicaciones": [{
+          "id": 1,
+          "idU": 1,
+          "descripcion": "aqui esta una foto1",
+          "img": "",
+          "mascotas": [1],
+          "reportado": true,
+          "fecha": "2000-05-01",
+          "likes": 0
+      },
+      {
+          "id": 1,
+          "idU": 2,
+          "descripcion": "aqui esta una foto2",
+          "img": "",
+          "mascotas": [],
+          "reportado": true,
+          "fecha": "2000-05-01",
+          "likes": 0
+      },
+      {
+          "id": 1,
+          "idU": 3,
+          "descripcion": "aqui esta una foto3",
+          "img": "",
+          "mascotas": [],
+          "reportado": true,
+          "fecha": "2019-11-02",
+          "likes": 0
+      }
+  ],
+  "productos": [{
+      "id": 1,
+      "nombre": "prod",
+      "precio": 123.5,
+      "marca": "peludo",
+      "size": "dimensiones",
+      "detalles": "producto",
+      "fecha": "2000-05-01",
+      "img": ""
+  }],
+  "pedidos": [{
+      "id": 1,
+      "idU": 1,
+      "productos": [{
+              "idP":"1",
+              "cantidad":"2"
+          }
 
-        ],
-        "subtotal": 10.1,
-        "total": 11.15,
-        "status": 1
-    }]
+      ],
+      "subtotal": 10.1,
+      "total": 11.15,
+      "status": 1
+  }]
 }
