@@ -1,8 +1,8 @@
 {
   "mascotas": [
     {
-      "id": 1,
-      "idU": 1,
+      "id": 0,
+      "idU": 0,
       "nombre": "figaro",
       "fecha": "2000-05-01",
       "tipo": "perro",
@@ -10,14 +10,47 @@
       "size": "chico",
       "descripcion": "holis",
       "img": ""
+    },
+    {
+      "id": 1,
+      "idU": 0,
+      "nombre": "Milaneso",
+      "fecha": "2000-05-01",
+      "tipo": "Perro",
+      "raza": "Pug",
+      "size": "chico",
+      "descripcion": "Milaneso es un perrito travieso que le gusta ser gordito.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShRAuRvuZpvh_WTnxtQ27ZxbIhmnDxXD-N1gVuQPWxpfHL05mh"
+    },
+    {
+      "id": 2,
+      "idU": 0,
+      "nombre": "Bannana",
+      "fecha": "2000-05-01",
+      "tipo": "Gato",
+      "raza": "Fruta",
+      "size": "chico",
+      "descripcion": "Bannana es un gatito que le gusta el dia del platano. Es muy tranquilo y hace caras cuando lo regañan.",
+      "img": "https://pbs.twimg.com/media/EEvcxx2W4AA_YOQ.jpg"
+    },
+    {
+      "id": 3,
+      "idU": 0,
+      "nombre": "Takin",
+      "fecha": "2000-05-01",
+      "tipo": "Perro",
+      "raza": "Border Collie",
+      "size": "chico",
+      "descripcion": "Takin es un Border Collie muy feliz pero es algo torpe para su raza, aunque es muy guapo.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkWG-Qq5J6SA5N31d9YPjrH4-SKkkdIPHpc4hIWrXy43DBAQK0"
     }
   ],
   "metodosPago": [
     {
       "id": 1,
       "idU": 1,
-      "tarjeta": 1111222233334444,
-      "fecha": "2000-05",
+      "tarjeta": 123456789,
+      "fecha": "2000-05-01",
       "nombre": "abc",
       "apellido": "def",
       "codigo": 123,
@@ -34,7 +67,7 @@
   ],
   "usuarios": [
     {
-      "id": 1,
+      "id": 0,
       "correo": "abc@abc.abc",
       "nombre": "abc",
       "fecha": "2000-05-01",
@@ -42,39 +75,82 @@
       "reportado": false,
       "seguidores": [],
       "siguiendo": [
+        1,
         2,
         3
       ],
       "admin": false,
-      "moderador": false
+      "moderador": false,
+      "img": "https://www.tialoto.bg/media/files/resized/article/615x/zip/zip-814d2ef213786c340967119ea9f88f8f.jpg"
+    },
+    {
+      "id": 1,
+      "correo": "123@abc.abc",
+      "nombre": "Animalover",
+      "fecha": "2000-05-01",
+      "password": "12345",
+      "reportado": false,
+      "seguidores": [0],
+      "siguiendo": [],
+      "admin": false,
+      "moderador": false,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTaVPIqZpe3hfUuJHSAKcqoCUESptSDmrJruLINyJrvfW7HQlJG"
     },
     {
       "id": 2,
       "correo": "def@abc.abc",
-      "nombre": "123",
+      "nombre": "CatPerson",
       "fecha": "2000-05-01",
       "password": "12345",
       "reportado": false,
       "seguidores": [
-        1
+        0
       ],
       "siguiendo": [],
       "admin": false,
-      "moderador": false
+      "moderador": false,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXFBMG8O7jozgWhuuZXUSII1KLu6lNWIKFVa6G8iMDR5Jbz2M3"
     },
     {
       "id": 3,
       "correo": "a@a.a",
-      "nombre": "a",
+      "nombre": "RakelRakun",
       "fecha": "2019-11-02",
       "password": "a",
       "reportado": false,
       "seguidores": [
-        1
+        0
       ],
       "siguiendo": [],
       "admin": false,
-      "moderador": false
+      "moderador": false,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQucjlelUkMjCrYN6DT9hf64CSJ8B3H2KEfWl9TEiSBtruDiRAV"
+    },
+    {
+      "id": 4,
+      "correo": "b@a.a",
+      "nombre": "NoobMaster69",
+      "fecha": "2019-11-02",
+      "password": "a",
+      "reportado": false,
+      "seguidores": [],
+      "siguiendo": [0],
+      "admin": false,
+      "moderador": false,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlJmxpNsgM5cupZAlc8Cq5y7R88ukdYEc9pgsrg_Tp0TDw0t-I"
+    },
+    {
+      "id": 5,
+      "correo": "b@a.a",
+      "nombre": "DogNBeer",
+      "fecha": "2019-11-02",
+      "password": "a",
+      "reportado": false,
+      "seguidores": [],
+      "siguiendo": [0],
+      "admin": false,
+      "moderador": false,
+      "img": "https://i.pinimg.com/originals/ea/0f/f3/ea0ff31e053a738277a1e9524726e4e7.jpg"
     }
   ],
   "publicaciones": [
@@ -91,23 +167,71 @@
       "likes": 0
     },
     {
-      "id": 1,
+      "id": 2,
       "idU": 2,
       "descripcion": "aqui esta una foto2",
       "img": "",
-      "mascotas": [],
+      "mascotas": [1],
       "reportado": true,
       "fecha": "2000-05-01",
       "likes": 0
     },
     {
-      "id": 1,
+      "id": 3,
       "idU": 3,
       "descripcion": "aqui esta una foto3",
       "img": "",
-      "mascotas": [],
+      "mascotas": [1],
       "reportado": true,
       "fecha": "2019-11-02",
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "idU": 1,
+      "descripcion": "",
+      "img": "",
+      "mascotas": [
+        1
+      ],
+      "reportado": false,
+      "fecha": "2019-11-22T03:18:47.539Z",
+      "likes": 0
+    },
+    {
+      "id": 5,
+      "idU": 0,
+      "descripcion": "Acabo de rescatar a este tierno gatito.",
+      "img": "https://pbs.twimg.com/media/EEvcxx2W4AA_YOQ.jpg",
+      "mascotas": [
+        2
+      ],
+      "reportado": false,
+      "fecha": "2019-11-22T03:18:47.539Z",
+      "likes": 0
+    },
+    {
+      "id": 6,
+      "idU": 0,
+      "descripcion": "Hoy pesaron a Milaneso. 500kgs!!",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkjsxbqWquMX-aX2sGtWNS0-vHBBD2f97s9rGVZTMlYooGDFKr",
+      "mascotas": [
+        1
+      ],
+      "reportado": false,
+      "fecha": "2019-11-22T03:18:47.539Z",
+      "likes": 0
+    },
+    {
+      "id": 7,
+      "idU": 0,
+      "descripcion": "Milaneso con Milanesa. Que pareja tan linda",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRimADyul3xRg52kyicrwarAcUbf7eLxUqNhh2j7ipITZaAZlvt",
+      "mascotas": [
+        1
+      ],
+      "reportado": false,
+      "fecha": "2019-11-22T03:18:47.539Z",
       "likes": 0
     }
   ],
@@ -130,30 +254,25 @@
       "productos": [
         {
           "idP": "1",
-          "nombre": "prod",
-          "img": "",
-          "cantidad": 11,
-          "precio": 1358.5
+          "cantidad": "2"
         }
       ],
-      "subtotal": 1358.5,
-      "total": 1575.86,
-      "status": 1,
-      "idPago": "1",
-      "idEnvio": "1"
+      "subtotal": 10.1,
+      "total": 11.15,
+      "status": 1
     }
-  ],
-  "direccionesEnvio": [
-    {
-      "id": 1,
-      "idU": 1,
-      "nombreCompleto": "abc def",
-      "direccion": "Av C, #21",
-      "subDireccion": "",
-      "ciudad": "A",
-      "estado": "B",
-      "CP": "12345",
-      "telefono": "123456789"
+  ],	
+  "direccionesEnvio": [	
+    {	
+      "id": 1,	
+      "idU": 1,	
+      "nombreCompleto": "abc def",	
+      "direccion": "Av C, #21",	
+      "subDireccion": "",	
+      "ciudad": "A",	
+      "estado": "B",	
+      "CP": "12345",	
+      "telefono": "123456789"	
     }
-  ]
+   ]
 }
