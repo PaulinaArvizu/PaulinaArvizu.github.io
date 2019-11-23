@@ -56,10 +56,10 @@
         input[type="radio"] {
             display: none;
         }
-        .thumbnail{
+
+        .thumbnail {
             height: 50px;
         }
-
     </style>
 </head>
 
@@ -70,9 +70,9 @@
         <div class="card">
             <div class="carrito-compras">
                 <div class="card border-warning mb-3">
-                    <div class="card-header">Pedido: #231241123</div>
+                    <div class="card-header">Pedido: #<span id="numPedido"></span></div>
                     <div class="card-body">
-                        <table class="table-striped table-condensed" width="100%">
+                        <table class="table-striped table-condensed" id="lista-carrito" width="100%">
                             <thead>
                                 <tr>
                                     <th>Cantidad</th>
@@ -100,11 +100,11 @@
                             <table>
                                 <tr class="subtotal">
                                     <td>Subtotal:</td>
-                                    <td>$$</td>
+                                    <td>$<span id="subtotal"></span></td>
                                 </tr>
                                 <tr class="total">
                                     <td>Total:</td>
-                                    <td>$$</td>
+                                    <td>$<span id="total"></span></td>
                                 </tr>
                             </table>
                         </div>
@@ -123,52 +123,11 @@
                 <div class="card-body">
                     <div class="form-check metodos-pago">
 
-                        <label class="form-check-label" for="Met1">
-                            <input type="radio" class="form-check-input" name="Metodos" id="Met1">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-title">Metodo 1</h6>
-                                    <p class="card-text">credito</p>
-                                </div>
-                            </div>
-                        </label>
-                        <br>
-                        <label class="form-check-label" for="Met2">
-                            <input type="radio" class="form-check-input" name="Metodos" id="Met2">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-title">Metodo 2</h6>
-                                    <p class="card-text">debito</p>
-                                </div>
-                            </div>
-                        </label>
-                        <br>
-                        <label class="form-check-label" for="Met3">
-                            <input type="radio" class="form-check-input" name="Metodos" id="Met3">
-                            <div class="card">
-                                <h6 class="card-title">Agregar tarjeta</h6>
-                                <div class="tarjeta">
-                                    <table>
-                                        <tr>
-                                            <td> <label for="Tnum">Tarjeta:</label></td>
-                                            <td><input type="text" name="Tarjeta" id="Tnum"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><label for="Tnom">Nombre:</label></td>
-                                            <td> <input type="text" name="Tarjeta" id="Tnom"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><label for="Tc">Codigo de seguridad:</label></td>
-                                            <td><input type="text" name="Tarjeta" id="Tc"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><label for="Tven">Fecha de vencimiento:</label></td>
-                                            <td><input type="month" name="Tarjeta" id="Tven"></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </label>
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPay">
+                            Agregar método de pago
+                        </button>
+
                     </div>
                 </div>
             </div>
@@ -179,42 +138,169 @@
 
         </div>
         <div class="card envio">
-            <div class="form-check">
-                <label>
-                    <input type="radio" name="envio" id="">
-                    
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="card-title">Direccion 1</h6>
-                            <p class="card-text">Calle x de D #123</p>
-                        </div>
-                    </div>
-                </label>
-                <br>
-                <label>
-                    <input type="radio" name="envio" id="">
-                    <div class="card">
-                        <h6 class="card-title">Agregar direccion</h6>
-                        <div class="nDirec">
-                            <table>
-                                <tr>
-                                    <td> <label for="calle">Calle:</label></td>
-                                    <td><input type="text" name="nDirec" id="calle"></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="numero">Numero de casa:</label></td>
-                                    <td> <input type="text" name="nDirec" id="numero"></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="c">Codigo postal:</label></td>
-                                    <td><input type="text" name="´nDirec" id="cp"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </label>
+            <h4 class="card-title">Direccion de envio</h4>
+            <div class="form-check direcciones">
+                
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAddress">
+                    Agregar método de pago
+                </button>
             </div>
 
+        </div>
+    </div>
+
+
+    <div class="modal fade bd-example-modal-lg" id="addPay" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-credit-card"></i> Agregar Método de
+                        Pago</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="card-num">Número de tarjeta</label>
+                            <input type="text" class="form-control" id="card-num" placeholder="xxxx-xxxx-xxxx-xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="valid-thru-date">Fecha de vencimiento</label>
+                            <input type="month" class="form-control" id="valid-thru-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-name">Nombre del titular</label>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" id="card-first-name" class="form-control"
+                                        placeholder="Nombre(s)">
+                                </div>
+                                <div class="col">
+                                    <input type="text" id="card-last-name" class="form-control" placeholder="Apellidos">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="security-code">Código de seguridad</label>
+                            <input type="text" class="form-control col-2" id="security-code" placeholder="xxx">
+                        </div>
+                        <div class="form-group">
+
+                            <p>
+                                <div class="form-row">
+                                    <div class="col-5">
+                                        <input type="text" class="form-control" placeholder="Calle" id="calle">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Num.ext." id="numExt">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Num.int." id="numInt">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" class="form-control" placeholder="Colonia" id="colonia">
+                                    </div>
+                                </div>
+                            </p>
+                            <p>
+                                <div class="form-row">
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" placeholder="Ciudad" id="ciudad">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Estado" id="estado">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="C. P." id="cp">
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade bd-example-modal-lg" id="addAddress" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-credit-card"></i> Agregar Direccion
+                        de Envio</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" id="name" class="form-control" placeholder="Nombre Completo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <p>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" class="form-control"
+                                            placeholder="Calle y numero, apartado de correos" id="dir1">
+                                    </div>
+                                </div>
+                            </p>
+                            <p>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" class="form-control"
+                                            placeholder="Piso, puerta, edificio, etc." id="dir2" value="">
+                                    </div>
+                                </div>
+                            </p>
+                            <p>
+                                <div class="form-row">
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" placeholder="Ciudad" id="city">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Estado" id="state">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="C. P." id="pc">
+                                    </div>
+                                </div>
+                            </p>
+                            <p>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Telefono" id="tel"
+                                            value="">
+                                    </div>
+                                </div>
+                            </p>
+                            <p>
+
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Optional JavaScript -->

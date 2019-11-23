@@ -41,8 +41,27 @@ makeHTTPRequest('pedidos', 'GET', undefined,
     kk => {
         let pedidos = JSON.parse(kk);
         let pedido = pedidos.find(a => a.status == 1 && a.idU == 1);
-        idC = pedido.id;
-        carrito = pedido.productos;
+        if (pedido != undefined) {
+            idC = pedido.id;
+            carrito = pedido.productos;
+        } else {
+            makeHTTPRequest('pedidos', 'PUT', { // crea nuevo pedido con status de carrito
+                "idU": 1,
+                "productos": [],
+                "subtotal": 0.0,
+                "total": 0.0,
+                "status": 1
+            },
+            ok=>{
+                let p = JSON.parse(ok);
+                idC = p.id;
+                carrito = p.productos;
+            },
+            (noSt, noTxt)=>{
+                console.log(noSt+ ": "+ noTxt);
+            })
+        }
+
     },
     (errStatus, errTxt) => {
         console.log(errStatus + ": " + errTxt);
@@ -67,22 +86,25 @@ document.getElementById("add").addEventListener("click", event => {
     let a = carrito.find(e => e.idP == localStorage.productId);
     if (i > 0) {
         if (a == undefined) {
-            carrito.push({
-                "id": "" + localStorage.productId,
-                "cantidad": i
-            });
+                carrito.push({
+                    "id": "" + localStorage.productId,
+                    "nombre": producto.nombre,
+                    "img": producto.img,
+                    "cantidad": i,
+                    "precio": producto.precio * i
+                });
             console.log(carrito)
             makeHTTPRequest('pedidos/' + idC, 'PATCH', {
                 "productos": carrito
             }, kk => {
                 console.log(kk)
-                event.preventDefault();
             }, (errStatus, errTxt) => {
                 console.log(errStatus + ": " + errTxt);
             });
 
         } else {
             a.cantidad += i;
+            a.precio = a.cantidad * producto.precio;
             console.log(carrito)
             makeHTTPRequest('pedidos/' + idC, 'PATCH', {
                 "productos": carrito
