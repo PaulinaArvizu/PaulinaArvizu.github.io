@@ -27,10 +27,12 @@
         .Especificaciones {
             width: 62%;
         }
-        .card{
+
+        .card {
             border: none;
         }
-        .descripcion{
+
+        .descripcion {
             background-color: rgb(242, 242, 242);
         }
     </style>
@@ -38,38 +40,44 @@
 
 <body>
     <p>Aqui va barra superior tienda</p>
-    <h4>Producto</h4>
+    <h4 id="nombre">Producto</h4>
     <div class="card-group">
         <img class="product"
             src="https://cdn.shopify.com/s/files/1/0185/9786/products/40304-FlatOutLeash-BrookTrout-WEB_1024x1024_b7dd091b-9495-4726-8b00-601c021f3942.jpg?v=1527392068"
-            alt="Card image cap">
+            alt="Card image cap" id="myImg">
         <div class="card descripcion">
             <div class="card-body">
-                <table>
-                    <tr>
-                        <td class="card-text descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                            accusantium sequi, quaerat aliquid fuga similique in sint maxime tempora enim quas iure
-                            voluptatem ex ipsam tempore itaque consequuntur recusandae officiis!</td>
-                    </tr>
-                    <tr>
-                        <td>Precio</td>
-                    </tr>
-                </table>
+                Precio: $<span id="precio"></span><br>
+                Marca: <span id="marca"></span><br>
+                Tamaño: <span id="size"></span>
             </div>
         </div>
         <div class="card carrito">
             <div class="btn-group">
-                <button type="button" class="btn btn-primary">+</button>
-                <a href="#" class="btn btn-primary active" role="button">0</a>
-                <button type="button" class="btn btn-primary">-</button>
+                <button type="button" class="btn btn-primary" id="inc">+</button>
+                <button href="#" class="btn btn-primary active" role="button" id="quantity" disabled>0</button>
+                <button type="button" class="btn btn-primary" id="dec">-</button>
             </div>
-            <a href="#">agregar al carrito</a>
+            <a href="#" id="add" data-toggle="modal" data-target="#agregado">Agregar al Carrito</a>
         </div>
     </div>
-    <p class="Especificaciones">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit unde, velit temporibus
-        molestias labore quos culpa reprehenderit. Eligendi dolorem, dicta commodi illo corporis, tempore assumenda
-        quibusdam numquam, itaque perspiciatis soluta.</p>
+
+    <p class="Especificaciones" id="detalles"></p>
+
+    <div class="modal fade" id="agregado" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Producto agregado al carrito</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
+    <script src="script-detalle.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
