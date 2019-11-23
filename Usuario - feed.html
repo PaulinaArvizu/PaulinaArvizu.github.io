@@ -16,32 +16,99 @@
     <!-- Style -->
     <link rel="stylesheet" href="style - usuario feed.css">
 
+    <!--Font Rakunians-->
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-        <p>Aqui va la barra superior de usuario general</p>
-    <div class="card" style="width: 50%;margin-left: 5%; margin-top: 5%;"> <!-- Nueva publicacion-->
+        <!-- <p>Aqui va la barra superior de usuario general</p> -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <table width="100%">
+                <tr>
+                    <td width="20%">
+                        <a class="nav-link Rakunians" href="Usuario - feed.html">
+                            <img src="Imagenes/Rakunians.png" alt="Rakunians" height="50px" id="RakuniansIMG">Rakunians
+                            <span class="sr-only">(current)</span></a>
+                    </td>
+                    <td width="15%">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Nombre de usuario
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="Usuario - ver cuenta.html">Ver cuenta</a>
+                                <a class="dropdown-item" href="Administrador - pagina principal.html" hidden>Vista de administrador</a>
+                                <a class="dropdown-item" href="#" hidden>Vista de moderador</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="buscar">
+                            <div class="form-inline my-2 my-lg-0 dropdown">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+                                <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit" data-toggle="dropdown" id="dropdownSearch">
+                                    Buscar
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownSearch" style="width: 300px !important">
+                                    <table class="table-striped table-condensed" width="100%" id="resultadoBusqueda">
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row"><img src="Imagenes/Seguidor1.jpg" alt=""></td>
+                                                <td class="usuario">NoobMaster69</td>
+                                                <td><a href="#" style="color:green;">Seguir</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><img src="Imagenes/Seguidor2.jpg" alt=""></td>
+                                                <td class="usuario">DogNBeer</td>
+                                                <td><a href="#" style="color:green;">Seguir</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="right">
+                        <div id="tienda">
+                            <a class="btn btn-primary" href="Tienda - pagina principal.html"><i class="fas fa-store"></i> Tienda</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </nav>
+    <div class="card" style="width: 50%;margin-left: 5%; margin-top: 5%;" id="newPost"> <!-- Nueva publicacion-->
         <h5 class="card-header" style="background-color: rgb(201, 226, 231);">Nueva publicación</h5>
         <div class="card-body">
             <form>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe algo..."></textarea>
-                <p><a href="#"><i class="fas fa-image"></i> Agregar imagen</a></p>
+                <p>
+                    <label for="imagen"><i class="fas fa-image"></i> Agregar imagen</label>
+                    <input type="text" id="imagen">
+                </p>
                 <p>Mascotas en esta publicación:</p>
                 <ul type="none">
                     <li>
-                        <input type="checkbox" name="post-pets" id="Milaneso">
+                        <input type="checkbox" name="post-pets" id="Milaneso" value="Milaneso">
                         <label for="Milaneso">Milaneso</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="post-pets" id="Bannana">
+                        <input type="checkbox" name="post-pets" id="Bannana" value="Bannana">
                         <label for="Bannana">Bannana</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="post-pets" id="Takin">
+                        <input type="checkbox" name="post-pets" id="Takin" value="Takin">
                         <label for="Takin">Takin</label>
                     </li>
+                    <li>
+                        <input type="checkbox" name="post-pets" id="figaro" value="figaro">
+                        <label for="figaro">figaro</label>
+                    </li>
                 </ul>
-                <p style="text-align: right;"><a href="#" class="btn btn-primary">Publicar</a></p>
+                <p style="text-align: right;"><button class="btn btn-primary">Publicar</button></p>
             </form>
         </div>
     </div>
@@ -97,9 +164,9 @@
     </div> <!-- termina div de publicaciones-->
     <div class="fixed-box">
         <div class="card border-info mb-3">
-            <div class="card-header tus-mascotas">Siguiendo</div>
+            <div class="card-header">Siguiendo</div>
             <div class="card-body">
-                <table class="table-striped table-condensed" width="100%">
+                <table class="table-striped table-condensed" width="100%" id='Siguiendo'>
                     <tbody>
                         <tr>
                             <td scope="row"><img src="Imagenes/Siguiendo1.jpg" alt=""></td>
@@ -118,9 +185,9 @@
             </div>
         </div>
         <div class="card border-info mb-3">
-            <div class="card-header tus-mascotas">Seguidores</div>
+            <div class="card-header">Seguidores</div>
             <div class="card-body">
-                <table class="table-striped table-condensed" width="100%">
+                <table class="table-striped table-condensed" width="100%" id="Seguidores">
                     <tbody>
                         <tr>
                             <td scope="row"><img src="Imagenes/Seguidor1.jpg" alt=""></td>
@@ -137,6 +204,8 @@
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="Usuario - feed.js"></script>
+    <script src="almacenamiento.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
