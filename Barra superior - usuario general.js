@@ -3,7 +3,7 @@ let searchBtn = document.getElementById('dropdownSearch');
 let globalUsers = [];
 let usuario;
 
-document.onload = loadUser;
+document.body.onload = loadUser;
 
 function loadUser() {
     makeHTTPRequest(`/usuarios/0`, 'GET', '', '',
@@ -26,17 +26,10 @@ function loadBar() {
         document.querySelector('.dropdown-menu:first-of-type a:nth-of-type(3)').removeAttribute('hidden');
     }
 
-    let ids = `idU=${usuario.id}`;
-    usuario.siguiendo.forEach(elem => ids += `&idU=${elem}`);
     makeHTTPRequest(`/usuarios`, 'GET', '', '',
                 (xhr) => {
                     if(xhr.status != 200) {console.log('error'); return}
-                    //arreglo de JSONs de las publicaciones del usuario y de usuarios que sigue
                     globalUsers = JSON.parse(xhr.response);
-                    siguiendo = globalUsers.filter(u => usuario.siguiendo.includes(u.id));
-                    seguidores = globalUsers.filter(u => usuario.seguidores.includes(u.id));
-                    // console.log(siguiendo);
-                    // console.log(seguidores);
                 });
 }
 
