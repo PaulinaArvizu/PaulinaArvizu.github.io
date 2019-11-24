@@ -23,8 +23,8 @@
             <table width="100%">
                 <tr>
                     <td width="20%">
-                        <a class="nav-link Rakunians" href="">
-                            <img src="Imagenes/Rakunians.png" alt="Rakunians" height="50px">Rakunians
+                        <a class="nav-link Rakunians" href="Usuario - feed.html">
+                            <img src="Imagenes/Rakunians.png" alt="Rakunians" height="50px" id="RakuniansIMG">Rakunians
                             <span class="sr-only">(current)</span></a>
                     </td>
                     <td width="15%">
@@ -34,23 +34,41 @@
                                 Nombre de usuario
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Ver cuenta</a>
-                                <a class="dropdown-item" href="#">Vista de administrador</a>
-                                <a class="dropdown-item" href="#">Vista de moderador</a>
+                                <a class="dropdown-item" href="Usuario - ver cuenta.html">Ver cuenta</a>
+                                <a class="dropdown-item" href="Administrador - pagina principal.html" hidden>Vista de administrador</a>
+                                <a class="dropdown-item" href="#" hidden>Vista de moderador</a>
                             </div>
                         </div>
                     </td>
                     <td>
                         <div id="buscar">
-                            <form class="form-inline my-2 my-lg-0">
+                            <div class="form-inline my-2 my-lg-0 dropdown">
                                 <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
-                                <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
-                            </form>
+                                <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit" data-toggle="dropdown" id="dropdownSearch">
+                                    Buscar
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownSearch" style="width: 300px !important">
+                                    <table class="table-striped table-condensed" width="100%" id="resultadoBusqueda">
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row"><img src="Imagenes/Seguidor1.jpg" alt=""></td>
+                                                <td class="usuario">NoobMaster69</td>
+                                                <td><a href="#" style="color:green;">Seguir</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><img src="Imagenes/Seguidor2.jpg" alt=""></td>
+                                                <td class="usuario">DogNBeer</td>
+                                                <td><a href="#" style="color:green;">Seguir</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </td>
                     <td align="right">
                         <div id="tienda">
-                            <button class="btn btn-primary" type="submit"><i class="fas fa-store"></i> Tienda</button>
+                            <a class="btn btn-primary" href="Tienda - pagina principal.html"><i class="fas fa-store"></i> Tienda</a>
                         </div>
                     </td>
                 </tr>
