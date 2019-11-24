@@ -61,10 +61,69 @@
             height: 50px;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/54a2b41b40.js"></script>
+    <link rel="stylesheet" href="style - barras.css">
+    
 </head>
 
 <body>
-    <p class="navbar">Aqui va barra superior tienda</p>
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <table width="100%">
+                <tr>
+                    <td width="20%">
+                        <a class="nav-link Rakunians" href="">
+                            <img src="Imagenes/Rakunians.png" alt="Rakunians" height="50px">Rakunians
+                            <span class="sr-only">(current)</span></a>
+                    </td>
+                    <td width="15%">
+                        <div class="dropdown" id="vistas">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="username"></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Ver cuenta</a>
+                                <a class="dropdown-item" href="#" hidden>Vista de administrador</a>
+                                <a class="dropdown-item" href="#" hidden>Vista de moderador</a>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div id="buscar">
+                            <div class="form-inline my-2 my-lg-0 dropdown">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+                                <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit" data-toggle="dropdown" id="dropdownSearch">
+                                    Buscar
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownSearch" style="width: 300px !important">
+                                    <table class="table-striped table-condensed" width="100%" id="resultadoBusqueda">
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="right">
+                        <div id="carrito">
+                            <a href="Tienda - Carrito de compras.html"><button class="btn btn-info" type="submit"><i class="fas fa-shopping-cart"></i> Ver
+                                carrito</button></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="tienda">
+                            <a href="Tienda - pagina principal.html"><button class="btn btn-primary" type="submit"><i class="fas fa-store"></i> Tienda</button></a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </nav>
+    
     <h4>Carrito de compras</h4>
     <div class="card-group">
         <div class="card">
@@ -305,6 +364,7 @@
     </div>
     <!-- Optional JavaScript -->
     <script src="script-carrito.js"></script>
+    <script src="script - barra tienda.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
