@@ -177,3 +177,13 @@ function cbToUpdateUser(xhr) {
     return xhr.status;
 
 }
+
+function cbToDeleteUser(xhr) {
+    console.log(xhr.response);
+    let user2del = JSON.parse(xhr.response);
+    document.getElementById("delete-nombre-user").innerText = user2del.nombre;
+    document.getElementById("delete-id-user").innerText = user2del.id;
+
+    return xhr.status;
+
+}
