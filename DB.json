@@ -49,7 +49,7 @@
     {
       "id": 1,
       "idU": 1,
-      "tarjeta": 123456789,
+      "tarjeta": 1234567890123456,
       "fecha": "2000-05-01",
       "nombre": "abc",
       "apellido": "def",
