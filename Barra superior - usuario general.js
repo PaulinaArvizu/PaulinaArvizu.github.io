@@ -3,7 +3,7 @@ let searchBtn = document.getElementById('dropdownSearch');
 let globalUsers = [];
 let usuario;
 
-document.body.onload = loadUser;
+document.body.onload = loadUser; //si se usa este evento en otro js, borrar este y ejecutar la funcion loadUser() dentro de la otra funcion
 
 function loadUser() {
     makeHTTPRequest(`/usuarios/0`, 'GET', '', cbOk1);
