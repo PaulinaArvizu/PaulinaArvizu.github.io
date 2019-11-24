@@ -35,7 +35,7 @@ function loadFeed() {
     }
 
     let ids = `idU=${usuario.id}`;
-    usuario.siguiendo.forEach(elem => ids += `&idU=${elem}`);
+    // usuario.siguiendo.forEach(elem => ids += `&idU=${elem}`);
     makeHTTPRequest(`/usuarios`, 'GET',/* '', */'',
                 (xhr) => {
                     if(xhr.status != 200) {console.log('error'); return}
@@ -59,7 +59,7 @@ function loadFeed() {
                     findUsersInPosts();
                     // console.log(publicaciones);
                 });
-    makeHTTPRequest(`/mascotas?${ids}`, 'GET',/* '',*/ '',
+    makeHTTPRequest(`/mascotas?idU=${usuario.id}`, 'GET',/* '',*/ '',
                 (xhr) => {
                     if(xhr.status != 200) {console.log('error'); return}
                     //arreglo de JSONs de las publicaciones del usuario y de usuarios que sigue
