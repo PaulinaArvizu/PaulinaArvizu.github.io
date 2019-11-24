@@ -73,7 +73,7 @@
       "fecha": "2000-05-01",
       "password": "12345",
       "reportado": false,
-      "seguidores": [],
+      "seguidores": [4,5],
       "siguiendo": [
         1,
         2,
