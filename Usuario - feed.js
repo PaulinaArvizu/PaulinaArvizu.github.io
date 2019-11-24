@@ -21,7 +21,20 @@ let newPostForm = document.getElementById('newPost');
 let newPostBtn = newPostForm.querySelector('button');
 let searchBtn = document.getElementById('dropdownSearch');
 
-document.body.onload = loadFeed;
+document.body.onload = loadUser;
+
+function loadUser() {
+    makeHTTPRequest(`/usuarios/0`, 'GET', '', '',
+                (xhr) => {
+                    if(xhr.status == 200) {
+                        usuario = JSON.parse(xhr.response);
+                        loadFeed();
+                    } else {
+                        alert("error al cargar la pagina");
+                    }
+                });
+}
+
 function loadFeed() {
     newPostBtn.setAttribute('disabled', '');
     document.querySelector('nav button:first-of-type').innerText = usuario.nombre;
@@ -87,7 +100,7 @@ function findPets() {
                         // console.log(elem.mascotas);
                         elem.mascotas.forEach(pet => {
                             let pName = Upets.find(p => p.id == pet);
-                            console.log(typeof(pName.nombre));
+                            // console.log(typeof(pName.nombre));
                             elem.nombreMascotas += '#'+pName.nombre;
                         });
                     });
@@ -147,7 +160,7 @@ function postToHTML(post) {
         <p class="card-text">${post.descripcion}</p>
         <table width="100%">
             <tr>
-                <td><a href="#" style="color: brown;""><i class=" fas fa-paw"></i> Me gusta</a></td>
+                <td><button style="color: brown;"" onclick="meGusta('${post.id}')"><i class=" fas fa-paw"></i> Me gusta</button>  <b class="like" style="font-size:15px">${post.likes.length}</b></td>
                 <td align="right"><a class="report" href="#" style="color: red;"><i class="fas fa-times-circle"></i> Reportar</a></td>
             </tr>
         </table>
@@ -214,7 +227,8 @@ function createPost(event) {
 searchBtn.onclick = buscarUsuarios;
 function buscarUsuarios() {
     let search = document.querySelector('[placeholder="Buscar"]').value;
-    let searchResult = globalUsers.filter(u => u.nombre.toLowerCase().includes(search.toLowerCase()));
+    // console.log(search);
+    let searchResult = globalUsers.filter(u => ((search != '') && u.nombre.toLowerCase().includes(search.toLowerCase())));
     searchResult = searchResult.map(u => { //recorre toda la lista con map y retorna un nuevo arreglo
         return resultTable(u);
     });
@@ -225,8 +239,59 @@ function resultTable(person) {
     let sResultado = `<tr>
         <td scope="row"><img src="${person.img}" alt=""></td>
         <td class="usuario">${person.nombre}</td>
-        <td><a href="#" style="color:green;" class="seguir">Seguir</a></td>
+        <td><a href="#" style="color:green;" onclick="seguirUsuario(${person.id})">Seguir</a></td>
     </tr>
     `;
     return sResultado;
+}
+
+function seguirUsuario(userId) {
+    // console.log(typeof(userId));
+    if(usuario.siguiendo.find(u => u == userId) != undefined) {return} //ya lo esta siguiendo
+    // console.log("hola");
+    usuario.siguiendo[usuario.siguiendo.length] = userId; //agrega a la lista de siguiendo
+    let user = globalUsers.find(u => u.id==userId);
+    user.seguidores[user.seguidores.length] = usuario.id; //agrega a la lista de seguidores
+
+    //envia los cambios
+    makeHTTPRequest(`/usuarios/${usuario.id}`, 'PATCH', {'Content-Type': 'application/json'}, usuario,
+                (xhr) => {
+                    if(xhr.status == 200) {
+                        console.log('cambio exitoso');
+                    } else {
+                        console.log('error en actualizacion');
+                    }
+                });
+    makeHTTPRequest(`/usuarios/${user.id}`, 'PATCH', {'Content-Type': 'application/json'}, user,
+                (xhr) => {
+                    if(xhr.status == 200) {
+                        console.log('cambio exitoso');
+                    } else {
+                        console.log('error en actualizacion');
+                    }
+                });
+    window.location.reload();
+}
+
+function meGusta(postId) {
+    let post = publicaciones.find(p => p.id==Number(postId));
+    let i = post.likes.indexOf(usuario.id);
+    if(i != -1) {
+        post.likes.splice(i, 1);
+    } else {
+        post.likes[post.likes.length] = usuario.id;
+    }
+
+    event.currentTarget.parentNode.querySelector('b').innerText = post.likes.length;
+
+    console.log("hola");
+    //envia los cambios
+    makeHTTPRequest(`/publicaciones/${post.id}`, 'PATCH', {'Content-Type': 'application/json'}, post,
+                (xhr) => {
+                    if(xhr.status == 200) {
+                        console.log('like exitoso');
+                    } else {
+                        console.log('error en like');
+                    }
+                });
 }
