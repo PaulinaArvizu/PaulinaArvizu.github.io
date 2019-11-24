@@ -7,7 +7,7 @@ td:first-of-type {
 td:last-of-type {
     width: 25%;
 }
-img {
+.usuarios img {
     width: 200px;
 }
 .table:nth-of-type(odd) {
