@@ -13,80 +13,91 @@
     <script src="https://kit.fontawesome.com/54a2b41b40.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="style - usuario editar.css">
+    <!--Font Rakunians-->
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
   </head>
   <body>
-        <p>Aqui va la barra superior de usuario general</p>
+        <!-- <p>Aqui va la barra superior de usuario general</p> -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <table width="100%">
+                <tr>
+                    <td width="20%">
+                        <a class="nav-link Rakunians" href="Usuario - feed.html">
+                            <img src="Imagenes/Rakunians.png" alt="Rakunians" height="50px" id="RakuniansIMG">Rakunians
+                            <span class="sr-only">(current)</span></a>
+                    </td>
+                    <td width="15%">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Nombre de usuario
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="Usuario - ver cuenta.html">Ver cuenta</a>
+                                <a class="dropdown-item" href="Administrador - pagina principal.html" hidden>Vista de administrador</a>
+                                <a class="dropdown-item" href="#" hidden>Vista de moderador</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="buscar">
+                            <div class="form-inline my-2 my-lg-0 dropdown">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+                                <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit" data-toggle="dropdown" id="dropdownSearch">
+                                    Buscar
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownSearch" style="width: 300px !important">
+                                    <table class="table-striped table-condensed" width="100%" id="resultadoBusqueda">
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row"><img src="Imagenes/Seguidor1.jpg" alt=""></td>
+                                                <td class="usuario">NoobMaster69</td>
+                                                <td><a href="#" style="color:green;">Seguir</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row"><img src="Imagenes/Seguidor2.jpg" alt=""></td>
+                                                <td class="usuario">DogNBeer</td>
+                                                <td><a href="#" style="color:green;">Seguir</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="right">
+                        <div id="tienda">
+                            <a class="btn btn-primary" href="Tienda - pagina principal.html"><i class="fas fa-store"></i> Tienda</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </nav>
     <h1>Nombre de usuario <i style="font-size: 10px;">Administrador</i></h1>
     
     <div class="ediciones">
-        <button type="button" class="btn btn-outline-info btn-lg" data-toggle="modal" data-target="#change-username">
+        <a href="Administrador - tienda principal.html">
+            <button type="button" class="btn btn-outline-info btn-lg" data-toggle="modal" data-target="#change-username">
                 <i class="fas fa-store"></i> Tienda
-        </button>
-        <button type="button" class="btn btn-outline-info btn-lg" data-toggle="modal" data-target="#changePW">
+            </button>
+        </a>
+        <a href="Administrador - ventas.html">
+            <button type="button" class="btn btn-outline-info btn-lg" data-toggle="modal" data-target="#changePW">
                 <i class="fas fa-search-dollar"></i> Ventas
-        </button>
-        <a href="">
+            </button>
+        </a>
+        <a href="Administrador - editar usuarios.html">
             <button type="button" class="btn btn-outline-info btn-lg">
                     <i class="fas fa-user"></i> Usuarios
             </button>
         </a>
     </div>
-    <div class="modal fade" id="change-username" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Cambiar nombre de usuario</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="user-new">Nuevo nombre de usuario</label>
-                            <input type="text" class="form-control" id="PW-new">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="changePW" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Cambiar contraseña</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="PW-actual">Contraseña actual</label>
-                            <input type="password" class="form-control" id="PW-actual" aria-describedby="emailHelp">
-                        </div>
-                        <div class="form-group">
-                            <label for="PW-new">Nueva contraseña</label>
-                            <input type="password" class="form-control" id="PW-new"></div>
-                            <div class="form-group">
-                                <label for="PW-confirm">Confirma nueva contraseña</label>
-                                <input type="password" class="form-control" id="PW-confirm">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-primary">Cambiar contraseña</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    
     <!-- Optional JavaScript -->
+    <script src="Barra superior - usuario general.js"></script>
+    <script src="almacenamiento.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
