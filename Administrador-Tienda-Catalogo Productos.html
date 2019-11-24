@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/54a2b41b40.js"></script>
 
     <style>
         h2 {
@@ -55,9 +57,66 @@
             height: 150px;
         }
     </style>
+    <link rel="stylesheet" href="style - barras.css">
 
 </head>
-<p> Aqui va la barra de navegacion.</p>
+<nav class="navbar navbar-expand-sm navbar-light">
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <table width="100%">
+            <tr>
+                <td width="20%">
+                    <a class="nav-link Rakunians" href="Usuario - feed.html">
+                        <img src="Imagenes/Rakunians.png" alt="Rakunians" height="50px" id="RakuniansIMG">Rakunians
+                        <span class="sr-only">(current)</span></a>
+                </td>
+                <td width="15%">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nombre de usuario
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="Usuario - ver cuenta.html">Ver cuenta</a>
+                            <a class="dropdown-item" href="Administrador - pagina principal.html" hidden>Vista de administrador</a>
+                            <a class="dropdown-item" href="#" hidden>Vista de moderador</a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div id="buscar">
+                        <div class="form-inline my-2 my-lg-0 dropdown">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+                            <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit" data-toggle="dropdown" id="dropdownSearch">
+                                Buscar
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownSearch" style="width: 300px !important">
+                                <table class="table-striped table-condensed" width="100%" id="resultadoBusqueda">
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row"><img src="Imagenes/Seguidor1.jpg" alt=""></td>
+                                            <td class="usuario">NoobMaster69</td>
+                                            <td><a href="#" style="color:green;">Seguir</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><img src="Imagenes/Seguidor2.jpg" alt=""></td>
+                                            <td class="usuario">DogNBeer</td>
+                                            <td><a href="#" style="color:green;">Seguir</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td align="right">
+                    <div id="tienda">
+                        <a class="btn btn-primary" href="Tienda - pagina principal.html"><i class="fas fa-store"></i> Tienda</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</nav>
 <p class="titulo">Catalogo de Productos
     <small>(Vista Administrador)</small>
 </p>
@@ -70,10 +129,9 @@
                 <nav class="nav">
                     <form action="">
                         <div align="center">
-                            <button class="btn btn-success" type="button"><i
-                                class="fas fa-plus"></i> Añadir</button>
+                            <button class="btn btn-success" type="button" data-toggle="modal" data-target="#add"><i class="fas fa-plus"></i> Añadir</button>
                         </div>
-                        
+
                         <hr>
                         <ul type="none">
 
@@ -182,7 +240,7 @@
                 </nav>
                 </form>
             </td>
-            <td width="65%">
+            <td width="65%" id="productos">
                 <div class="card-columns">
                     <div class="card border-info mb-3">
                         <div class="card-header">
@@ -207,47 +265,6 @@
                             </p>
                             <table align="center">
                                 <tr>
-                                <td>
-                                    <form>
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <button class="btn btn-danger col" type="button"><i
-                                                        class="fas fa-trash-alt"></i> Eliminar</button>
-                                            </div>
-                                            <div class="input-group-append">
-                                                <button class="btn btn-success" type="button"><i
-                                                        class="fas fa-pen"></i> Editar</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card border-info mb-3">
-                            <div class="card-header">
-                                <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
-                            </div>
-                            <div class="card-body">
-                                <p align="center">
-                                    <img src="/Imagenes/Alimento para Perro.jpg" class="ProductP" alt="PP">
-                                </p>
-                                <hr>
-                                <p class="card-text">
-                                    <ul type="none">
-                                        <li><b>Nombre: </b>Alimento para Perro Titan</li>
-                                        <li><b>Costo: </b>$599.99</li>
-                                        <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
-                                            Con prebióticos exclusivos: CitriStim
-                                            Único en su segmento con pulpa de remolacha
-                                            Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
-    
-                                        </li>
-                                    </ul>
-                                </p>
-                                <table align="center">
-                                    <tr>
                                     <td>
                                         <form>
                                             <div class="input-group mb-3">
@@ -262,96 +279,233 @@
                                             </div>
                                         </form>
                                     </td>
-                                    </tr>
-                                </table>
-                            </div>
+                                </tr>
+                            </table>
                         </div>
-                        <div class="card border-info mb-3">
-                                <div class="card-header">
-                                    <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
-                                </div>
-                                <div class="card-body">
-                                    <p align="center">
-                                        <img src="/Imagenes/Alimento para Perro.jpg" class="ProductP" alt="PP">
-                                    </p>
-                                    <hr>
-                                    <p class="card-text">
-                                        <ul type="none">
-                                            <li><b>Nombre: </b>Alimento para Perro Titan</li>
-                                            <li><b>Costo: </b>$599.99</li>
-                                            <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
-                                                Con prebióticos exclusivos: CitriStim
-                                                Único en su segmento con pulpa de remolacha
-                                                Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
-        
-                                            </li>
-                                        </ul>
-                                    </p>
-                                    <table align="center">
-                                        <tr>
-                                        <td>
-                                            <form>
-                                                <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <button class="btn btn-danger col" type="button"><i
-                                                                class="fas fa-trash-alt"></i> Eliminar</button>
-                                                    </div>
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-success" type="button"><i
-                                                                class="fas fa-pen"></i> Editar</button>
-                                                    </div>
+                    </div>
+                    <div class="card border-info mb-3">
+                        <div class="card-header">
+                            <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                        </div>
+                        <div class="card-body">
+                            <p align="center">
+                                <img src="/Imagenes/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                            </p>
+                            <hr>
+                            <p class="card-text">
+                                <ul type="none">
+                                    <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                    <li><b>Costo: </b>$599.99</li>
+                                    <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                        Con prebióticos exclusivos: CitriStim
+                                        Único en su segmento con pulpa de remolacha
+                                        Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+
+                                    </li>
+                                </ul>
+                            </p>
+                            <table align="center">
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-danger col" type="button"><i
+                                                            class="fas fa-trash-alt"></i> Eliminar</button>
                                                 </div>
-                                            </form>
-                                        </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="card border-info mb-3">
-                                    <div class="card-header">
-                                        <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <p align="center">
-                                            <img src="/Imagenes/Alimento para Perro.jpg" class="ProductP" alt="PP">
-                                        </p>
-                                        <hr>
-                                        <p class="card-text">
-                                            <ul type="none">
-                                                <li><b>Nombre: </b>Alimento para Perro Titan</li>
-                                                <li><b>Costo: </b>$599.99</li>
-                                                <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
-                                                    Con prebióticos exclusivos: CitriStim
-                                                    Único en su segmento con pulpa de remolacha
-                                                    Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
-            
-                                                </li>
-                                            </ul>
-                                        </p>
-                                        <table align="center">
-                                            <tr>
-                                            <td>
-                                                <form>
-                                                    <div class="input-group mb-3">
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-danger col" type="button"><i
-                                                                    class="fas fa-trash-alt"></i> Eliminar</button>
-                                                        </div>
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-success" type="button"><i
-                                                                    class="fas fa-pen"></i> Editar</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-success" type="button"><i
+                                                            class="fas fa-pen"></i> Editar</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card border-info mb-3">
+                        <div class="card-header">
+                            <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                        </div>
+                        <div class="card-body">
+                            <p align="center">
+                                <img src="/Imagenes/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                            </p>
+                            <hr>
+                            <p class="card-text">
+                                <ul type="none">
+                                    <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                    <li><b>Costo: </b>$599.99</li>
+                                    <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                        Con prebióticos exclusivos: CitriStim
+                                        Único en su segmento con pulpa de remolacha
+                                        Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+
+                                    </li>
+                                </ul>
+                            </p>
+                            <table align="center">
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-danger col" type="button"><i
+                                                            class="fas fa-trash-alt"></i> Eliminar</button>
+                                                </div>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-success" type="button"><i
+                                                            class="fas fa-pen"></i> Editar</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card border-info mb-3">
+                        <div class="card-header">
+                            <h5 class="card-title"> Titán Alimento para Perro Adulto, 25 Kg</h5>
+                        </div>
+                        <div class="card-body">
+                            <p align="center">
+                                <img src="/Imagenes/Alimento para Perro.jpg" class="ProductP" alt="PP">
+                            </p>
+                            <hr>
+                            <p class="card-text">
+                                <ul type="none">
+                                    <li><b>Nombre: </b>Alimento para Perro Titan</li>
+                                    <li><b>Costo: </b>$599.99</li>
+                                    <li><b>Descripcion: </b>20% de Proteínas Buenas para que esté sano y fuerte
+                                        Con prebióticos exclusivos: CitriStim
+                                        Único en su segmento con pulpa de remolacha
+                                        Análisis Garantizado: Proteína mín. 20%, Grasa mín. 8%</li>
+
+                                    </li>
+                                </ul>
+                            </p>
+                            <table align="center">
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-danger col" type="button"><i
+                                                            class="fas fa-trash-alt"></i> Eliminar</button>
+                                                </div>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-success" type="button"><i
+                                                            class="fas fa-pen"></i> Editar</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
             </td>
         </tr>
     </table>
+    <div class="modal fade bd-example-modal-lg" id="edit" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="card-num">Nombre</label>
+                            <input type="text" class="form-control" id="pNombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-num">Precio</label>
+                            <input type="number" class="form-control" id="pPrecio">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-num">Marca</label>
+                            <input type="text" class="form-control" id="pMarca">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-num">Detalles</label>
+                            <input type="text" class="form-control" id="pDetalles">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-num">Dimensiones</label>
+                            <input type="text" class="form-control" id="pSize">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-num">Imagen</label>
+                            <input type="text" class="form-control" id="pImg">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="card-num">Nombre</label>
+                            <input type="text" class="form-control" id="aNombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-num">Precio</label>
+                            <input type="number" class="form-control" id="aPrecio">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-num">Marca</label>
+                            <input type="text" class="form-control" id="aMarca">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-num">Detalles</label>
+                            <input type="text" class="form-control" id="aDetalles">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-num">Dimensiones</label>
+                            <input type="text" class="form-control" id="aSize">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-num">Imagen</label>
+                            <input type="text" class="form-control" id="aImg">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
+    <script src="almacenamiento.js"></script>
+    <script src="Barra superior - usuario general.js"></script>
+    <script src="Administrador-Tienda-Catalogo Productos.js"></script>
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
