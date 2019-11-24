@@ -47,23 +47,45 @@
   ],
   "metodosPago": [
     {
-      "id": 1,
-      "idU": 1,
-      "tarjeta": 1234567890123456,
+      "id": "1",
+      "idU": "1",
+      "tarjeta": "6789678967896789",
+      "tipo": "Debito",
+      "categoria": "MasterCard",
       "fecha": "2000-05-01",
-      "nombre": "abc",
-      "apellido": "def",
-      "codigo": 123,
+      "nombre": "Rodrigo",
+      "apellido": "Rodriguez",
+      "codigo": "123",
       "direccion": [
-        "calle",
-        "num ext",
-        "num int",
-        "colonia",
-        "ciudad",
-        "estado",
-        "c.p."
+        "Calle Principal",
+        "420",
+        "",
+        "Fresona",
+        "Guadalajara",
+        "Jalisco",
+        "44010"
       ]
-    }
+    },
+    {
+      "id": "11",
+      "idU": 2,
+      "tarjeta": "1234567891234567",
+      "tipo": "Debito",
+      "categoria": "Visa",
+      "fecha": "2024-11-05",
+      "nombre": "Hector",
+      "apellido": "Silva",
+      "codigo": "123",
+      "direccion": [
+        "Calle Principal",
+        "420",
+        "",
+        "Fresona",
+        "Guadalajara",
+        "Jalisco",
+        "40505"
+      ]
+    },
   ],
   "usuarios": [
     {
