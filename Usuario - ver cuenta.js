@@ -20,7 +20,7 @@ let publicaciones;
 makeHTTPRequest2('usuarios/' + userId, 'GET', undefined,
     kk => {
         user = JSON.parse(kk);
-        
+        document.querySelector('#user-title').innerText = user.nombre;
         // displayPost;
         makeHTTPRequest2('publicaciones?idU=' + userId, 'GET', undefined,
             kk => {
