@@ -73,7 +73,10 @@
       "fecha": "2000-05-01",
       "password": "12345",
       "reportado": false,
-      "seguidores": [4,5],
+      "seguidores": [
+        4,
+        5
+      ],
       "siguiendo": [
         1,
         2,
@@ -170,7 +173,7 @@
       ],
       "reportado": true,
       "fecha": "2000-05-01",
-      "likes": 0
+      "likes": []
     },
     {
       "id": 2,
@@ -182,7 +185,7 @@
       ],
       "reportado": true,
       "fecha": "2000-05-01",
-      "likes": 0
+      "likes": []
     },
     {
       "id": 3,
@@ -194,7 +197,7 @@
       ],
       "reportado": true,
       "fecha": "2019-11-02",
-      "likes": 0
+      "likes": []
     },
     {
       "id": 4,
@@ -206,7 +209,7 @@
       ],
       "reportado": false,
       "fecha": "2019-11-22T03:18:47.539Z",
-      "likes": 0
+      "likes": []
     },
     {
       "id": 5,
@@ -218,7 +221,9 @@
       ],
       "reportado": false,
       "fecha": "2019-11-22T03:18:47.539Z",
-      "likes": 0
+      "likes": [],
+      "username": "abc",
+      "nombreMascotas": "#Bannana"
     },
     {
       "id": 6,
@@ -230,7 +235,9 @@
       ],
       "reportado": false,
       "fecha": "2019-11-22T03:18:47.539Z",
-      "likes": 0
+      "likes": [],
+      "username": "abc",
+      "nombreMascotas": "#Milaneso"
     },
     {
       "id": 7,
@@ -242,7 +249,7 @@
       ],
       "reportado": false,
       "fecha": "2019-11-22T03:18:47.539Z",
-      "likes": 0
+      "likes": []
     }
   ],
   "productos": [
@@ -270,11 +277,9 @@
           "img": ""
         }
       ],
-      "subtotal": 0,
-      "total": 0,
-      "status": 1,
-      "idPago": 1,
-      "idEnvio": 1
+      "subtotal": 10.1,
+      "total": 11.15,
+      "status": 1
     }
   ],
   "direccionesEnvio": [
@@ -288,6 +293,20 @@
       "estado": "B",
       "CP": "12345",
       "telefono": "123456789"
+    }
+  ],
+  "reportesP": [
+    {
+      "id": 0,
+      "idP": 0,
+      "descripcion": "pos nomas"
+    }
+  ],
+  "reportesU": [
+    {
+      "id": 0,
+      "idU": 0,
+      "descripcion": "me cae mal"
     }
   ]
 }
