@@ -3,7 +3,20 @@ let searchBtn = document.getElementById('dropdownSearch');
 let globalUsers = [];
 let usuario;
 
-document.onload = loadBar;
+document.onload = loadUser;
+
+function loadUser() {
+    makeHTTPRequest(`/usuarios/0`, 'GET', '', '',
+                (xhr) => {
+                    if(xhr.status == 200) {
+                        usuario = JSON.parse(xhr.response);
+                        loadBar();
+                    } else {
+                        alert("Error al cargar la pagina");
+                    }
+                });
+}
+
 function loadBar() {
     document.querySelector('nav button:first-of-type').innerText = usuario.nombre;
     if(usuario.admin) {
