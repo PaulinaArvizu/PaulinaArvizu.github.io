@@ -8,6 +8,7 @@ div.foto-perfil {
 img {
     height: 250px;
 }
+
 .ediciones {
     width: 50%;
 }
@@ -30,4 +31,8 @@ nav {
 
 #RakuniansIMG {
     height: 50px;
+}
+
+td img {
+    height: 30px;
 }
