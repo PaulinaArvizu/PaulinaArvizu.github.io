@@ -4,19 +4,8 @@ let Upets = [];
 let globalUsers = [];
 let siguiendo = [];
 let seguidores = [];
-let usuario = {
-    id: 0,
-    correo: "abc@abc.abc",
-    nombre: "abc",
-    fecha: "2000-05-01",
-    password: "12345",
-    reportado: false,
-    seguidores: [4,5],
-    siguiendo: [1,2,3],
-    admin: false,
-    moderador: true,
-    img: "https://www.tialoto.bg/media/files/resized/article/615x/zip/zip-814d2ef213786c340967119ea9f88f8f.jpg"
-  };
+let usuario;
+let id;
 let newPostForm = document.getElementById('newPost');
 let newPostBtn = newPostForm.querySelector('button');
 let searchBtn = document.getElementById('dropdownSearch');
@@ -30,7 +19,7 @@ function loadUser() {
                         usuario = JSON.parse(xhr.response);
                         loadFeed();
                     } else {
-                        alert("error al cargar la pagina");
+                        alert("Error al cargar la pagina");
                     }
                 });
 }
@@ -57,11 +46,16 @@ function loadFeed() {
                     // console.log(siguiendo);
                     // console.log(seguidores);
                 });
-    makeHTTPRequest(`/publicaciones?${ids}`, 'GET', '', '',
+    makeHTTPRequest(`/publicaciones`, 'GET', '', '',
                 (xhr) => {
                     if(xhr.status != 200) {console.log('error'); return}
+                    //busca el ultimo id
+                    publicaciones = JSON.parse(xhr.response);
+                    let ids = publicaciones.map(p => p.id);
+                    id = Math.max(...ids)+1;
                     //arreglo de JSONs de las publicaciones del usuario y de usuarios que sigue
-                    publicaciones = JSON.parse(xhr.response).sort(sortByDate); //ordenar de mas reciente a menos reciente
+                    publicaciones = publicaciones.filter(p => (p.idU==usuario.id)||(usuario.siguiendo.find(u => u.id==p.idU) != undefined));
+                    publicaciones = publicaciones.sort(sortByDate); //ordenar de mas reciente a menos reciente
                     findUsersInPosts();
                     // console.log(publicaciones);
                 });
@@ -191,35 +185,35 @@ newPostBtn.onclick = createPost;
 function createPost(event) {
     event.preventDefault();
     let petList = document.querySelectorAll('ul :checked');
-    for(let i = 0; i < petList.length; i++) {
-        console.log(petList[i].value);
-    }
+    // for(let i = 0; i < petList.length; i++) {
+    //     console.log(petList[i].value);
+    // }
     let petArray = [];
     petList.forEach(pet => {
         let p = Upets.find(elem => elem.nombre == pet.value);
         petArray.push(p.id);
     })
-    console.log(petArray);
+    // console.log(petArray);
     let newPost = {
-        "id": 4,
+        "id": id,
         "idU": usuario.id,
         "descripcion": newPostForm.getElementsByTagName('textarea')[0].value,
         "img": document.getElementById('imagen').value,
         "mascotas": petArray,
         "reportado": false,
         "fecha": new Date(),
-        "likes": 0
+        "likes": []
     }
     // console.log(newPost);
     // location.reload();
     makeHTTPRequest(`/publicaciones`,'POST', {'Content-Type': 'application/json'}, newPost,
                 (xhr) => {
                     if(xhr.status == 201) {
-                        alert('Exito');
+                        alert('Publicado');
                         window.location.reload();
                     }
                     else {
-                        alert('Error en registro');
+                        alert('Error en publicación');
                     }
                 });
 }
