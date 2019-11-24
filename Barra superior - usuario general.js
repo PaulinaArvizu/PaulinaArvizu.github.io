@@ -6,15 +6,16 @@ let usuario;
 document.body.onload = loadUser;
 
 function loadUser() {
-    makeHTTPRequest(`/usuarios/0`, 'GET', '', '',
-                (xhr) => {
-                    if(xhr.status == 200) {
-                        usuario = JSON.parse(xhr.response);
-                        loadBar();
-                    } else {
-                        alert("Error al cargar la pagina");
-                    }
-                });
+    makeHTTPRequest(`/usuarios/0`, 'GET', '', cbOk1);
+}
+
+function cbOk1(xhr){
+    if(xhr.status == 200) {
+        usuario = JSON.parse(xhr.response);
+        loadBar();
+    } else {
+        alert("Error al cargar la pagina");
+    }
 }
 
 function loadBar() {
@@ -26,11 +27,12 @@ function loadBar() {
         document.querySelector('.dropdown-menu:first-of-type a:nth-of-type(3)').removeAttribute('hidden');
     }
 
-    makeHTTPRequest(`/usuarios`, 'GET', '', '',
-                (xhr) => {
-                    if(xhr.status != 200) {console.log('error'); return}
-                    globalUsers = JSON.parse(xhr.response);
-                });
+    makeHTTPRequest(`/usuarios`, 'GET', '', cbOk2);
+}
+
+function cbOk2(xhr) {
+    if(xhr.status != 200) {console.log('error'); return}
+    globalUsers = JSON.parse(xhr.response);
 }
 
 
@@ -64,21 +66,15 @@ function seguirUsuario(userId) {
     user.seguidores[user.seguidores.length] = usuario.id; //agrega a la lista de seguidores
 
     //envia los cambios
-    makeHTTPRequest(`/usuarios/${usuario.id}`, 'PATCH', {'Content-Type': 'application/json'}, usuario,
-                (xhr) => {
-                    if(xhr.status == 200) {
-                        console.log('cambio exitoso');
-                    } else {
-                        console.log('error en actualizacion');
-                    }
-                });
-    makeHTTPRequest(`/usuarios/${user.id}`, 'PATCH', {'Content-Type': 'application/json'}, user,
-                (xhr) => {
-                    if(xhr.status == 200) {
-                        console.log('cambio exitoso');
-                    } else {
-                        console.log('error en actualizacion');
-                    }
-                });
+    makeHTTPRequest(`/usuarios/${usuario.id}`, 'PATCH', usuario, cbOk3);
+    makeHTTPRequest(`/usuarios/${user.id}`, 'PATCH', user, cbOk3);
     window.location.reload();
+}
+
+function cbOk3 (xhr) {
+    if(xhr.status == 200) {
+        console.log('cambio exitoso');
+    } else {
+        console.log('error en actualizacion');
+    }
 }
