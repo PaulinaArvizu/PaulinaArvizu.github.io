@@ -23,7 +23,7 @@ iniciar.onclick = () => {
     if(invalid.length == 0) {
         let email = inicioForm.querySelector('[type="email"]').value;
         let pw = inicioForm.querySelector('[type="password"]').value;
-        makeHTTPRequest(`/usuarios?correo=${email}`,'GET', '','',(xhr) => {
+        makeHTTPRequest(`/usuarios?correo=${email}`,'GET',/* '',*/'',(xhr) => {
             if(xhr.status == 200) {
                 let user = JSON.parse(xhr.response)[0];
                 if(user.password == pw) {window.location.href = 'Usuario - feed.html';}
@@ -44,7 +44,7 @@ registro.onclick = () => {
     if(invalid.length == 0) {
 
         //busca el usuario en la base de datos
-        makeHTTPRequest('/usuarios', 'GET', '', '', addUser);
+        makeHTTPRequest('/usuarios', 'GET', /*'',*/ '', addUser);
            
     } else {
         invalid.forEach(obj => {obj.style = "border-color: red"});
@@ -86,7 +86,7 @@ function addUser(xhr) {
     Usuario.moderador = false;
     // console.log(Usuario);
         
-    makeHTTPRequest(`/usuarios`,'POST', {'Content-Type': 'application/json'}, Usuario,
+    makeHTTPRequest(`/usuarios`,'POST', /*{'Content-Type': 'application/json'},*/ Usuario,
                 (xhr) => {
                     if(xhr.status == 201) {
                         window.location.href = 'Usuario - feed.html';
