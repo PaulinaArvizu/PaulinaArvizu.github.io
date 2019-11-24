@@ -45,7 +45,7 @@ makeHTTPRequest('pedidos', 'GET', undefined,
             idC = pedido.id;
             carrito = pedido.productos;
         } else {
-            makeHTTPRequest('pedidos', 'PUT', { // crea nuevo pedido con status de carrito
+            makeHTTPRequest('pedidos', 'POST', { // crea nuevo pedido con status de carrito
                 "idU": 1,
                 "productos": [],
                 "subtotal": 0.0,
@@ -87,7 +87,7 @@ document.getElementById("add").addEventListener("click", event => {
     if (i > 0) {
         if (a == undefined) {
                 carrito.push({
-                    "id": "" + localStorage.productId,
+                    "id": localStorage.productId,
                     "nombre": producto.nombre,
                     "img": producto.img,
                     "cantidad": i,

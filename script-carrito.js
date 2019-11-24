@@ -26,8 +26,8 @@ let displayPay = makeHTTPRequest('metodosPago?idU=' + userId, 'GET', undefined,
         listaMetodos.querySelectorAll("label").forEach(e => e.remove());
         metodos.forEach(element => {
             let censor = "************" + ("" + element.tarjeta).substring(12);
-            let a = `<label class="form-check-label" for="Met1">
-        <input type="radio" class="form-check-input" name="Metodos" id="Met1" value="${element.id}">
+            let a = `<label class="form-check-label">
+        <input type="radio" class="form-check-input" name="Metodos" id="Met${element.id}" value="${element.id}">
         <div class="card">
             <div class="card-body">
                 <h6 class="card-title">${censor}</h6>
@@ -71,10 +71,9 @@ makeHTTPRequest('pedidos?idU=' + userId + "&status=1", 'GET', undefined,
     ok => {
         a = JSON.parse(ok)[0];
         subTotal = 0.0;
-        document.getElementById("numPedido").innerText = a.id;
+        document.getElementById("numPedido").innerText = "NA";
         let tbod = document.querySelector("#lista-carrito tbody");
         tbod.innerHTML = "";
-        console.log(tbod)
         a.productos.forEach(e => {
             let h = `<tr>
             <td>${e.cantidad}</td>
@@ -88,6 +87,18 @@ makeHTTPRequest('pedidos?idU=' + userId + "&status=1", 'GET', undefined,
         document.getElementById("subtotal").innerText = subTotal;
         document.getElementById("total").innerText = subTotal * iva;
 
+    },
+    nok=>{
+        subTotal = 0.0;
+        document.getElementById("numPedido").innerText = a.id;
+        let tbod = document.querySelector("#lista-carrito tbody");
+        tbod.innerHTML = `<tr>
+        <td>0</td>
+        <td><img src="$" alt="" class="thumbnail"></td>
+        <td>/td>
+        <td>$0</td>
+        </tr>`;
+        
     })
 
 document.getElementById("addPay").querySelector("form").addEventListener('change', event => {
@@ -328,8 +339,8 @@ document.querySelector(".finalizar").addEventListener("click", e => {
         "total": subTotal*iva,
         "subtotal":subTotal,
         "status":2,
-        "idPago":v[0].value,
-        "idEnvio":v[1].value
+        "idPago": Number.parseInt(v[0].value),
+        "idEnvio":Number.parseInt(v[1].value)
     },
     ok=>{
         console.log("cool")

@@ -90,7 +90,9 @@
       "fecha": "2000-05-01",
       "password": "12345",
       "reportado": false,
-      "seguidores": [0],
+      "seguidores": [
+        0
+      ],
       "siguiendo": [],
       "admin": false,
       "moderador": false,
@@ -134,7 +136,9 @@
       "password": "a",
       "reportado": false,
       "seguidores": [],
-      "siguiendo": [0],
+      "siguiendo": [
+        0
+      ],
       "admin": false,
       "moderador": false,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlJmxpNsgM5cupZAlc8Cq5y7R88ukdYEc9pgsrg_Tp0TDw0t-I"
@@ -147,7 +151,9 @@
       "password": "a",
       "reportado": false,
       "seguidores": [],
-      "siguiendo": [0],
+      "siguiendo": [
+        0
+      ],
       "admin": false,
       "moderador": false,
       "img": "https://i.pinimg.com/originals/ea/0f/f3/ea0ff31e053a738277a1e9524726e4e7.jpg"
@@ -171,7 +177,9 @@
       "idU": 2,
       "descripcion": "aqui esta una foto2",
       "img": "",
-      "mascotas": [1],
+      "mascotas": [
+        1
+      ],
       "reportado": true,
       "fecha": "2000-05-01",
       "likes": 0
@@ -181,7 +189,9 @@
       "idU": 3,
       "descripcion": "aqui esta una foto3",
       "img": "",
-      "mascotas": [1],
+      "mascotas": [
+        1
+      ],
       "reportado": true,
       "fecha": "2019-11-02",
       "likes": 0
@@ -253,28 +263,31 @@
       "idU": 1,
       "productos": [
         {
-          "idP": "1",
+          "idP": 1,
+          "nombre": "prod",
           "cantidad": "2",
-          "precio" : 247,
+          "precio": 247,
           "img": ""
         }
       ],
-      "subtotal": 10.1,
-      "total": 11.15,
-      "status": 1
+      "subtotal": 0,
+      "total": 0,
+      "status": 1,
+      "idPago": 1,
+      "idEnvio": 1
     }
-  ],	
-  "direccionesEnvio": [	
-    {	
-      "id": 1,	
-      "idU": 1,	
-      "nombreCompleto": "abc def",	
-      "direccion": "Av C, #21",	
-      "subDireccion": "",	
-      "ciudad": "A",	
-      "estado": "B",	
-      "CP": "12345",	
-      "telefono": "123456789"	
+  ],
+  "direccionesEnvio": [
+    {
+      "id": 1,
+      "idU": 1,
+      "nombreCompleto": "abc def",
+      "direccion": "Av C, #21",
+      "subDireccion": "",
+      "ciudad": "A",
+      "estado": "B",
+      "CP": "12345",
+      "telefono": "123456789"
     }
-   ]
+  ]
 }
