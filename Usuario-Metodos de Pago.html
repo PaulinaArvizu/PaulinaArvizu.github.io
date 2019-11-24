@@ -13,90 +13,175 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
+    <!--Font Rakunians-->
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
 
     <style>
         h2 {
             text-decoration: underline;
         }
+
         .card {
             width: 10%;
             height: 10%;
         }
+
         .MascotaPP {
             width: 150px;
             height: 150px;
         }
+
         .card-footer {
             background-color: rgb(240, 240, 240);
         }
+
         .card-body {
             height: 40%;
         }
+
         .text-muted {
             font-weight: bolder;
         }
+
         .card {
             background-color: powderblue;
         }
+
         .titulo {
             font-family: 'Montserrat', sans-serif;
             font-weight: bolder;
             font-size: 2em;
         }
-        .Logo{
+
+        .Logo {
             width: 35px;
             height: 20px;
+        }
+
+        [class~="Rakunians"] {
+            font-family: 'Cedarville Cursive', cursive;
+            font-size: 40px;
+            color: black;
+        }
+
+        nav {
+            background-color: #d0e9ee;
+            height: 50%;
+        }
+
+        #RakuniansIMG {
+            height: 50px;
+        }
+
+        td img {
+            height: 30px;
         }
     </style>
 
 </head>
+<nav class="navbar navbar-expand-sm navbar-light">
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <table width="100%">
+            <tr>
+                <td width="20%">
+                    <a class="nav-link Rakunians" href="Usuario - feed.html">
+                        <img src="Imagenes/Rakunians.png" alt="Rakunians" height="50px" id="RakuniansIMG">Rakunians
+                        <span class="sr-only">(current)</span></a>
+                </td>
+                <td width="15%">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nombre de usuario
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="Usuario - ver cuenta.html">Ver cuenta</a>
+                            <a class="dropdown-item" href="Administrador - pagina principal.html" hidden>Vista de
+                                administrador</a>
+                            <a class="dropdown-item" href="#" hidden>Vista de moderador</a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div id="buscar">
+                        <div class="form-inline my-2 my-lg-0 dropdown">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+                            <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit" data-toggle="dropdown"
+                                id="dropdownSearch">
+                                Buscar
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownSearch" style="width: 300px !important">
+                                <table class="table-striped table-condensed" width="100%" id="resultadoBusqueda">
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td align="right">
+                    <div id="tienda">
+                        <a class="btn btn-primary" href="Tienda - pagina principal.html"><i class="fas fa-store"></i>
+                            Tienda</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</nav>
+
 <p class="titulo">Editar Metodos de Pago</p>
 <hr>
-<body>
-<div class="card-columns">
-    <div class="card bg-light mb-3">
-        <div class="card-body">
-            <h5 class="card-title"> MasterCard <b>x-6789</b>
-                <img src="/Imagenes/MasterCard_Logo.png" class="Logo" alt="LogoCC"></h5>
-            <hr>
-            <p class="card-text">
-                <ul type="none">
-                    <li><b>Tarjeta: </b>x-6789</li>
-                    <li><b>Tipo: </b>Debito</li>
-                    <li><b>Fecha de Vencimiento: </b>21/10/2022</li>
-                    <li><b>Direccion: </b>
-                        <table>
-                            <tr>
-                                <td>Calzada Principal 420</td>
-                            </tr>
-                            <tr>
-                                <td>Colonia Fresona</td>
-                            </tr>
-                            <tr>
-                                <td>42022, Guadalajara JAL</td>
-                            </tr>
-                        </table>
-                    </li>
-                </ul>
-            </p>
-            <table align="center">
-                <tr>
-                    <td>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>
-                    <td>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
 
-    <div class="card bg-light mb-3">
+<body>
+    <div class="card-columns" id="listaDeMetodos">
+        <div class="card bg-light mb-3">
+            <div class="card-body">
+                <h5 class="card-title" id="MetodoNombre"> MasterCard <b>x-6789</b>
+                    <!-- <img src="/Imagenes/MasterCard_Logo.png" class="Logo" alt="LogoCC"> -->
+                </h5>
+                <hr>
+                <p class="card-text">
+                    <ul type="none">
+
+                        <li><b>Tarjeta: </b>x-6789</li>
+                        <li><b>Tipo: </b>Debito</li>
+                        <li><b>Fecha de Vencimiento: </b>21/10/2022</li>
+                        <li><b>Direccion: </b>
+                            <table>
+                                <tr>
+                                    <td>Calzada Principal 420</td>
+                                </tr>
+                                <tr>
+                                    <td>Colonia Fresona</td>
+                                </tr>
+                                <tr>
+                                    <td>42022, Guadalajara JAL</td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </p>
+                <table align="center">
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+                                Eliminar</button>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card bg-light mb-3">
             <div class="card-body">
                 <h5 class="card-title"> Visa <b>x-1234</b>
-                    <img src="/Imagenes/Visa_Logo.png" class="Logo" alt="LogoCC"></h5>
+                    <!-- <img src="/Imagenes/Visa_Logo.png" class="Logo" alt="LogoCC"> -->
+                </h5>
                 <hr>
                 <p class="card-text">
                     <ul type="none">
@@ -123,18 +208,20 @@
                         <td>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>
+                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+                                Eliminar</button>
                         <td>
                         </td>
                     </tr>
                 </table>
-            </div>            
+            </div>
         </div>
-        
-    <div class="card bg-light mb-3">
+
+        <div class="card bg-light mb-3">
             <div class="card-body">
                 <h5 class="card-title"> American Express <b>x-3456</b>
-                    <img src="/Imagenes/AmericanExpress_Loco.png" class="Logo" alt="LogoCC"></h5>
+                    <!-- <img src="/Imagenes/AmericanExpress_Loco.png" class="Logo" alt="LogoCC"> -->
+                </h5>
                 <hr>
                 <p class="card-text">
                     <ul type="none">
@@ -161,35 +248,168 @@
                         <td>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>
+                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+                                Eliminar</button>
                         <td>
                         </td>
                     </tr>
                 </table>
-            </div>            
+            </div>
+        </div>
+    </div>
+    <p>
+
+    </p>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addMethod">
+        <h7><i class="fas fa-plus-circle"></i> Agregar Metodo de Pago</h7>
+    </button>
+
+    <div class="modal fade" id="addMethod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-credit-card"></i> Agregar Método de
+                        Pago</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="card-num">Número de tarjeta</label>
+                            <input type="text" class="form-control" id="card-num"
+                                placeholder="xxxx-xxxx-xxxx-xxxx (ingrese num sin guiones (-) ni espacios)" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-type">Tipo</label>
+                            <select class="form-control" id="card-type" required>
+                                <option>Debito</option>
+                                <option>Credito</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-cat">Categoria</label>
+                            <select class="form-control" id="card-cat" required>
+                                <option>MasterCard</option>
+                                <option>Visa</option>
+                                <option>American Express</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="valid-thru-date">Fecha de vencimiento</label>
+                            <input type="date" class="form-control" id="valid-thru-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-name">Nombre del titular</label>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" id="card-first-name" class="form-control" placeholder="Nombre(s)"
+                                        required>
+                                </div>
+                                <div class="col">
+                                    <input type="text" id="card-last-name" class="form-control" placeholder="Apellidos"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="security-code">Código de seguridad</label>
+                            <input type="text" class="form-control col-2" id="security-code" placeholder="xxx" required>
+                        </div>
+                        <div class="form-group">
+                            <p>Dirección</p>
+                            <p>
+                                <div class="form-row">
+                                    <div class="col-5">
+                                        <input type="text" class="form-control" placeholder="Calle" id="calle-card"
+                                            required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Num.ext." id="numext-card"
+                                            required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Num.int." id="numint-card">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" class="form-control" placeholder="Colonia" id="col-card"
+                                            required>
+                                    </div>
+                                </div>
+                            </p>
+                            <p>
+                                <div class="form-row">
+                                    <div class="col-7">
+                                        <input type="text" class="form-control" placeholder="Ciudad" id="ciudad-card"
+                                            required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Estado" id="estado-card"
+                                            required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="C. P." id="cp-card"
+                                            required>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="pmAdd" disabled>Agregar</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    
+    <div class="modal fade" id="delete-Pm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Borrar Mascota</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Estas seguro que deseas eliminar:
+                    <div id="delete-num-card">
 
-<p>
+                    </div>
+                    <br>
+                    <div id="delete-id-card" hidden>
 
-</p>
-<button type="button" class="btn btn-success">
-    <h7><i class="fas fa-plus-circle"></i> Agregar Metodo de Pago</h7>
-</button>
+                    </div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-</script>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="PmDel">Borrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="barra superior - usuario general.js"></script>
+    <script src="usuario-metodos de pago.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
