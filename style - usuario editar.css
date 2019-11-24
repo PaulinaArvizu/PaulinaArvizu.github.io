@@ -1,6 +1,6 @@
 div.foto-perfil {
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: 10%;
     display: flex;
     align-items: flex-start;
@@ -11,8 +11,23 @@ img {
 .ediciones {
     width: 50%;
 }
-button {
+.ediciones button {
     /* text-align: left; */
     width: 50%;
     margin: 1%;
+}
+
+[class~="Rakunians"] {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 40px;
+    color: black;
+}
+
+nav {
+    background-color: #d0e9ee;
+    height: 50%;
+}
+
+#RakuniansIMG {
+    height: 50px;
 }
