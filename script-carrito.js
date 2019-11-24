@@ -271,6 +271,8 @@ document.querySelector("#addPay .btn-primary").addEventListener("click", e => {
     let ciudad = form.querySelector("#ciudad");
     let estado = form.querySelector("#estado");
     let cp = form.querySelector("#cp");
+    let cat = form.querySelector("#card-cat");
+    let type = form.querySelector("#card-type");
     let a = {
         "idU": userId,
         "tarjeta": Number.parseInt(card.value),
@@ -278,6 +280,8 @@ document.querySelector("#addPay .btn-primary").addEventListener("click", e => {
         "nombre": nombre.value,
         "apellido": apellidos.value,
         "codigo": Number.parseInt(code.value),
+        "categoria": cat.value,
+        "tipo": type.value,
         "direccion": [
             calle.value,
             numExt.value,

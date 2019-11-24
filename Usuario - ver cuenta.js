@@ -2,7 +2,7 @@ let user;
 let userId = 0;
 let baseURL = "http://localhost:3000/";
 
-function makeHTTPRequest(endpoint, method, data, cbOk, cbErr) {
+function makeHTTPRequest2(endpoint, method, data, cbOk, cbErr) {
     let xhr = new XMLHttpRequest();
     xhr.open(method, baseURL + endpoint);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -15,14 +15,16 @@ function makeHTTPRequest(endpoint, method, data, cbOk, cbErr) {
         }
     }
 }
+let publicaciones;
 
-
-makeHTTPRequest('usuarios/' + userId, 'GET', undefined,
+makeHTTPRequest2('usuarios/' + userId, 'GET', undefined,
     kk => {
         user = JSON.parse(kk);
+        
         // displayPost;
-        makeHTTPRequest('publicaciones?idU=' + userId, 'GET', undefined,
+        makeHTTPRequest2('publicaciones?idU=' + userId, 'GET', undefined,
             kk => {
+                publicaciones = JSON.parse(kk);
                 console.log(kk)
                 let postMap = JSON.parse(kk).map(x => htmlPublicacion(x));
                 document.querySelector(".publicaciones").innerHTML = "<h3>Tus publicaciones</h3>" + postMap.join(" ");
@@ -31,7 +33,7 @@ makeHTTPRequest('usuarios/' + userId, 'GET', undefined,
 
             });
 
-        makeHTTPRequest('mascotas?idU=' + userId, 'GET', undefined,
+        makeHTTPRequest2('mascotas?idU=' + userId, 'GET', undefined,
             kk => {
                 console.log(kk)
                 let petMap = JSON.parse(kk).map(x => htmlPet(x));
@@ -39,7 +41,7 @@ makeHTTPRequest('usuarios/' + userId, 'GET', undefined,
             },
             nok => {
             })
-        makeHTTPRequest('pedidos?idU=' + userId, 'GET', undefined,
+        makeHTTPRequest2('pedidos?idU=' + userId, 'GET', undefined,
             kk => {
                 console.log(kk)
                 let a = JSON.parse(kk);
@@ -57,7 +59,7 @@ makeHTTPRequest('usuarios/' + userId, 'GET', undefined,
 
 
 
-// let displayPost = makeHTTPRequest('publicaciones?idU=' + userId, 'GET', undefined,
+// let displayPost = makeHTTPRequest2('publicaciones?idU=' + userId, 'GET', undefined,
 //     kk => {
 //         console.log(kk)
 //         let postMap = JSON.parse(kk).map(x => htmlPublicacion(x));
@@ -79,7 +81,7 @@ function htmlPublicacion(post) {
         <p class="card-text">${post.descripcion}</p>
         <table width="100%">
             <tr>
-                <td><a href="#" style="color: brown;""><i class=" fas fa-paw"></i> Me gusta</a></td>
+                <td><button style="color: brown;"" onclick="meGusta('${post.id}')"><i class=" fas fa-paw"></i> Me gusta</button>  <b class="like" style="font-size:15px">${post.likes.length}</b></td>
                 <td align="right"><a class="delete" href="#" style="color: red;" onclick="deletePost(${post.id})"><i class="fas fa-times-circle"></i> Eliminar</a></td>
             </tr>
         </table>
@@ -95,10 +97,10 @@ function htmlPet(pet) {
 }
 
 function deletePost(id) {
-    makeHTTPRequest('publicaciones/' + id, 'DELETE', undefined,
+    makeHTTPRequest2('publicaciones/' + id, 'DELETE', undefined,
         kk => {
             console.log(kk)
-            makeHTTPRequest('publicaciones?idU=' + userId, 'GET', undefined,
+            makeHTTPRequest2('publicaciones?idU=' + userId, 'GET', undefined,
                 kk => {
                     console.log(kk)
                     let postMap = JSON.parse(kk).map(x => htmlPublicacion(x));
@@ -154,3 +156,23 @@ document.querySelectorAll(".btn-link")[0].addEventListener('click',e=>{
 document.querySelectorAll(".btn-link")[1].addEventListener('click',e=>{
     document.location.href = "Usuario - Editar Mascotas.html"  
 })
+
+function meGusta(postId) {
+    let post = publicaciones.find(p => p.id==Number(postId));
+    let i = post.likes.indexOf(user.id);
+    if(i != -1) {
+        post.likes.splice(i, 1);
+    } else {
+        post.likes[post.likes.length] = user.id;
+    }
+
+    event.currentTarget.parentNode.querySelector('b').innerText = post.likes.length;
+
+    makeHTTPRequest2(`publicaciones/${post.id}`, 'PATCH', post,
+    kk=>{
+        console.log("like exitoso")
+    },
+    nok=>{
+        console.log("no like")
+    })
+}
