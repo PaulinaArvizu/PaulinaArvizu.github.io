@@ -265,7 +265,7 @@
         {
           "idP": 1,
           "nombre": "prod",
-          "cantidad": "2",
+          "cantidad": 2,
           "precio": 247,
           "img": ""
         }
