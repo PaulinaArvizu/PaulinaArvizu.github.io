@@ -254,7 +254,9 @@
       "productos": [
         {
           "idP": "1",
-          "cantidad": "2"
+          "cantidad": "2",
+          "precio" : 247,
+          "img": ""
         }
       ],
       "subtotal": 10.1,
