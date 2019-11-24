@@ -54,7 +54,7 @@ function loadFeed() {
                     let ids = publicaciones.map(p => p.id);
                     id = Math.max(...ids)+1;
                     //arreglo de JSONs de las publicaciones del usuario y de usuarios que sigue
-                    publicaciones = publicaciones.filter(p => (p.idU==usuario.id)||(usuario.siguiendo.find(u => u.id==p.idU) != undefined));
+                    publicaciones = publicaciones.filter(p => (p.idU==usuario.id)||(usuario.siguiendo.find(u => u==p.idU) != undefined));
                     publicaciones = publicaciones.sort(sortByDate); //ordenar de mas reciente a menos reciente
                     findUsersInPosts();
                     // console.log(publicaciones);
@@ -278,7 +278,7 @@ function meGusta(postId) {
 
     event.currentTarget.parentNode.querySelector('b').innerText = post.likes.length;
 
-    console.log("hola");
+    // console.log("hola");
     //envia los cambios
     makeHTTPRequest(`/publicaciones/${post.id}`, 'PATCH', /*{'Content-Type': 'application/json'},*/ post,
                 (xhr) => {
