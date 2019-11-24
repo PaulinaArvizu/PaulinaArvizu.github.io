@@ -13,7 +13,7 @@ let searchBtn = document.getElementById('dropdownSearch');
 document.body.onload = loadUser;
 
 function loadUser() {
-    makeHTTPRequest(`/usuarios/0`, 'GET', '', '',
+    makeHTTPRequest(`/usuarios/0`, 'GET',/* '', */'',
                 (xhr) => {
                     if(xhr.status == 200) {
                         usuario = JSON.parse(xhr.response);
@@ -36,7 +36,7 @@ function loadFeed() {
 
     let ids = `idU=${usuario.id}`;
     usuario.siguiendo.forEach(elem => ids += `&idU=${elem}`);
-    makeHTTPRequest(`/usuarios`, 'GET', '', '',
+    makeHTTPRequest(`/usuarios`, 'GET',/* '', */'',
                 (xhr) => {
                     if(xhr.status != 200) {console.log('error'); return}
                     //arreglo de JSONs de las publicaciones del usuario y de usuarios que sigue
@@ -46,7 +46,7 @@ function loadFeed() {
                     // console.log(siguiendo);
                     // console.log(seguidores);
                 });
-    makeHTTPRequest(`/publicaciones`, 'GET', '', '',
+    makeHTTPRequest(`/publicaciones`, 'GET',/* '',*/ '',
                 (xhr) => {
                     if(xhr.status != 200) {console.log('error'); return}
                     //busca el ultimo id
@@ -59,7 +59,7 @@ function loadFeed() {
                     findUsersInPosts();
                     // console.log(publicaciones);
                 });
-    makeHTTPRequest(`/mascotas?${ids}`, 'GET', '', '',
+    makeHTTPRequest(`/mascotas?${ids}`, 'GET',/* '',*/ '',
                 (xhr) => {
                     if(xhr.status != 200) {console.log('error'); return}
                     //arreglo de JSONs de las publicaciones del usuario y de usuarios que sigue
@@ -84,7 +84,7 @@ function findUsersInPosts() {
 function findPets() {
     let ids = `idU=${usuario.id}`;
     usuario.siguiendo.forEach(elem => ids += `&idU=${elem}`);
-    makeHTTPRequest(`/mascotas?${ids}`, 'GET', '', '',
+    makeHTTPRequest(`/mascotas?${ids}`, 'GET',/* '',*/ '',
                 (xhr) => {
                     if(xhr.status != 200) {console.log('error'); return}
                     //arreglo de JSONs de las publicaciones del usuario y de usuarios que sigue
@@ -206,7 +206,7 @@ function createPost(event) {
     }
     // console.log(newPost);
     // location.reload();
-    makeHTTPRequest(`/publicaciones`,'POST', {'Content-Type': 'application/json'}, newPost,
+    makeHTTPRequest(`/publicaciones`,'POST', /*{'Content-Type': 'application/json'},*/ newPost,
                 (xhr) => {
                     if(xhr.status == 201) {
                         alert('Publicado');
@@ -248,7 +248,7 @@ function seguirUsuario(userId) {
     user.seguidores[user.seguidores.length] = usuario.id; //agrega a la lista de seguidores
 
     //envia los cambios
-    makeHTTPRequest(`/usuarios/${usuario.id}`, 'PATCH', {'Content-Type': 'application/json'}, usuario,
+    makeHTTPRequest(`/usuarios/${usuario.id}`, 'PATCH', /*{'Content-Type': 'application/json'},*/ usuario,
                 (xhr) => {
                     if(xhr.status == 200) {
                         console.log('cambio exitoso');
@@ -256,7 +256,7 @@ function seguirUsuario(userId) {
                         console.log('error en actualizacion');
                     }
                 });
-    makeHTTPRequest(`/usuarios/${user.id}`, 'PATCH', {'Content-Type': 'application/json'}, user,
+    makeHTTPRequest(`/usuarios/${user.id}`, 'PATCH', /*{'Content-Type': 'application/json'},*/ user,
                 (xhr) => {
                     if(xhr.status == 200) {
                         console.log('cambio exitoso');
@@ -280,7 +280,7 @@ function meGusta(postId) {
 
     console.log("hola");
     //envia los cambios
-    makeHTTPRequest(`/publicaciones/${post.id}`, 'PATCH', {'Content-Type': 'application/json'}, post,
+    makeHTTPRequest(`/publicaciones/${post.id}`, 'PATCH', /*{'Content-Type': 'application/json'},*/ post,
                 (xhr) => {
                     if(xhr.status == 200) {
                         console.log('like exitoso');
