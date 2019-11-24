@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <!--Font Rakunians-->
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet">
 
 
     <style>
@@ -56,25 +58,105 @@
             padding: 0px;
             margin: 0px;
         }
+
+        [class~="Rakunians"] {
+            font-family: 'Cedarville Cursive', cursive;
+            font-size: 40px;
+            color: black;
+        }
+
+        nav {
+            background-color: #d0e9ee;
+            height: 50%;
+        }
+
+        #RakuniansIMG {
+            height: 50px;
+        }
+
+        td img {
+            height: 30px;
+        }
     </style>
 
 </head>
+<nav class="navbar navbar-expand-sm navbar-light">
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <table width="100%">
+            <tr>
+                <td width="20%">
+                    <a class="nav-link Rakunians" href="Usuario - feed.html">
+                        <img src="Imagenes/Rakunians.png" alt="Rakunians" height="50px" id="RakuniansIMG">Rakunians
+                        <span class="sr-only">(current)</span></a>
+                </td>
+                <td width="15%">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nombre de usuario
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="Usuario - ver cuenta.html">Ver cuenta</a>
+                            <a class="dropdown-item" href="Administrador - pagina principal.html" hidden>Vista de
+                                administrador</a>
+                            <a class="dropdown-item" href="#" hidden>Vista de moderador</a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div id="buscar">
+                        <div class="form-inline my-2 my-lg-0 dropdown">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+                            <button class="btn btn btn-outline-info my-2 my-sm-0" type="submit" data-toggle="dropdown"
+                                id="dropdownSearch">
+                                Buscar
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownSearch" style="width: 300px !important">
+                                <table class="table-striped table-condensed" width="100%" id="resultadoBusqueda">
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row"><img src="Imagenes/Seguidor1.jpg" alt=""></td>
+                                            <td class="usuario">NoobMaster69</td>
+                                            <td><a href="#" style="color:green;">Seguir</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><img src="Imagenes/Seguidor2.jpg" alt=""></td>
+                                            <td class="usuario">DogNBeer</td>
+                                            <td><a href="#" style="color:green;">Seguir</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td align="right">
+                    <div id="tienda">
+                        <a class="btn btn-primary" href="Tienda - pagina principal.html"><i class="fas fa-store"></i>
+                            Tienda</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</nav>
 
 <p class="titulo">Editar Mascotas</p>
 <hr>
 
 <body>
-    <div class="card-columns">
+    <div class="card-columns" id="listaDeMascotas">
         <div class="card">
             <table width="100%">
                 <tr>
                     <td>
-                        <img class="MascotaPP card-img-top border border-dark rounded"
-                            src="/Imagenes/milaneso.jpg" alt="Card image cap">
+                        <!-- <img class="MascotaPP card-img-top border border-dark rounded" src="/Imagenes/milaneso.jpg"
+                            alt="Card image cap"> -->
                     </td>
                     <td align="right">
                         <p><button type="button" class="btn btn-primary"> <i class="fas fa-pen"></i> Editar</button></p>
-                        <p><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button></p>
+                        <p><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+                                Eliminar</button></p>
                     </td>
                 </tr>
             </table>
@@ -96,12 +178,13 @@
             <table width="100%">
                 <tr>
                     <td>
-                        <img class="MascotaPP card-img-top border border-dark rounded"
-                            src="/Imagenes/Bannana.jpg" alt="Card image cap">
+                        <!-- <img class="MascotaPP card-img-top border border-dark rounded" src="/Imagenes/Bannana.jpg"
+                            alt="Card image cap"> -->
                     </td>
                     <td align="right">
                         <p><button type="button" class="btn btn-primary"> <i class="fas fa-pen"></i> Editar</button></p>
-                        <p><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button></p>
+                        <p><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+                                Eliminar</button></p>
                     </td>
                 </tr>
             </table>
@@ -124,12 +207,14 @@
             <table width="100%">
                 <tr>
                     <td>
-                        <img class="MascotaPP card-img-top border border-dark rounded"
-                            src="/Imagenes/Takin.jpg" alt="Card image cap">
+                        <!-- <img class="MascotaPP card-img-top border border-dark rounded" src="/Imagenes/Takin.jpg"
+                            alt="Card image cap"> -->
                     </td>
                     <td align="right">
-                        <p><button type="button" class="btn btn-primary"> <i class="fas fa-pen"></i> Editar</button></p>
-                        <p><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button></p>
+                        <p><button type="button" class="btn btn-primary" id="PetEdit"> <i class="fas fa-pen"></i>
+                                Editar</button></p>
+                        <p><button type="button" class="btn btn-danger" id="PetDelete"><i class="fas fa-trash-alt"></i>
+                                Eliminar</button></p>
                     </td>
                 </tr>
             </table>
@@ -150,12 +235,174 @@
         </div>
     </div>
     <hr>
-    <button type="button" class="btn btn-success"><h7><i class="fas fa-plus-circle"></i> Agregar Mascota
-            </h7>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addPet">
+        <h7><i class="fas fa-plus-circle"></i> Agregar Mascota
+        </h7>
     </button>
-    
+
+    <!-- Modal Añadir -->
+    <div class="modal fade" id="addPet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-paw"></i> Agregar Mascota</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre-mascota">Nombre de tu mascota</label>
+                            <input type="text" class="form-control" id="nombre-mascota" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nacim-mascota">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="nacim-mascota" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo-mascota">Tipo</label>
+                            <select class="form-control" id="tipo-mascota" required>
+                                <option>Perro</option>
+                                <option>Gato</option>
+                                <option>Otros domésticos</option>
+                                <option>Exótico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="raza-mascota">Raza</label>
+                            <input type="text" class="form-control" id="raza-mascota" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pet-size">Tamaño</label>
+                            <select class="form-control" id="pet-size" required>
+                                <option>Extra chico</option>
+                                <option>Chico</option>
+                                <option>Mediano</option>
+                                <option>Grande</option>
+                                <option>Extra grande</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="about-pet">Acerca de tu mascota</label>
+                            <textarea class="form-control" id="about-pet" rows="3" placeholder="Opcional"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <p><a href="#"><i class="fas fa-image"></i> Agregar imagen</a></p>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="PetAdd" disabled>Agregar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Editar -->
+    <div class="modal fade" id="edit-Pet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-paw"></i> Editar Mascota</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="edit-nombre-mascota">Nombre de tu mascota</label>
+                            <input type="text" class="form-control" id="edit-nombre-mascota">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-nacim-mascota">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="edit-nacim-mascota">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-tipo-mascota">Tipo</label>
+                            <select class="form-control" id="edit-tipo-mascota">
+                                <option>Perro</option>
+                                <option>Gato</option>
+                                <option>Otros domésticos</option>
+                                <option>Exótico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-raza-mascota">Raza</label>
+                            <input type="text" class="form-control" id="edit-raza-mascota">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-pet-size">Tamaño</label>
+                            <select class="form-control" id="edit-pet-size">
+                                <option>Extra chico</option>
+                                <option>Chico</option>
+                                <option>Mediano</option>
+                                <option>Grande</option>
+                                <option>Extra grande</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-about-pet">Acerca de tu mascota</label>
+                            <textarea class="form-control" id="edit-about-pet" rows="3"
+                                placeholder="Opcional"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <p><a href="#"><i class="fas fa-image"></i> Agregar imagen</a></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="edit-pet-id" hidden>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="PetEd">Actualizar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Eliminar-->
+    <div class="modal fade" id="delete-Pet" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Borrar Mascota</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Estas seguro que deseas eliminar a:
+                    <div id="delete-nombre-mascota">
+
+                    </div>
+                    <br>
+                    <div id="delete-id-mascota" hidden>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="PetDel">Borrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="barra superior - usuario general.js"></script>
+    <script src="usuario-mascotas.js"></script>
+    <script src="barra superior - usuario general.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
