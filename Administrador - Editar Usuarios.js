@@ -34,7 +34,7 @@ function userToHTML(user) {
     <tbody>
         <tr>
             <th>
-                <img src="Imagenes/Seguidor1.jpg">
+                <img src="${user.img}">
                 <p>${user.nombre}</p>
             </th>
             <td>
