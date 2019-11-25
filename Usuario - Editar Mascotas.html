@@ -2,6 +2,7 @@
 const baseURL = 'http://localhost:3000';
 document.body.onload = loadPets;
 let detailedPets = [];
+let userId = 0;
 
 let mRegistro = document.getElementById("addPet");
 let mInvCampos = document.querySelectorAll(":invalid");
@@ -100,7 +101,7 @@ function addPet(event) {
     let idPet = detailedPets[detailedPets.length-1].id+1;
     let newPet = {
         id: idPet,
-        idU: 2,
+        idU: userId,
         nombre: document.getElementById("nombre-mascota").value,
         fecha: document.getElementById("nacim-mascota").value,
         tipo: document.getElementById("tipo-mascota").value,
@@ -123,6 +124,7 @@ function updatePet(event) {
     event.preventDefault();
     let newPet = {
         id: document.getElementById("edit-pet-id").value,
+        uid: userId,
         nombre: document.getElementById("edit-nombre-mascota").value,
         fecha: document.getElementById("edit-nacim-mascota").value,
         tipo: document.getElementById("edit-tipo-mascota").value,
@@ -179,8 +181,10 @@ function listPets(xhr) {
         case 200:
             let pList = JSON.parse(xhr.response);
             pList.forEach(element => {
+            if(element.uid == userId){
                 let petId = element.id;
                 makeHTTPRequest(`/mascotas/${petId}`, 'GET', '', petDetails);
+            }
             });
             break;
         default:
