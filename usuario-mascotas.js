@@ -99,6 +99,7 @@ function addPet(event) {
     console.log("hoa");
 
     let idPet = detailedPets[detailedPets.length-1].id+1;
+    console.log(idPet);
     let newPet = {
         id: idPet,
         idU: userId,
@@ -131,9 +132,8 @@ function updatePet(event) {
         raza: document.getElementById("edit-raza-mascota").value,
         size: document.getElementById("edit-pet-size").value,
         descripcion: document.getElementById("edit-about-pet").value,
-        img: ""
     }
-    makeHTTPRequest(`/mascotas/${newPet.id}`, 'PUT', newPet, cbUpdatePet);
+    makeHTTPRequest(`/mascotas/${newPet.id}`, 'PATCH', newPet, cbUpdatePet);
 }
 
 function deletePet(id) {
