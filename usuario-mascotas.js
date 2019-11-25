@@ -2,6 +2,7 @@
 const baseURL = 'http://localhost:3000';
 document.body.onload = loadPets;
 let detailedPets = [];
+let userId = 0;
 
 let mRegistro = document.getElementById("addPet");
 let mInvCampos = document.querySelectorAll(":invalid");
@@ -46,8 +47,8 @@ function petToHTML(pet) {
     <table width="100%">
         <tr>
             <td>
-                <!-- <img class="MascotaPP card-img-top border border-dark rounded" src="/Imagenes/milaneso.jpg"
-                    alt="Card image cap"> -->
+                <img class="MascotaPP card-img-top border border-dark rounded" src="${pet.img}"
+                    alt="Card image cap">
             </td>
             <td align="right">
                 <p><button type="button" class="btn btn-primary" onclick="editPet('${pet.id}')" data-toggle="modal" data-target="#edit-Pet"> <i class="fas fa-pen"></i> Editar</button></p>
@@ -100,7 +101,7 @@ function addPet(event) {
     let idPet = detailedPets[detailedPets.length-1].id+1;
     let newPet = {
         id: idPet,
-        idU: 2,
+        idU: userId,
         nombre: document.getElementById("nombre-mascota").value,
         fecha: document.getElementById("nacim-mascota").value,
         tipo: document.getElementById("tipo-mascota").value,
@@ -123,6 +124,7 @@ function updatePet(event) {
     event.preventDefault();
     let newPet = {
         id: document.getElementById("edit-pet-id").value,
+        uid: userId,
         nombre: document.getElementById("edit-nombre-mascota").value,
         fecha: document.getElementById("edit-nacim-mascota").value,
         tipo: document.getElementById("edit-tipo-mascota").value,
@@ -179,8 +181,10 @@ function listPets(xhr) {
         case 200:
             let pList = JSON.parse(xhr.response);
             pList.forEach(element => {
+            if(element.uid == userId){
                 let petId = element.id;
                 makeHTTPRequest(`/mascotas/${petId}`, 'GET', '', petDetails);
+            }
             });
             break;
         default:
