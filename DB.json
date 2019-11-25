@@ -2,7 +2,7 @@
   "mascotas": [
     {
       "id": 0,
-      "idU": 0,
+      "idU": 1,
       "nombre": "figaro",
       "fecha": "2000-05-01",
       "tipo": "perro",
@@ -186,52 +186,18 @@
   ],
   "publicaciones": [
     {
-      "id": 1,
-      "idU": 1,
-      "descripcion": "aqui esta una foto1",
-      "img": "",
-      "mascotas": [
-        1
-      ],
-      "reportado": true,
-      "fecha": "2000-05-01",
-      "likes": []
-    },
-    {
-      "id": 2,
-      "idU": 2,
-      "descripcion": "aqui esta una foto2",
-      "img": "",
-      "mascotas": [
-        1
-      ],
-      "reportado": true,
-      "fecha": "2000-05-01",
-      "likes": []
-    },
-    {
-      "id": 3,
-      "idU": 3,
-      "descripcion": "aqui esta una foto3",
-      "img": "",
-      "mascotas": [
-        1
-      ],
-      "reportado": true,
-      "fecha": "2019-11-02",
-      "likes": []
-    },
-    {
       "id": 4,
       "idU": 1,
-      "descripcion": "",
-      "img": "",
+      "descripcion": "Este es figaro.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHlMVlIEvIkibLhFSKilfoRt3_R6dyahArl5jVAGcVqVkxkpMt",
       "mascotas": [
-        1
+        2
       ],
       "reportado": false,
       "fecha": "2019-11-22T03:18:47.539Z",
-      "likes": []
+      "likes": [],
+      "username": "Animalover",
+      "nombreMascotas": "#figaro"
     },
     {
       "id": 5,
@@ -271,19 +237,45 @@
       ],
       "reportado": false,
       "fecha": "2019-11-22T03:18:47.539Z",
+      "likes": [],
+      "username": "abc",
+      "nombreMascotas": "#Milaneso"
+    },
+    {
+      "id": 8,
+      "idU": 0,
+      "descripcion": "gato",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSHHCU7FbevXYofZQ_6fc6kGr2DPw1U-mLnpyi6lGXfKyi2M4s6",
+      "mascotas": [
+        2
+      ],
+      "reportado": false,
+      "fecha": "2019-11-24T15:31:46.589Z",
+      "likes": []
+    },
+    {
+      "id": 9,
+      "idU": 0,
+      "descripcion": "",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9yFo_cu1JCjhZ2ORxLUjaID1NzYysP3v_Ab66cUT9vaRCARgg",
+      "mascotas": [
+        3
+      ],
+      "reportado": false,
+      "fecha": "2019-11-24T15:35:00.654Z",
       "likes": []
     }
   ],
   "productos": [
     {
       "id": 1,
-      "nombre": "prod",
+      "nombre": "Tina para perro",
       "precio": 123.5,
-      "marca": "peludo",
+      "marca": "Peludo",
       "size": "dimensiones",
-      "detalles": "producto",
+      "detalles": "Tina para mascotas que escuchan música",
       "fecha": "2000-05-01",
-      "img": ""
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIvVMMjx46BzhGHJX1E1ylNU_d2mPl7L20wx0J8nG7vsTdiqhR"
     }
   ],
   "pedidos": [
