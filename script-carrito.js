@@ -16,7 +16,7 @@ function makeHTTPRequest(endpoint, method, data, cbOk, cbErr) {
         }
     }
 }
-let userId = 1;
+let userId = 0;
 
 //conseguir metodos de pago
 let displayPay = makeHTTPRequest('metodosPago?idU=' + userId, 'GET', undefined,
@@ -46,8 +46,6 @@ let displayDirs = makeHTTPRequest('direccionesEnvio?idU=' + userId, 'GET', undef
         let listaDirs = document.querySelector(".direcciones");
         listaDirs.querySelectorAll("label").forEach(e => e.remove());
         dirs.forEach(element => {
-            console.log(element)
-
             let a = `<label>
         <input type="radio" name="envio" id="" value="${element.id}">
         <div class="card">
@@ -335,8 +333,12 @@ document.querySelector("#addAddress .btn-primary").addEventListener("click", e =
 })
 
 document.querySelector(".finalizar").addEventListener("click", e => {
-    let v = document.querySelectorAll(":checked");
+    console.log("ded")
+    let v = document.querySelectorAll(".envio :checked, .metodos-pago :checked");
+    console.log(v);
+    console.log(v[0].value);
     if(v.length != 2){
+        alert("selecciona direccion y metodo de pago")
         return;
     }
     makeHTTPRequest(`pedidos/${a.id}`,'PATCH',{
