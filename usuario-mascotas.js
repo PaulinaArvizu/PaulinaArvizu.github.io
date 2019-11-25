@@ -124,7 +124,7 @@ function updatePet(event) {
     event.preventDefault();
     let newPet = {
         id: document.getElementById("edit-pet-id").value,
-        uid: userId,
+        idU: userId,
         nombre: document.getElementById("edit-nombre-mascota").value,
         fecha: document.getElementById("edit-nacim-mascota").value,
         tipo: document.getElementById("edit-tipo-mascota").value,
@@ -181,7 +181,7 @@ function listPets(xhr) {
         case 200:
             let pList = JSON.parse(xhr.response);
             pList.forEach(element => {
-            if(element.uid == userId){
+            if(element.idU == userId){
                 let petId = element.id;
                 makeHTTPRequest(`/mascotas/${petId}`, 'GET', '', petDetails);
             }
