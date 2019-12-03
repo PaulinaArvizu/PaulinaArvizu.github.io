@@ -2,7 +2,7 @@
 let searchBtn = document.getElementById('dropdownSearch');
 let globalUsers = [];
 let usuario;
-//asdasdas
+
 document.body.onload = loadUser; //si se usa este evento en otro js, borrar este y ejecutar la funcion loadUser() dentro de la otra funcion
 
 function loadUser() {
