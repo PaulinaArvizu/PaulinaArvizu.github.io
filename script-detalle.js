@@ -40,13 +40,13 @@ let carrito;
 makeHTTPRequest('pedidos', 'GET', undefined,
     kk => {
         let pedidos = JSON.parse(kk);
-        let pedido = pedidos.find(a => a.status == 1 && a.idU == 1);
+        let pedido = pedidos.find(a => a.status == 1 && a.idU == 0);
         if (pedido != undefined) {
             idC = pedido.id;
             carrito = pedido.productos;
         } else {
             makeHTTPRequest('pedidos', 'POST', { // crea nuevo pedido con status de carrito
-                "idU": 1,
+                "idU": 0,
                 "productos": [],
                 "subtotal": 0.0,
                 "total": 0.0,
