@@ -9,9 +9,9 @@ let imgModal = document.getElementById('change-img');
 let newImgBtn = imgModal.querySelector('.modal-footer button:last-of-type');
 
 function loadImg() {
-    let promise = new Promise((resolve, reject) => {
-        resolve
-    })
+    // let promise = new Promise((resolve, reject) => {
+    //     resolve
+    // })
     document.querySelector('.foto-perfil img').setAttribute('src', usuario.img);
 }
 
