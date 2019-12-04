@@ -70,3 +70,18 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
 }
+
+[class~="Rakunians"] {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 40px;
+    color: black;
+}
+
+nav {
+    background-color: #d0e9ee;
+    height: 50%;
+}
+
+#RakuniansIMG {
+    height: 50px;
+}
