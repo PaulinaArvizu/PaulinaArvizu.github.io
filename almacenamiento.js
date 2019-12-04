@@ -2,10 +2,12 @@
 // let url = "https://api.myjson.com/bins/rty5e";
 let baseURl = "http://localhost:3000";
 
-function makeHTTPRequest(endpoint, method, headers, data, cb){
+function makeHTTPRequest(endpoint, method, /*headers,*/ data, cb){
     // 1. crear XMLHttpRequest object
     let xhr = new XMLHttpRequest();
     // 2. configurar
+    let headers = {'Content-Type': 'application/json'};
+    if(method == 'DELETE') {headers = ''}
     xhr.open(method, baseURl+endpoint);
     for(let key in headers) {
         xhr.setRequestHeader(key, headers[key]);
