@@ -11,7 +11,7 @@ function makeHTTPRequest(endpoint, method, data, cbOk, cbErr) {
         }
     }
 }
-let uId = 1;
+let uId = 0;
 
 makeHTTPRequest('usuarios/' + uId, 'GET', undefined,
     kk => {
