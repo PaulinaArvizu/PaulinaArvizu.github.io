@@ -1,6 +1,6 @@
 [class="fixed-box"] {
     position: fixed;
-    top: 10%;
+    top: 15%;
     display: flex;
     flex-direction: column;
     width: 75%;
@@ -38,10 +38,25 @@
     padding-left: 5%;
     padding-top: 1%;
 }
+
 td img {
     height: 30px;
 }
 
 td.mascota {
     vertical-align: middle;
+}
+[class~="Rakunians"] {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 40px;
+    color: black;
+}
+
+nav {
+    background-color: #d0e9ee;
+    height: 50%;
+}
+
+#RakuniansIMG {
+    height: 50px;
 }
