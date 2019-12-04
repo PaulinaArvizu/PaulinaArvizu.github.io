@@ -276,37 +276,49 @@
       "detalles": "Tina para mascotas que escuchan música",
       "fecha": "2000-05-01",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIvVMMjx46BzhGHJX1E1ylNU_d2mPl7L20wx0J8nG7vsTdiqhR"
+    },
+    {
+      "nombre": "Otra cosa",
+      "precio": 50,
+      "marca": "Ola",
+      "detalles": "Cosa para mascotas",
+      "size": "Chico",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0g_4mGvtXZzf9dY3gMcIKcMFuno-bH1JMg8E5CcPb2SEG_b14",
+      "fecha": "2019-11-25T06:16:46.025Z",
+      "id": 2
     }
   ],
   "pedidos": [
     {
-      "id": 1,
-      "idU": 1,
+      "idU": 0,
       "productos": [
         {
-          "idP": 1,
-          "nombre": "prod",
-          "cantidad": 2,
-          "precio": 247,
-          "img": ""
+          "id": "1",
+          "nombre": "Tina para perro",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIvVMMjx46BzhGHJX1E1ylNU_d2mPl7L20wx0J8nG7vsTdiqhR",
+          "cantidad": 3,
+          "precio": 370.5
         }
       ],
-      "subtotal": 10.1,
-      "total": 11.15,
-      "status": 1
+      "subtotal": 370.5,
+      "total": 429.78,
+      "status": 2,
+      "id": 1,
+      "idPago": 1,
+      "idEnvio": 1
     }
   ],
   "direccionesEnvio": [
     {
       "id": 1,
-      "idU": 1,
+      "idU": 0,
       "nombreCompleto": "abc def",
       "direccion": "Av C, #21",
       "subDireccion": "",
       "ciudad": "A",
       "estado": "B",
       "CP": "12345",
-      "telefono": "123456789"
+      "telefono": "1234567890"
     }
   ],
   "reportesP": [
