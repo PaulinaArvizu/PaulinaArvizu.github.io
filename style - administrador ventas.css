@@ -1,13 +1,13 @@
-th {
+.ventas th {
     width: 5%;
 }
-td:first-of-type {
+.ventas td:first-of-type {
     width: 15%;
 }
-td:last-of-type {
+.ventas td:last-of-type {
     width: 25%;
 }
-img {
+.ventas img {
     width: 200px;
 }
 .table:nth-of-type(odd) {
@@ -20,9 +20,27 @@ th p {
 .usuario {
     margin: 0px;
 }
-table-condensed tr {
+.table-condensed tr {
     height: 10px;
 }
 table td p{
     vertical-align: middle; 
+}
+[class~="Rakunians"] {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 40px;
+    color: black;
+}
+
+nav {
+    background-color: #d0e9ee;
+    height: 50%;
+}
+
+#RakuniansIMG {
+    height: 50px;
+}
+
+td img {
+    height: 30px;
 }
