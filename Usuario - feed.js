@@ -35,7 +35,7 @@ function loadFeed() {
     }
 
     let ids = `idU=${usuario.id}`;
-    // usuario.siguiendo.forEach(elem => ids += `&idU=${elem}`);
+    usuario.siguiendo.forEach(elem => ids += `&idU=${elem}`);
     makeHTTPRequest(`/usuarios`, 'GET',/* '', */'',
                 (xhr) => {
                     if(xhr.status != 200) {console.log('error'); return}
@@ -59,7 +59,7 @@ function loadFeed() {
                     findUsersInPosts();
                     // console.log(publicaciones);
                 });
-    makeHTTPRequest(`/mascotas?idU=${usuario.id}`, 'GET',/* '',*/ '',
+    makeHTTPRequest(`/mascotas?${ids}`, 'GET',/* '',*/ '',
                 (xhr) => {
                     if(xhr.status != 200) {console.log('error'); return}
                     //arreglo de JSONs de las publicaciones del usuario y de usuarios que sigue
@@ -75,9 +75,9 @@ function sortByDate(a,b) {
 }
 
 function findUsersInPosts() {
-    publicaciones.forEach(elem => {
-        elem.username = globalUsers.find(usu => (elem.idU == usu.id)).nombre;
-    });
+    // publicaciones.forEach(elem => {
+    //     elem.username = globalUsers.find(usu => (elem.idU == usu.id)).nombre;
+    // });
     findPets();
 }
 
@@ -115,7 +115,9 @@ function displayPosts() {
 
 function displayForm() {
     let petList = Upets.map(pet => { //recorre toda la lista con map y retorna un nuevo arreglo
-        return petToHTML(pet);
+        if(pet.idU==usuario.id) {
+            return petToHTML(pet);
+        }
     });
     document.getElementsByTagName('ul')[0].innerHTML = petList.join('');
 }
@@ -155,7 +157,6 @@ function postToHTML(post) {
         <table width="100%">
             <tr>
                 <td><button style="color: brown;"" onclick="meGusta('${post.id}')"><i class=" fas fa-paw"></i> Me gusta</button>  <b class="like" style="font-size:15px">${post.likes.length}</b></td>
-                <td align="right"><a class="report" href="#" style="color: red;"><i class="fas fa-times-circle"></i> Reportar</a></td>
             </tr>
         </table>
     </div>
@@ -202,7 +203,8 @@ function createPost(event) {
         "mascotas": petArray,
         "reportado": false,
         "fecha": new Date(),
-        "likes": []
+        "likes": [],
+        "username": usuario.nombre
     }
     // console.log(newPost);
     // location.reload();
@@ -210,7 +212,7 @@ function createPost(event) {
                 (xhr) => {
                     if(xhr.status == 201) {
                         alert('Publicado');
-                        window.location.reload();
+                        // window.location.reload();
                     }
                     else {
                         alert('Error en publicación');
@@ -248,23 +250,18 @@ function seguirUsuario(userId) {
     user.seguidores[user.seguidores.length] = usuario.id; //agrega a la lista de seguidores
 
     //envia los cambios
-    makeHTTPRequest(`/usuarios/${usuario.id}`, 'PATCH', /*{'Content-Type': 'application/json'},*/ usuario,
-                (xhr) => {
-                    if(xhr.status == 200) {
-                        console.log('cambio exitoso');
-                    } else {
-                        console.log('error en actualizacion');
-                    }
-                });
-    makeHTTPRequest(`/usuarios/${user.id}`, 'PATCH', /*{'Content-Type': 'application/json'},*/ user,
-                (xhr) => {
-                    if(xhr.status == 200) {
-                        console.log('cambio exitoso');
-                    } else {
-                        console.log('error en actualizacion');
-                    }
-                });
-    window.location.reload();
+    makeHTTPRequest(`/usuarios/${usuario.id}`, 'PATCH', /*{'Content-Type': 'application/json'},*/ usuario, cbNewPost);
+    makeHTTPRequest(`/usuarios/${user.id}`, 'PATCH', /*{'Content-Type': 'application/json'},*/ user, cbNewPost);
+    
+}
+
+function cbNewPost(xhr) {
+    if(xhr.status == 200) {
+        console.log('cambio exitoso');
+        window.location.reload();
+    } else {
+        console.log('error en actualizacion');
+    }
 }
 
 function meGusta(postId) {
