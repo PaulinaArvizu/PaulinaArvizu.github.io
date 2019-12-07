@@ -83,7 +83,7 @@ makeHTTPRequest('pedidos?idU=' + userId + "&status=1", 'GET', undefined,
             subTotal += e.precio;
         })
         document.getElementById("subtotal").innerText = subTotal;
-        document.getElementById("total").innerText = subTotal * iva;
+        document.getElementById("total").innerText = (subTotal * iva).toFixed(2);
 
     },
     nok=>{
