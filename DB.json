@@ -182,10 +182,6 @@
       "idU": 1,
       "descripcion": "Este es figaro.",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHlMVlIEvIkibLhFSKilfoRt3_R6dyahArl5jVAGcVqVkxkpMt",
-      "mascotas": [
-        2
-      ],
-      "reportado": false,
       "fecha": "2019-11-22T03:18:47.539Z",
       "likes": [],
       "username": "Animalover",
@@ -196,10 +192,6 @@
       "idU": 0,
       "descripcion": "Acabo de rescatar a este tierno gatito.",
       "img": "https://pbs.twimg.com/media/EEvcxx2W4AA_YOQ.jpg",
-      "mascotas": [
-        2
-      ],
-      "reportado": false,
       "fecha": "2019-11-22T03:18:47.539Z",
       "likes": [],
       "username": "abc",
@@ -210,10 +202,6 @@
       "idU": 0,
       "descripcion": "Hoy pesaron a Milaneso. 500kgs!!",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkjsxbqWquMX-aX2sGtWNS0-vHBBD2f97s9rGVZTMlYooGDFKr",
-      "mascotas": [
-        1
-      ],
-      "reportado": false,
       "fecha": "2019-11-22T03:18:47.539Z",
       "likes": [],
       "username": "abc",
@@ -224,10 +212,6 @@
       "idU": 0,
       "descripcion": "Milaneso con Milanesa. Que pareja tan linda",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRimADyul3xRg52kyicrwarAcUbf7eLxUqNhh2j7ipITZaAZlvt",
-      "mascotas": [
-        1
-      ],
-      "reportado": false,
       "fecha": "2019-11-22T03:18:47.539Z",
       "likes": [],
       "username": "abc",
@@ -238,10 +222,6 @@
       "idU": 0,
       "descripcion": "gato",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSHHCU7FbevXYofZQ_6fc6kGr2DPw1U-mLnpyi6lGXfKyi2M4s6",
-      "mascotas": [
-        2
-      ],
-      "reportado": false,
       "fecha": "2019-11-24T15:31:46.589Z",
       "username": "abc",
       "nombreMascotas": "#Bannana",
@@ -252,10 +232,6 @@
       "idU": 0,
       "descripcion": "",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9yFo_cu1JCjhZ2ORxLUjaID1NzYysP3v_Ab66cUT9vaRCARgg",
-      "mascotas": [
-        3
-      ],
-      "reportado": false,
       "fecha": "2019-11-24T15:35:00.654Z",
       "likes": [],
       "username": "abc",
@@ -266,30 +242,12 @@
       "idU": 0,
       "descripcion": "wesdbetnrt",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSrQ_AOhtT9M22mx0qCxlfzyA3zThvZeGmyuwHZRMNC-Bb4M1yA",
-      "mascotas": [
-        2
-      ],
-      "reportado": false,
       "fecha": "2019-12-06T10:37:04.854Z",
       "likes": [
         0
       ],
       "username": "abc",
       "nombreMascotas": "#Bannana"
-    },
-    {
-      "id": 11,
-      "idU": 0,
-      "descripcion": "un chango",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNpPHOJmnLF2_votTw4fKUNP5Uz5-CsgdEaKgpF6nUj2gI0w3R",
-      "mascotas": [
-        1
-      ],
-      "reportado": false,
-      "fecha": "2019-12-06T13:21:56.644Z",
-      "likes": [],
-      "nombreMascotas": "#Milaneso",
-      "username": "abc"
     }
   ],
   "productos": [
@@ -355,6 +313,31 @@
       "total": 487.78,
       "status": 2,
       "id": 2,
+      "idPago": 11,
+      "idEnvio": 1
+    },
+    {
+      "idU": 0,
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Tina para perro",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIvVMMjx46BzhGHJX1E1ylNU_d2mPl7L20wx0J8nG7vsTdiqhR",
+          "cantidad": 1,
+          "precio": 123.5
+        },
+        {
+          "id": "2",
+          "nombre": "Otra cosa",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0g_4mGvtXZzf9dY3gMcIKcMFuno-bH1JMg8E5CcPb2SEG_b14",
+          "cantidad": 1,
+          "precio": 50
+        }
+      ],
+      "subtotal": 173.5,
+      "total": 201.26,
+      "status": 2,
+      "id": 3,
       "idPago": 11,
       "idEnvio": 1
     }
