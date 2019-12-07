@@ -89,15 +89,7 @@ function findPets() {
                     if(xhr.status != 200) {console.log('error'); return}
                     //arreglo de JSONs de las publicaciones del usuario y de usuarios que sigue
                     let pets = JSON.parse(xhr.response);
-                    publicaciones.forEach(elem => {
-                        elem.nombreMascotas = '';
-                        // console.log(elem.mascotas);
-                        elem.mascotas.forEach(pet => {
-                            let pName = Upets.find(p => p.id == pet);
-                            // console.log(typeof(pName.nombre));
-                            elem.nombreMascotas += '#'+pName.nombre;
-                        });
-                    });
+                    
                     displayPosts();
                     displayForm();
                     displayFollowers();
@@ -193,17 +185,19 @@ function createPost(event) {
     petList.forEach(pet => {
         let p = Upets.find(elem => elem.nombre == pet.value);
         petArray.push(p.id);
-    })
-    // console.log(petArray);
+    });
+    let nombreMascotas = '';
+    petArray.forEach(pet => {
+        nombreMascotas += '#'+pet.nombre;
+    });
     let newPost = {
         "id": id,
         "idU": usuario.id,
         "descripcion": newPostForm.getElementsByTagName('textarea')[0].value,
         "img": document.getElementById('imagen').value,
-        "mascotas": petArray,
-        "reportado": false,
         "fecha": new Date(),
         "likes": [],
+        "nombreMascotas": nombreMascotas,
         "username": usuario.nombre
     }
     // console.log(newPost);
