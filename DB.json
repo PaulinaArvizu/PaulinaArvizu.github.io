@@ -12,17 +12,6 @@
       "img": ""
     },
     {
-      "id": 1,
-      "idU": 0,
-      "nombre": "Milaneso",
-      "fecha": "2000-05-01",
-      "tipo": "Perro",
-      "raza": "Pug",
-      "size": "chico",
-      "descripcion": "Milaneso es un perrito travieso que le gusta ser gordito.",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShRAuRvuZpvh_WTnxtQ27ZxbIhmnDxXD-N1gVuQPWxpfHL05mh"
-    },
-    {
       "id": 2,
       "idU": 0,
       "nombre": "Bannana",
@@ -48,7 +37,7 @@
   "metodosPago": [
     {
       "id": "1",
-      "idU": "1",
+      "idU": 0,
       "tarjeta": "6789678967896789",
       "tipo": "Debito",
       "categoria": "MasterCard",
@@ -68,7 +57,7 @@
     },
     {
       "id": "11",
-      "idU": 2,
+      "idU": 0,
       "tarjeta": "1234567891234567",
       "tipo": "Debito",
       "categoria": "Visa",
@@ -93,7 +82,7 @@
       "correo": "abc@abc.abc",
       "nombre": "abc",
       "fecha": "2000-05-01",
-      "password": "12345",
+      "password": "12",
       "reportado": false,
       "seguidores": [
         4,
@@ -104,7 +93,7 @@
         2,
         3
       ],
-      "admin": false,
+      "admin": true,
       "moderador": false,
       "img": "https://www.tialoto.bg/media/files/resized/article/615x/zip/zip-814d2ef213786c340967119ea9f88f8f.jpg"
     },
@@ -160,7 +149,10 @@
       "fecha": "2019-11-02",
       "password": "a",
       "reportado": false,
-      "seguidores": [],
+      "seguidores": [
+        0,
+        0
+      ],
       "siguiendo": [
         0
       ],
@@ -170,7 +162,7 @@
     },
     {
       "id": 5,
-      "correo": "b@a.a",
+      "correo": "c@a.a",
       "nombre": "DogNBeer",
       "fecha": "2019-11-02",
       "password": "a",
@@ -197,7 +189,7 @@
       "fecha": "2019-11-22T03:18:47.539Z",
       "likes": [],
       "username": "Animalover",
-      "nombreMascotas": "#figaro"
+      "nombreMascotas": "#Bannana"
     },
     {
       "id": 5,
@@ -251,6 +243,8 @@
       ],
       "reportado": false,
       "fecha": "2019-11-24T15:31:46.589Z",
+      "username": "abc",
+      "nombreMascotas": "#Bannana",
       "likes": []
     },
     {
@@ -263,7 +257,39 @@
       ],
       "reportado": false,
       "fecha": "2019-11-24T15:35:00.654Z",
-      "likes": []
+      "likes": [],
+      "username": "abc",
+      "nombreMascotas": "#Takin"
+    },
+    {
+      "id": 10,
+      "idU": 0,
+      "descripcion": "wesdbetnrt",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSrQ_AOhtT9M22mx0qCxlfzyA3zThvZeGmyuwHZRMNC-Bb4M1yA",
+      "mascotas": [
+        2
+      ],
+      "reportado": false,
+      "fecha": "2019-12-06T10:37:04.854Z",
+      "likes": [
+        0
+      ],
+      "username": "abc",
+      "nombreMascotas": "#Bannana"
+    },
+    {
+      "id": 11,
+      "idU": 0,
+      "descripcion": "un chango",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNpPHOJmnLF2_votTw4fKUNP5Uz5-CsgdEaKgpF6nUj2gI0w3R",
+      "mascotas": [
+        1
+      ],
+      "reportado": false,
+      "fecha": "2019-12-06T13:21:56.644Z",
+      "likes": [],
+      "nombreMascotas": "#Milaneso",
+      "username": "abc"
     }
   ],
   "productos": [
@@ -305,6 +331,31 @@
       "status": 2,
       "id": 1,
       "idPago": 1,
+      "idEnvio": 1
+    },
+    {
+      "idU": 0,
+      "productos": [
+        {
+          "id": "2",
+          "nombre": "Otra cosa",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0g_4mGvtXZzf9dY3gMcIKcMFuno-bH1JMg8E5CcPb2SEG_b14",
+          "cantidad": 1,
+          "precio": 50
+        },
+        {
+          "id": "1",
+          "nombre": "Tina para perro",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIvVMMjx46BzhGHJX1E1ylNU_d2mPl7L20wx0J8nG7vsTdiqhR",
+          "cantidad": 3,
+          "precio": 370.5
+        }
+      ],
+      "subtotal": 420.5,
+      "total": 487.78,
+      "status": 2,
+      "id": 2,
+      "idPago": 11,
       "idEnvio": 1
     }
   ],
