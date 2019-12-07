@@ -115,9 +115,9 @@ function deletePost(id) {
         })
 }
 
-function htmlPendingOrders(order) {
-    return `<h3>Pedidos en curso</h3>
-    <div class="card border-warning mb-3">
+function htmlCompleteOrders(order) {
+    return `
+    <div class="card border-success mb-3">
         <div class="card-header">Pedido: #${order.id}</div>
         <div class="card-body">
         <table class="table-striped table-condensed" width="100%">
@@ -128,8 +128,10 @@ function htmlPendingOrders(order) {
             <th>Precio</th>
         </tr>
     </thead>
-    <tbody>` + order.productos.map(x => `<tr><td scope="row">${x.cantidad}</td><td>${x.nombre}</td><td>${x.precio}</td></tr>`).join(' ') + `</tbody>
-    </table>`;
+    <tbody>` + order.productos.map(x => `<tr><td scope="row">${x.cantidad}</td><td>${x.nombre}</td><td>$${x.precio}</td></tr>`).join(' ') + `</tbody>
+    </table>
+    </div>
+    </div>`;
 }
 
 function htmlCompleteOrders(order) {
