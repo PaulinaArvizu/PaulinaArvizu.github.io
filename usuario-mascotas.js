@@ -132,6 +132,7 @@ function updatePet(event) {
         raza: document.getElementById("edit-raza-mascota").value,
         size: document.getElementById("edit-pet-size").value,
         descripcion: document.getElementById("edit-about-pet").value,
+        img: document.getElementById("edit-pet-img").value
     }
     makeHTTPRequest(`/mascotas/${newPet.id}`, 'PATCH', newPet, cbUpdatePet);
 }
