@@ -183,14 +183,9 @@ function createPost(event) {
     // for(let i = 0; i < petList.length; i++) {
     //     console.log(petList[i].value);
     // }
-    let petArray = [];
-    petList.forEach(pet => {
-        let p = Upets.find(elem => elem.nombre == pet.value);
-        petArray.push(p.id);
-    });
     let nombreMascotas = '';
-    petArray.forEach(pet => {
-        nombreMascotas += '#'+pet.nombre;
+    petList.forEach(pet => {
+        nombreMascotas += '#'+pet.value;
     });
     let newPost = {
         "id": id,
