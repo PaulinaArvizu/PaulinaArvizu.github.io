@@ -8,6 +8,8 @@ let newPWBtn = PWModal.querySelector('.modal-footer button:last-of-type');
 let imgModal = document.getElementById('change-img');
 let newImgBtn = imgModal.querySelector('.modal-footer button:last-of-type');
 
+let uId = localStorage.userId;
+
 function loadImg() {
     // let promise = new Promise((resolve, reject) => {
     //     resolve
@@ -109,7 +111,7 @@ let usuario;
 document.body.onload = loadUser; //si se usa este evento en otro js, borrar este y ejecutar la funcion loadUser() dentro de la otra funcion
 
 function loadUser() {
-    makeHTTPRequest(`/usuarios/0`, 'GET', '', cbOk1);
+    makeHTTPRequest(`/usuarios/${uId}`, 'GET', '', cbOk1);
 }
 
 function cbOk1(xhr){

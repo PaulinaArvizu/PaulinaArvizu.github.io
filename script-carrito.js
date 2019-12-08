@@ -16,7 +16,7 @@ function makeHTTPRequest(endpoint, method, data, cbOk, cbErr) {
         }
     }
 }
-let userId = 0;
+let userId = localStorage.userId;
 
 //conseguir metodos de pago
 let displayPay = makeHTTPRequest('metodosPago?idU=' + userId, 'GET', undefined,

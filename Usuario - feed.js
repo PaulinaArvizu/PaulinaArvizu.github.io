@@ -10,10 +10,12 @@ let newPostForm = document.getElementById('newPost');
 let newPostBtn = newPostForm.querySelector('button');
 let searchBtn = document.getElementById('dropdownSearch');
 
+let uId = localStorage.userId;
+
 document.body.onload = loadUser;
 
 function loadUser() {
-    makeHTTPRequest(`/usuarios/0`, 'GET',/* '', */'',
+    makeHTTPRequest(`/usuarios/${uId}`, 'GET',/* '', */'',
                 (xhr) => {
                     if(xhr.status == 200) {
                         usuario = JSON.parse(xhr.response);

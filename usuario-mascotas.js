@@ -2,7 +2,7 @@
 const baseURL = 'http://localhost:3000';
 document.body.onload = loadPets;
 let detailedPets = [];
-let userId = 0;
+let userId = localStorage.userId;
 
 let mRegistro = document.getElementById("addPet");
 let mInvCampos = document.querySelectorAll(":invalid");

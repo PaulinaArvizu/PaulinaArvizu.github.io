@@ -1,5 +1,5 @@
 let user;
-let userId = 0;
+let userId = localStorage.userId;
 let baseURL = "http://localhost:3000/";
 
 function makeHTTPRequest2(endpoint, method, data, cbOk, cbErr) {

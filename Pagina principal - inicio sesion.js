@@ -24,7 +24,10 @@ iniciar.onclick = () => {
         makeHTTPRequest(`/usuarios?correo=${email}`,'GET',/* '',*/'',(xhr) => {
             if(xhr.status == 200) {
                 let user = JSON.parse(xhr.response)[0];
-                if(user.password == pw) {window.location.href = 'Usuario - feed.html';}
+                if(user.password == pw) {
+                    localStorage.userId = user.id;
+                    window.location.href = 'Usuario - feed.html';
+                }
             }
             else {
                 alert('error');

@@ -2,9 +2,10 @@
 const baseURL = 'http://localhost:3000';
 document.body.onload = loadPm;
 let detailedPm = [];
+let userId = localStorage.userId;
 
 function loadPm(event) {
-    makeHTTPRequest('/metodosPago', 'GET', '', listPm);
+    makeHTTPRequest(`/metodosPago?idU=${userId}`, 'GET', '', listPm);
     loadUser();
 }
 
