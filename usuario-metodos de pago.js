@@ -51,7 +51,7 @@ function addPm(event) {
     event.preventDefault();
     console.log("hoa");
 
-    let idPm = detailedPm[detailedPm.length - 1].id + 1;
+    let idPm = Number(detailedPm[detailedPm.length - 1].id) + 1;
     let direc = [];
     console.log(document.getElementById("calle-card").value);
     direc.push(document.getElementById("calle-card").value);
@@ -64,7 +64,7 @@ function addPm(event) {
     console.log(direc);
     let newPm = {
         id: idPm,
-        idU: 2,
+        idU: userId,
         tarjeta: document.getElementById("card-num").value,
         tipo: document.getElementById("card-type").value,
         categoria: document.getElementById("card-cat").value,
