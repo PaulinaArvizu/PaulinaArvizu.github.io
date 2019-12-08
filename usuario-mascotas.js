@@ -109,7 +109,7 @@ function addPet(event) {
         raza: document.getElementById("raza-mascota").value,
         size: document.getElementById("pet-size").value,
         descripcion: document.getElementById("about-pet").value,
-        img: ""
+        img: document.getElementById("pet-img").value
     }
     console.log(newPet);
     makeHTTPRequest('/mascotas', 'POST', newPet, cbAddPet);
