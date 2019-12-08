@@ -32,6 +32,17 @@
       "size": "chico",
       "descripcion": "Takin es un Border Collie muy feliz pero es algo torpe para su raza, aunque es muy guapo.",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkWG-Qq5J6SA5N31d9YPjrH4-SKkkdIPHpc4hIWrXy43DBAQK0"
+    },
+    {
+      "id": 4,
+      "idU": "0",
+      "nombre": "Milanesero",
+      "fecha": "2019-12-05",
+      "tipo": "Perro",
+      "raza": "pug",
+      "size": "Extra chico",
+      "descripcion": "",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Mops_oct09_cropped2.jpg"
     }
   ],
   "metodosPago": [
@@ -80,9 +91,9 @@
     {
       "id": 0,
       "correo": "abc@abc.abc",
-      "nombre": "abc",
+      "nombre": "def",
       "fecha": "2000-05-01",
-      "password": "12",
+      "password": "123",
       "reportado": false,
       "seguidores": [
         4,
@@ -91,7 +102,8 @@
       "siguiendo": [
         1,
         2,
-        3
+        3,
+        4
       ],
       "admin": true,
       "moderador": false,
@@ -128,31 +140,13 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXFBMG8O7jozgWhuuZXUSII1KLu6lNWIKFVa6G8iMDR5Jbz2M3"
     },
     {
-      "id": 3,
-      "correo": "a@a.a",
-      "nombre": "RakelRakun",
-      "fecha": "2019-11-02",
-      "password": "a",
-      "reportado": false,
-      "seguidores": [
-        0
-      ],
-      "siguiendo": [],
-      "admin": false,
-      "moderador": false,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQucjlelUkMjCrYN6DT9hf64CSJ8B3H2KEfWl9TEiSBtruDiRAV"
-    },
-    {
       "id": 4,
       "correo": "b@a.a",
       "nombre": "NoobMaster69",
       "fecha": "2019-11-02",
       "password": "a",
       "reportado": false,
-      "seguidores": [
-        0,
-        0
-      ],
+      "seguidores": [],
       "siguiendo": [
         0
       ],
@@ -228,26 +222,16 @@
       "likes": []
     },
     {
-      "id": 9,
-      "idU": 0,
-      "descripcion": "",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9yFo_cu1JCjhZ2ORxLUjaID1NzYysP3v_Ab66cUT9vaRCARgg",
-      "fecha": "2019-11-24T15:35:00.654Z",
-      "likes": [],
-      "username": "abc",
-      "nombreMascotas": "#Takin"
-    },
-    {
       "id": 10,
       "idU": 0,
-      "descripcion": "wesdbetnrt",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSrQ_AOhtT9M22mx0qCxlfzyA3zThvZeGmyuwHZRMNC-Bb4M1yA",
-      "fecha": "2019-12-06T10:37:04.854Z",
+      "descripcion": "ejemplo",
+      "img": "https://fotografias.lasexta.com/clipping/cmsimages01/2017/02/07/364CAAAC-A60E-43BB-8FED-05AA0B8F3AF9/58.jpg",
+      "fecha": "2019-12-08T08:58:23.874Z",
       "likes": [
         0
       ],
-      "username": "abc",
-      "nombreMascotas": "#Bannana"
+      "nombreMascotas": "#Bannana#Milanesitas",
+      "username": "abc"
     }
   ],
   "productos": [
@@ -263,7 +247,7 @@
     },
     {
       "nombre": "Otra cosa",
-      "precio": 50,
+      "precio": 420,
       "marca": "Ola",
       "detalles": "Cosa para mascotas",
       "size": "Chico",
@@ -338,6 +322,56 @@
       "total": 201.26,
       "status": 2,
       "id": 3,
+      "idPago": 11,
+      "idEnvio": 1
+    },
+    {
+      "idU": 0,
+      "productos": [
+        {
+          "id": "2",
+          "nombre": "Otra cosa",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0g_4mGvtXZzf9dY3gMcIKcMFuno-bH1JMg8E5CcPb2SEG_b14",
+          "cantidad": 5,
+          "precio": 250
+        },
+        {
+          "id": "1",
+          "nombre": "Tina para perro",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIvVMMjx46BzhGHJX1E1ylNU_d2mPl7L20wx0J8nG7vsTdiqhR",
+          "cantidad": 3,
+          "precio": 370.5
+        }
+      ],
+      "subtotal": 620.5,
+      "total": 719.78,
+      "status": 2,
+      "id": 4,
+      "idPago": 11,
+      "idEnvio": 1
+    },
+    {
+      "idU": 0,
+      "productos": [
+        {
+          "id": "2",
+          "nombre": "Otra cosa",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0g_4mGvtXZzf9dY3gMcIKcMFuno-bH1JMg8E5CcPb2SEG_b14",
+          "cantidad": 8,
+          "precio": 800
+        },
+        {
+          "id": "1",
+          "nombre": "Tina para perro",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIvVMMjx46BzhGHJX1E1ylNU_d2mPl7L20wx0J8nG7vsTdiqhR",
+          "cantidad": 1,
+          "precio": 123.5
+        }
+      ],
+      "subtotal": 923.5,
+      "total": 1071.26,
+      "status": 2,
+      "id": 5,
       "idPago": 11,
       "idEnvio": 1
     }
