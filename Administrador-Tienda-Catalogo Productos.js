@@ -81,13 +81,13 @@ function htmlProduct(p) {
             <td>
                 <form>
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-danger col" type="button" onclick="deleteProduct(${p.id})"><i
-                                    class="fas fa-trash-alt"></i> Eliminar</button>
-                        </div>
                         <div class="input-group-append">
                             <button class="btn btn-success" type="button" onclick="loadEdit(${p.id})" data-toggle="modal" data-target="#edit"><i
                                     class="fas fa-pen"></i> Editar</button>
+                        </div>
+                        <div class="input-group-prepend">
+                            <button class="btn btn-danger col" type="button" onclick="deleteProduct(${p.id})"><i
+                                    class="fas fa-trash-alt"></i> Eliminar</button>
                         </div>
                     </div>
                 </form>
