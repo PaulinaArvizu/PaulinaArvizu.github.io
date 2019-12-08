@@ -45,8 +45,7 @@ function userToHTML(user) {
                 </ul>
             </td>
             <td>
-                <p><b>Descripción</b></p>
-                <p>Temporalmente vacio</p>
+               
             </td>
             <td>
                 <p><button type="button" class="btn btn-secondary" id="btnMakeAdmin" onclick="updateUser('${user.id}')" data-toggle="modal" data-target="#update-User">Cambiar a administrador</button></p>
