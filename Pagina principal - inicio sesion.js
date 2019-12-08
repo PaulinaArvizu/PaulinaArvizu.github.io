@@ -10,11 +10,9 @@ let Usuario = {
     nombre: "",
     fecha: "",
     password: "",
-    reportado: false,
     seguidores: [],
     siguiendo: [],
-    admin: false,
-    moderador: false
+    admin: false
 }
 
 iniciar.onclick = () => {
@@ -81,9 +79,7 @@ function addUser(xhr) {
     Usuario.nombre = nomUsu;
     Usuario.fecha = registerForm.querySelector('[type="date"]').value;
     Usuario.password = pw[0].value;
-    Usuario.reportado = false;
     Usuario.admin = false;
-    Usuario.moderador = false;
     // console.log(Usuario);
         
     makeHTTPRequest(`/usuarios`,'POST', /*{'Content-Type': 'application/json'},*/ Usuario,
